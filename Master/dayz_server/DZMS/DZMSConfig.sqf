@@ -5,7 +5,7 @@
 
 ///////////////////////////////////////////////////////////////////////
 // Do you want your players to gain humanity from killing mission AI?
-DZMSMissHumanity = true;
+DZMSMissHumanity = false;
 
 // How Much Humanity?
 DZMSCntHumanity = 25;
@@ -16,7 +16,7 @@ DZMSUseNVG = true;
 
 // Do you want AI to use RPG7V's?
 //(Only one unit per group spawn will have one)
-DZMSUseRPG = false;
+DZMSUseRPG = true;
 
 // Do you want AI kills to count as bandit kills?
 DZMSCntBanditKls = true;
@@ -26,14 +26,14 @@ DZMSCleanDeath = false;
 
 // Do you want AI that players run over to not have gear?
 // (If DZMSCleanDeath is true, this doesn't matter)
-DZMSRunGear = false;
+DZMSRunGear = true;
 
 // How long before bodies disappear? (in seconds) (default = 2400)
 DZMSBodyTime = 2400;
 
 // Percentage of AI that must be dead before mission completes (default = 0)
 //( 0 is 0% of AI / 0.50 is 50% / 1 is 100% )
-DZMSRequiredKillPercent = 0;
+DZMSRequiredKillPercent = 0.50;
 
 // How long in seconds before mission scenery disappears (default = 1800 / 0 = disabled)
 DZMSSceneryDespawnTimer = 1800;

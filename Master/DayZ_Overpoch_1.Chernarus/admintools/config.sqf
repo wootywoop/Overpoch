@@ -3,19 +3,16 @@
 
 //Replace 111111111 with your ID. 
 SuperAdminList = [
-"76561198003411083", // <Admin Woot>
-"76561198025096946", // <Admin Mattdrat>
-"999999999" // <Admin>
+"76561198003411083", // <Woot admin>
+"999999999" // <S-Admin In-Game Name>
 ];
 AdminList = [
-"76561198048960373", // <Admin Dylan>
-"76561198128539208", // <Admin Dave>
-"76561198125483842", // <Admin Darren>
+"999999999", // <Admin In-Game Name>
 "999999999" // <Admin In-Game Name>
 ];
 ModList = [
-"999999999", // <Moderator #1>
-"999999999" // <Moderator spare>
+"999999999", // <Moderator In-Game Name>
+"999999999" // <Moderator In-Game Name>
 ];
 
 
@@ -44,7 +41,7 @@ ModList = [
 
 	// This option requires players to have the parts for building a bike (consumes the parts)
 	// Required parts: two wheels, one scrap metal
-	RequirePartsBike = true;
+	RequirePartsBike = false;
 
 	// This option dictates if players are allowed to repack a bike to get their items back
 	AllowPackBike = true;

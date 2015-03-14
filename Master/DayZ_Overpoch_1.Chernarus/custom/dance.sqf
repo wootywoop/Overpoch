@@ -8,7 +8,7 @@ player playMove _danceMoves;
 
 _nul = [objNull, player, rSAY, "fox"] call RE;
  
-cutText ["RedneX in da house !!","PLAIN DOWN"];
+cutText ["Turn your volume UP !!!","PLAIN DOWN"];
 
 r_interrupt = false;
 _animState = animationState player;
@@ -35,7 +35,7 @@ _finished = false;
  
 if (_finished) then {
  
-cutText ["WTF are you doing bro ?","PLAIN DOWN"];
+cutText ["Awwww is it over already ?","PLAIN DOWN"];
  
 } else {
 r_interrupt = false;

@@ -723,18 +723,6 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 		s_player_sleep = -1;
 	};
 	
-	_clothesTaken = cursorTarget getVariable["clothesTaken",false];
- 
-    // Take clothes by Zabn @ BalotaBuddies.net
-    if (_isMan and !_isAlive and !_isZombie and !_clothesTaken) then {
-        if (s_player_clothes < 0) then {
-            s_player_clothes = player addAction [("<t color='#0096ff'>")+("Take Clothes")+("</t>"), "custom\player_takeClothes.sqf",cursorTarget, -10, false, true, "",""];
-        };
-    } else {
-        player removeAction s_player_clothes;
-        s_player_clothes = -1;
-    };
-
 	//Repairing Vehicles
 	if ((dayz_myCursorTarget != _cursorTarget) && _isVehicle && !_isMan && _hasToolbox && (damage _cursorTarget < 1) && !_isDisallowRepair) then {
 		if (s_player_repair_crtl < 0) then {
@@ -790,8 +778,8 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 				s_player_parts set [count s_player_parts,_buy];
 
 				// Add static metals trader options under sub menu
-                _metals_trader = player addAction ["Trade Gems", "custom\trade_metals.sqf",["na"], 0, true, false, "",""];
-                s_player_parts set [count s_player_parts,_metals_trader];
+				_metals_trader = player addAction ["Trade Gems", "custom\trade_metals.sqf",["na"], 0, true, false, "",""];
+				s_player_parts set [count s_player_parts,_metals_trader];
 
 			};
 			s_player_parts_crtl = 1;
@@ -992,115 +980,3 @@ if (inflamed cursorTarget and _canDo) then {
 //    s_player_fight = -1;
 };
 // ---------------------------------------FIRE DANCE END------------------------------------
-
-// ---------------------------------------Deployable Bike Start------------------------------------
- _itemsPlayer = items player;
- _hasToolbox = "ItemToolbox" in _itemsPlayer;
- if (_canDo && (speed player <= 1) && _hasToolbox) then {
-     if (s_player_deploybike < 0) then {
-         s_player_deploybike = player addaction[("<t color=""#007ab7"">" + ("Deploy Bike (will use Toolbox)") +"</t>"),"deployables\mtbike\deploy.sqf","",5,false,true,"", ""];
-     };
- } else {
-     player removeAction s_player_deploybike;
-     s_player_deploybike = -1;
- };
-
- if (_canDo && (speed player <= 1) && cursorTarget isKindOf "MMT_Civ" && (cursorTarget getVariable ["SpawnedBike",0] == 1)) then {
-     if (s_player_deploybike2 < 0) then {
-         s_player_deploybike2 = player addaction[("<t color=""#007ab7"">" + ("Re-Pack Bike") +"</t>"),"deployables\mtbike\pack.sqf","",5,false,true,"", ""];
-     };
- } else {
-     player removeAction s_player_deploybike2;
-     s_player_deploybike2 = -1;
- };
- // ---------------------------------------Deployable Bike End------------------------------------
-
- //--------------------------------------Deploy Moped----------------------------------
- //------------------------------------------Start-------------------------------------
- _weapons = [currentWeapon player] + (weapons player) + (magazines player);
- _isMoped = typeOf cursorTarget in ["TT650_Civ"];
-
- //MOPED DEPLOY
- if ("ItemToolbox" in _weapons && "PartGeneric" in _weapons && "PartGeneric" in _weapons && "PartEngine" in _weapons && "PartWheel" in _weapons && "PartWheel" in _weapons && "ItemJerrycan" in _weapons) then {
- hasMopedItem = true;
- } else { hasMopedItem = false;};
- if((speed player <= 1) && hasMopedItem && _canDo) then {
- if (s_player_deploymoped < 0) then {
- s_player_deploymoped = player addaction[("<t color=""#4eff00"">" + ("Deploy Moped") +"</t>"),"deployables\moped\deploy.sqf","",5,false,true,"", ""];
- };
- } else {
- player removeAction s_player_deploymoped;
- s_player_deploymoped = -1;
- };
-
- //PACK MOPED
- if (_isMoped && "ItemToolbox" in _weapons && (speed player <= 1) && (player distance cursorTarget < 10) && (cursorTarget getVariable ["SpawnedMoped",0] == 1)) then {
- if (s_player_deploymoped2 < 0) then {
- s_player_deploymoped2 = player addaction[("<t color=""#4eff00"">" + ("Re-Pack Moped") +"</t>"),"deployables\moped\pack.sqf","",5,false,true,"", ""];
- };
- } else {
- player removeAction s_player_deploymoped2;
- s_player_deploymoped2 = -1;
- };
- //--------------------------------------Deploy Moped-----------------------------------
- //-------------------------------------------End---------------------------------------
-
- //--------------------------------------Deploy Mozzie----------------------------------
- //------------------------------------------Start--------------------------------------
- _weapons = [currentWeapon player] + (weapons player) + (magazines player);
- _isMozzie = typeOf cursorTarget in ["CSJ_GyroC"];
-
- //MOZZIE DEPLOY
- if ("ItemToolbox" in _weapons && "PartGeneric" in _weapons && "PartGeneric" in _weapons && "PartEngine" in _weapons && "ItemFuelBarrel" in _weapons && "PartVRotor" in _weapons) then {
- hasMozzieItem = true;
- } else { hasMozzieItem = false;};
- if((speed player <= 1) && hasMozzieItem && _canDo) then {
- if (s_player_deploymozzie < 0) then {
- s_player_deploymozzie = player addaction[("<t color=""#4eff00"">" + ("Deploy Mozzie") +"</t>"),"deployables\mozzie\deploy.sqf","",5,false,true,"", ""];
- };
- } else {
- player removeAction s_player_deploymozzie;
- s_player_deploymozzie = -1;
- };
-
- //PACK MOZZIE
- if (_isMozzie && "ItemToolbox" in _weapons && (speed player <= 1) && (player distance cursorTarget < 10) && (cursorTarget getVariable ["SpawnedMozzie",0] == 1)) then {
- if (s_player_deploymozzie2 < 0) then {
- s_player_deploymozzie2 = player addaction[("<t color=""#4eff00"">" + ("Re-Pack Mozzie") +"</t>"),"deployables\mozzie\pack.sqf","",5,false,true,"", ""];
- };
- } else {
- player removeAction s_player_deploymozzie2;
- s_player_deploymozzie2 = -1;
- };
- //--------------------------------------Deploy Mozzie-----------------------------------
- //--------------------------------------------End---------------------------------------
-
- //--------------------------------------Deploy Little Bird-----------------------------
- //---------------------------------------------Start-----------------------------------
- _weapons = [currentWeapon player] + (weapons player) + (magazines player);
- _isBird = typeOf cursorTarget in ["MH6J_EP1"];
-
- //BIRD DEPLOY
- if ("ItemToolbox" in _weapons && "PartGeneric" in _weapons && "PartGeneric" in _weapons && "PartEngine" in _weapons && "PartFueltank" in _weapons && "PartVRotor" in _weapons && "ItemFuelBarrel" in _weapons && "PartGlass" in _weapons && "PartGlass" in _weapons) then {
- hasBirdItem = true;
- } else { hasBirdItem = false;};
- if((speed player <= 1) && hasBirdItem && _canDo) then {
- if (s_player_deploybird < 0) then {
- s_player_deploybird = player addaction[("<t color=""#4eff00"">" + ("Deploy Little Bird") +"</t>"),"deployables\bird\deploy.sqf","",5,false,true,"", ""];
- };
- } else {
- player removeAction s_player_deploybird;
- s_player_deploybird = -1;
- };
-
- //PACK BIRD
- if (_isBird && "ItemToolbox" in _weapons && (speed player <= 1) && (player distance cursorTarget < 10) && (cursorTarget getVariable ["SpawnedBird",0] == 1)) then {
- if (s_player_deploybird2 < 0) then {
- s_player_deploybird2 = player addaction[("<t color=""#4eff00"">" + ("Re-Pack Little Bird") +"</t>"),"deployables\bird\pack.sqf","",5,false,true,"", ""];
- };
- } else {
- player removeAction s_player_deploybird2;
- s_player_deploybird2 = -1;
- };
- //--------------------------------------Deploy Little Bird----------------------------------
- //-----------------------------------------------End-----------------------------------------

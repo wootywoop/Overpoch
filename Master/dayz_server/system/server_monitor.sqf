@@ -336,10 +336,7 @@ if (isServer && isNil "sm_done") then {
 	if(isnil "OldHeliCrash") then {
 		OldHeliCrash = false;
 	};
-    [] ExecVM "\z\addons\dayz_server\WAI\init.sqf";
-	[] ExecVM "\z\addons\dayz_server\DZMS\DZMSInit.sqf";
-	allowConnection = true;
-	
+
 	// [_guaranteedLoot, _randomizedLoot, _frequency, _variance, _spawnChance, _spawnMarker, _spawnRadius, _spawnFire, _fadeFire]
 	if(OldHeliCrash) then {
 		_nul = [3, 4, (50 * 60), (15 * 60), 0.75, 'center', HeliCrashArea, true, false] spawn server_spawnCrashSite;
@@ -382,6 +379,8 @@ if (isServer && isNil "sm_done") then {
 		endLoadingScreen;
 	};
 
+	ExecVM "\z\addons\dayz_server\WAI\init.sqf";
+	[] ExecVM "\z\addons\dayz_server\DZMS\DZMSInit.sqf";
 	allowConnection = true;	
 	sm_done = true;
 	publicVariable "sm_done";

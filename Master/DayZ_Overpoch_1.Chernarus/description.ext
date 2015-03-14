@@ -1,20 +1,24 @@
 respawn = "BASE";
 respawndelay = 5;
-onLoadMission= "DayZ Epoch Chernarus";
-OnLoadIntro = "Welcome to DayZ Epoch Chernarus";
+onLoadMission= "DayZ OverPoch Chernarus";
+OnLoadIntro = "Welcome to DayZ OverPoch Chernarus";
 OnLoadIntroTime = False;
 OnLoadMissionTime = False;
 disabledAI = true;
 disableChannels[]={0,2,6};
 enableItemsDropping = 0;
-#include "customloot\CfgBuildingLoot.hpp"
+
+//Edit for custom loot
+#include "custom\loot\CfgBuildingLoot.hpp"
+#include "custom\loot\CfgLootSmall.hpp"
+#include "custom\loot\CfgLoot.hpp"
+
 
 briefing = 0;
 debriefing = 0;
 
 onPauseScript = "";
-//loadScreen = "\z\addons\dayz_code\gui\dayz_logo_ca.paa";
-loadScreen = "Loading.jpg";
+loadScreen = "custom\Loading.jpg";
 
 class Header
 {
@@ -165,7 +169,6 @@ class CfgSounds
     };
 };
 
+#include "custom\snap_pro\snappoints.hpp"  //Snap Build Pro
 // Epoch Admin Tools
 #include "admintools\dialog.hpp"
-// SnapTo
-#include "custom\snap_build\points.hpp"
