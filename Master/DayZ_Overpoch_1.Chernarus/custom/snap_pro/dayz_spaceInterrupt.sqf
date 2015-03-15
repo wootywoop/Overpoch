@@ -119,14 +119,7 @@ if (_dikCode in (actionKeys "GetOver")) then {
 //if (_dikCode == 57) then {_handled = true}; // space
 //if (_dikCode in actionKeys 'MoveForward' or _dikCode in actionKeys 'MoveBack') then {r_interrupt = true};
 if (_dikCode == 210) then {
-	if (isNil 'debugMonitor') then {
-		debugMonitor = true;
-		_nill = execvm "custom\debug_monitor.sqf";
-	} else {
-		debugMonitor = !debugMonitor;
-		hintSilent '';
-		_nill = execvm "custom\debug_monitor.sqf";
-	};
+		_nill = execvm "\z\addons\dayz_code\actions\playerstats.sqf";
 };
 
 if (_dikCode in actionKeys "ForceCommandingMode") then {_handled = true};

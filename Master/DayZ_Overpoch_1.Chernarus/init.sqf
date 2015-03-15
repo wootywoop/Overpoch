@@ -33,6 +33,7 @@ MaxAmmoBoxes = 15;
 dayz_MapArea = 14000; // Default = 10000
 dayz_minpos = -1; 
 dayz_maxpos = 16000;
+dayz_spawnselection = 0;
 dayz_paraSpawn = false; // Experimental feature that will parachute spawn all players into the game. (Default: false) 
 dayz_sellDistance_vehicle = 80;
 dayz_sellDistance_boat = 80;
@@ -52,6 +53,10 @@ DZE_BackpackGuard = false; //Default = True, deletes backpack contents if loggin
 DZE_BuildingLimit = 1000; //Default = 150, decides how many objects can be built on the server before allowing any others to be built. Change value for more buildings.
 DZE_TRADER_SPAWNMODE = false; //Vehicles bought with traders will parachute in instead of just spawning on the ground.
 DZE_BuildOnRoads = false; // Default: False
+DZE_noRotate = []; //Objects that cannot be rotated. Ex: DZE_noRotate = ["ItemVault"] (NOTE: The objects magazine classname)
+DZE_vectorDegrees = [0.01, 0.1, 1, 5, 15, 45, 90];
+DZE_curDegree = 45; //Starting rotation angle. //Prefered any value in array above
+DZE_dirWithDegrees = true; //When rotating objects with Q&E, use the custom degrees
 DZE_GodModeBase = true;  //unbreakable bases
 DZE_requireplot = 1;   //removes need for plot pole
 DZE_HeliLift = false;     //epoch default heli lifting
@@ -64,10 +69,14 @@ DZE_selfTransfuse_Values = [6000, 200, 240]; //[blood amount, infection chance, 
 DZE_MissionLootTable = true;  //Edit for custom loot
 setViewDistance 2200;	//sets view distance
 setTerrainGrid 20;	//sets terrain detail
-
+/*ZSC*/
+DZE_ConfigTrader = true;
+/*ZSC*/
 
 EpochEvents = [["any","any","any","any",30,"crash_spawner"],["any","any","any","any",0,"crash_spawner"],["any","any","any","any",15,"supply_drop"]];
 dayz_fullMoonNights = true;
+
+dayz_poleSafeArea = 90; // Default = 30m, the buildable distance
 
 //Load in compiled functions
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
@@ -76,11 +85,15 @@ call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";	
 progressLoadingScreen 0.2;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functions_med.sqf";	//Functions used by CLIENT for medical
 progressLoadingScreen 0.4;
-call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\compiles.sqf";				//Compile regular functions
+call compile preprocessFileLineNumbers "compiles.sqf";				//Compile regular functions
 call compile preprocessFileLineNumbers "custom\compiles.sqf";							 //Compile custom compiles
 call compile preprocessFileLineNumbers "addons\bike\init.sqf";                          //Deployable Bike Init
+/*ZSC*/	
+call compile preprocessFileLineNumbers "ZSC\gold\ZSCinit.sqf";
+/*ZSC*/		
 progressLoadingScreen 0.5;
-call compile preprocessFileLineNumbers "server_traders.sqf";				//Compile trader configs
+//call compile preprocessFileLineNumbers "server_traders.sqf";				//Compile trader configs
+call compile preprocessFileLineNumbers "server_traders_cherno_11.sqf";
 call compile preprocessFileLineNumbers "admintools\config.sqf"; // Epoch admin Tools config file
 call compile preprocessFileLineNumbers "admintools\variables.sqf"; // Epoch admin Tools variables
 progressLoadingScreen 1.0;
@@ -93,7 +106,8 @@ if (isServer) then {
 	
 	// Add trader citys
 	_nil = [] execVM "\z\addons\dayz_server\missions\DayZ_Epoch_11.Chernarus\mission.sqf";
-	_serverMonitor = 	[] execVM "\z\addons\dayz_code\system\server_monitor.sqf";
+	//_serverMonitor = 	[] execVM "\z\addons\dayz_code\system\server_monitor.sqf";
+	_serverMonitor = 	[] execVM "\z\addons\dayz_server\system\server_monitor.sqf";
 };
 
 if (!isDedicated) then {
@@ -105,6 +119,7 @@ if (!isDedicated) then {
 	//Run the player monitor
 	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
 	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";	
+	execVM "ZSC\compiles\playerHud.sqf";
 	
 	// Epoch Admin Tools
 	if ( !((getPlayerUID player) in AdminList) && !((getPlayerUID player) in ModList)) then 
@@ -131,9 +146,10 @@ execVM "\z\addons\dayz_code\external\DynamicWeatherEffects.sqf";
 
 #include "\z\addons\dayz_code\system\BIS_Effects\init.sqf"
 
-//Starting Loadout
-DefaultMagazines = [""];
-DefaultWeapons = [""];
+[] execVM "custom\base_SafeArea.sqf";
+
+DefaultMagazines = ["ItemBandage","ItemBandage","ItemPainkiller"];
+DefaultWeapons = ["ItemFlashlight"];
 DefaultBackpack = "";
 DefaultBackpackWeapon = "";
 
@@ -141,3 +157,5 @@ DefaultBackpackWeapon = "";
 [] execVM "R3F_ARTY_AND_LOG\init.sqf";  //R3F Lift and Tow
 [] execvm 'AGN\agn_SafeZoneCommander.sqf';  //Trader Safe Zones
 [] execVM "admintools\Activate.sqf"; // Epoch admin tools
+waitUntil {!isNil "PVDZE_plr_LoginRecord"};
+if (!isDedicated && {dayzPlayerLogin2 select 2}) then {execVM "spawn\spawn.sqf";};

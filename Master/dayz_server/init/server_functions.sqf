@@ -589,17 +589,64 @@ dayz_objectUID = {
 };
 
 dayz_objectUID2 = {
-	private["_position","_dir","_key"];
-	_dir = _this select 0;
-	_key = "";
-	_position = _this select 1;
-	{
-		_x = _x * 10;
-		if ( _x < 0 ) then { _x = _x * -10 };
-		_key = _key + str(round(_x));
-	} count _position;
-	_key = _key + str(round(_dir));
-	_key
+    private["_position","_dir","_key","_element","_vector","_set","_vecCnt","_usedVec"];
+    _dir = _this select 0;
+    _key = "";
+    _position = _this select 1;
+
+    if((count _this) == 2) then{
+        {
+            _x = _x * 10;
+            if ( _x < 0 ) then { _x = _x * -10 };
+            _key = _key + str(round(_x));
+        } count _position;
+        _key = _key + str(round(_dir));
+    }else{
+        _vector = [];
+        _usedVec = false;
+        {
+            _element = _x;
+            if(typeName _element == "ARRAY") then{
+                _vector = _element;
+                if((count _vector) == 2)then{
+                    if(((count (_vector select 0)) == 3) && ((count (_vector select 1)) == 3))then{
+                            {
+                                _x = _x * 10;
+                                if ( _x < 0 ) then { _x = _x * -10 };
+                                _key = _key + str(round(_x));
+                            } count _position;
+
+                            _vecCnt = 0;
+                            {
+                                _set = _x;
+                                {
+                                    _vecCnt = _vecCnt + (round (_x * 100));
+
+                                } foreach _set;
+
+                            } foreach _vector;
+                            if(_vecCnt < 0)then{
+                                _vecCnt = ((_vecCnt * -1) * 3);
+                            };
+                            _key = _key + str(_vecCnt);
+                            _usedVec = true;
+                    };
+                };
+            };
+        } count _this;
+
+        if!(_usedVec) then{
+                {
+                    _x = _x * 10;
+                    if ( _x < 0 ) then { _x = _x * -10 };
+                    _key = _key + str(round(_x));
+                } count _position;
+                _key = _key + str(round(_dir));
+        };
+
+
+    };
+    _key
 };
 
 dayz_objectUID3 = {
@@ -621,6 +668,8 @@ dayz_recordLogin = {
 	_key = format["CHILD:103:%1:%2:%3:",_this select 0,_this select 1,_this select 2];
 	_key call server_hiveWrite;
 };
+
+#include "ESSconfig.sqf"
 
 dayz_perform_purge = {
 	if(!isNull(_this)) then {
@@ -843,7 +892,7 @@ server_spawnCleanLoot = {
 	_dateNow = (DateToNumber date);
 	{
 		if (!isNull _x) then {
-			_keep = _x getVariable["permaLoot", false];
+			_keep = _x getVariable["permaLoot", true];
 			if (!_keep) then {
 				_created = _x getVariable["created", -0.1];
 				if (_created == -0.1) then{
@@ -917,4 +966,26 @@ server_logUnlockLockEvent = {
 		};
 		diag_log format["SAFE %5: ID:%1 UID:%2 BY %3(%4)", _objectID, _objectUID, (name _player), (getPlayerUID _player), _statusText];
 	};
+};
+execVM "\z\addons\dayz_server\init\ESSfloor.sqf";
+call compile preProcessFileLineNumbers "\z\addons\dayz_server\CUSTOMMAPS\prison.sqf";
+call compile preProcessFileLineNumbers "\z\addons\dayz_server\CUSTOMMAPS\NWAF.sqf";
+
+KK_fnc_floatToString = {
+	private "_arr";
+	if (abs (_this - _this % 1) == 0) exitWith { str _this };
+	_arr = toArray str abs (_this % 1);
+	_arr set [0, 32];
+	toString (toArray str (
+		abs (_this - _this % 1) * _this / abs _this
+	) + _arr - [32])
+};
+
+KK_fnc_positionToString = {
+	format [
+		"[%1,%2,%3]",
+		_this select 0 call KK_fnc_floatToString,
+		_this select 1 call KK_fnc_floatToString,
+		_this select 2 call KK_fnc_floatToString
+	]
 };

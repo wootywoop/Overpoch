@@ -82,7 +82,7 @@ if (_characterID != "0") then {
 	};
 	if (_isNewGear || _forceGear) then {
 		//diag_log ("gear..."); sleep 0.05;
-		_playerGear = [weapons _character,_magazines];
+		_playerGear = [weapons _character,_magazines, _character getVariable["cashMoney",0]];
 		//diag_log ("playerGear: " +str(_playerGear));
 		_backpack = unitBackpack _character;
 		if(_playerwasNearby) then {

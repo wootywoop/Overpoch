@@ -1,3 +1,4 @@
+#include "ZSC\config\cfgServerTrader.hpp"
 respawn = "BASE";
 respawndelay = 5;
 onLoadMission= "DayZ OverPoch Chernarus";
@@ -30,6 +31,11 @@ class Header
 aiKills = 1;
 diagRadio = 1;
 diagHit = 1;
+
+class RscTitles
+{
+    #include "ZSC\config\ZSChud.hpp"
+};
 
 class RscText
 {
@@ -172,3 +178,14 @@ class CfgSounds
 #include "custom\snap_pro\snappoints.hpp"  //Snap Build Pro
 // Epoch Admin Tools
 #include "admintools\dialog.hpp"
+// Spawn select
+#include "spawn\defines.hpp"
+#include "spawn\class.hpp"
+#include "spawn\halo.hpp"
+#include "spawn\spawn.hpp"
+// ZSC
+#include "ZSC\config\ZSCdefines.hpp"
+#include "ZSC\advancedTrading\advancedTrading.hpp"
+#include "ZSC\config\ZSCdialogs.hpp"
+// RC
+#include "custom\extra_rc.hpp"

@@ -440,12 +440,12 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 
 	// Study Body
 	if (_player_studybody) then {
-		if (s_player_studybody < 0) then {
-			s_player_studybody = player addAction [localize "str_action_studybody", "\z\addons\dayz_code\actions\study_body.sqf",_cursorTarget, 0, false, true, "",""];
+    if (s_player_studybody < 0) then {
+        s_player_studybody = player addAction [("<t color=""#FF0000"">"+("Check Wallet") + "</t>"), "ZSC\actions\check_wallet.sqf",_cursorTarget, 0, false, true, "",""];
 		};
 	} else {
-		player removeAction s_player_studybody;
-		s_player_studybody = -1;
+    player removeAction s_player_studybody;
+    s_player_studybody = -1;
 	};
 
 	// logic vars
@@ -547,6 +547,25 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 		s_player_unlockvault = -1;
 	};
 
+	if(_typeOfCursorTarget in ZSC_MoneyStorage && (player distance _cursorTarget < 5)) then {
+    if (s_bank_dialog < 0) then {
+        s_bank_dialog = player addAction ["Money Storage", "ZSC\actions\bank_dialog.sqf",_cursorTarget, 3, true, true, "", ""];
+    };
+} else {
+    player removeAction s_bank_dialog;
+    s_bank_dialog = -1;
+};
+
+// cars 
+if( _isVehicle && !_isMan &&_isAlive && !_isMan && !locked _cursorTarget && !(_cursorTarget isKindOf "Bicycle") && (player distance _cursorTarget < 5)) then {  
+    if (s_bank_dialog2 < 0) then {
+        s_bank_dialog2 = player addAction ["Money Storage", "ZSC\actions\bank_dialog.sqf",_cursorTarget, 3, true, true, "", ""];
+    };
+} else {
+    player removeAction s_bank_dialog2;
+    s_bank_dialog2 = -1;
+ };
+	
 	//Allow owner to pack vault
 	if(_typeOfCursorTarget in DZE_UnLockedStorage && _ownerID != "0" && (player distance _cursorTarget < 3)) then {
 
@@ -773,6 +792,8 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 					s_player_parts set [count s_player_parts,_buy];
 				
 				} count (_traderMenu select 1);
+				_buyV = player addAction ["<t color='#0059FF'>Advanced Trading</t>", "ZSC\advancedTrading\init.sqf",(_traderMenu select 0), 999, true, false, "",""];
+				s_player_parts set [count s_player_parts,_buyV];
 				// Database menu
 				_buy = player addAction [localize "STR_EPOCH_PLAYER_289", "\z\addons\dayz_code\actions\show_dialog.sqf",(_traderMenu select 0), 999, true, false, "",""];
 				s_player_parts set [count s_player_parts,_buy];
@@ -934,6 +955,12 @@ if (!isNull cursorTarget && !_inVehicle && !_isPZombie && (player distance curso
 	s_player_fuelauto = -1;
 	player removeAction s_player_fuelauto2;
 	s_player_fuelauto2 = -1;
+	player removeAction s_givemoney_dialog;
+	s_givemoney_dialog = -1;
+	player removeAction s_bank_dialog;
+	s_bank_dialog = -1;
+	player removeAction s_bank_dialog2;
+	s_bank_dialog2 = -1;
 };
 
 

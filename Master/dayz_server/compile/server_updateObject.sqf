@@ -52,8 +52,8 @@ _object_position = {
 	private["_position","_worldspace","_fuel","_key"];
 		_position = getPosATL _object;
 		_worldspace = [
-			round(direction _object),
-			_position
+			(getDir _object) call KK_fnc_floatToString,
+			_position call KK_fnc_positionToString
 		];
 		_fuel = 0;
 		if (_object isKindOf "AllVehicles") then {
@@ -69,7 +69,10 @@ _object_inventory = {
 		_inventory = [
 			getWeaponCargo _object,
 			getMagazineCargo _object,
-			getBackpackCargo _object
+			getBackpackCargo _object,
+			/*ZSC*/
+			_object getVariable["bankMoney",0]
+			/*ZSC*/
 		];
 		_previous = str(_object getVariable["lastInventory",[]]);
 		if (str(_inventory) != _previous) then {

@@ -4,10 +4,13 @@
 //Replace 111111111 with your ID. 
 SuperAdminList = [
 "76561198003411083", // <Woot admin>
+"76561198025096946", // <Admin Mattdrat>
 "999999999" // <S-Admin In-Game Name>
 ];
 AdminList = [
-"999999999", // <Admin In-Game Name>
+"76561198048960373", // <Admin Dylan>
+"76561198128539208", // <Admin Dave>
+"76561198125483842", // <Admin Darren>
 "999999999" // <Admin In-Game Name>
 ];
 ModList = [
