@@ -8,7 +8,6 @@ if (!isDedicated) then {
 	player_unlockVault =   compile preprocessFileLineNumbers "custom\BuildVectors\compile\player_unlockVault.sqf";
     player_lockVault =     compile preprocessFileLineNumbers "custom\BuildVectors\compile\player_lockVault.sqf";
 	player_death = compile preprocessFileLineNumbers "Recover_Skin\player_death.sqf";
-	player_selectSlot = compile preprocessFileLineNumbers "dayz_code\compile\ui_selectSlot.sqf";
 	fnc_SetPitchBankYaw =       compile preprocessFileLineNumbers "custom\BuildVectors\fnc_SetPitchBankYaw.sqf";
     DZE_build_vector_file =         "custom\BuildVectors\build_vectors.sqf";
     build_vectors =                 compile preprocessFileLineNumbers DZE_build_vector_file;

@@ -164,16 +164,21 @@ class DayZ_loadingScreen
 
 class CfgSounds
 {
-    sounds[] =
-    {
-    fox
-    };
+    sounds[] = {fox, Brief_Open_Sound};
+	
     class fox
     {
-    name="fox";
-    sound[]={fox.ogg,0.9,1};
-    titles[] = {};
+		name="fox";
+		sound[]={fox.ogg,0.9,1};
+		titles[] = {};
     };
+	
+	class Brief_Open_Sound
+	{
+		name = "Brief_Open_Sound";
+		sound[] = {addons\mbc\brief_open.ogg,0.4,1};
+		titles[] = {};
+	};
 };
 
 #include "custom\snap_pro\snappoints.hpp"  //Snap Build Pro
@@ -190,3 +195,5 @@ class CfgSounds
 #include "ZSC\config\ZSCdialogs.hpp"
 // RC
 #include "custom\extra_rc.hpp"
+// Mystery briefcase
+#include "addons\mbc\dialogs.hpp"

@@ -110,7 +110,7 @@ if (!isDedicated) then {
 	player_upgradeVehicle =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_upgradeVehicle.sqf";
 
 	//ui
-	player_selectSlot =			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\ui_selectSlot.sqf";
+	player_selectSlot =			compile preprocessFileLineNumbers "custom\ui_selectSlot.sqf";
 	player_gearSync	=			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_gearSync.sqf";
 	player_gearSet	=			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_gearSet.sqf";
 	ui_changeDisplay = 			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\ui_changeDisplay.sqf";
@@ -617,5 +617,8 @@ if (!isDedicated) then {
 	};
 	
 //DynamicWeather
-execVM "DynamicWeatherEffects.sqf";
+//execVM "custom\DynamicWeatherEffects.sqf";
+
+// Mystery Briefcase by Rocu
+call compile preprocessFileLineNumbers "addons\mbc\config.sqf";
 initialized = true;
