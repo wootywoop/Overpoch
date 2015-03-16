@@ -16,7 +16,7 @@ if(isServer) then {
 
 		ai_clear_body 				= false;		// instantly clear bodies
 		ai_clean_dead 				= true;			// clear bodies after certain amount of time
-		ai_cleanup_time 			= 7200;			// time to clear bodies in seconds
+		ai_cleanup_time 			= 1200;			// time to clear bodies in seconds
 		ai_clean_roadkill			= false; 		// clean bodies that are roadkills
 		ai_roadkill_damageweapon	= 0;			// percentage of chance a roadkill will destroy weapon AI is carrying
 
@@ -27,7 +27,7 @@ if(isServer) then {
 		ai_hero_behaviour			= "COMBAT";		// behaviour of hero AI
 
 		ai_share_info				= true;			// AI share info on player position
-		ai_share_distance			= 300;			// Distance from killed AI for AI to share your rough position
+		ai_share_distance			= 900;			// Distance from killed AI for AI to share your rough position
 
 		ai_kills_gain				= true;			// add kill to bandit/human kill score
 		ai_humanity_gain			= true;			// gain humanity for killing AI
@@ -48,7 +48,7 @@ if(isServer) then {
 		ai_static_array				= [["aimingAccuracy",0.20],["aimingShake",0.70],["aimingSpeed",0.75],["endurance",1.00],["spotDistance",0.70],["spotTime",0.50],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",1.00]];
 
 		ai_gear0					= [["ItemBandage","ItemBandage","ItemPainkiller"],["ItemKnife","ItemFlashlight"]];
-		ai_gear1					= [["ItemBandage","ItemBandage","ItemPainkiller"],["ItemKnife","ItemFlashlight"]];
+		ai_gear1					= [["ItemBandage","ItemBandage","ItemPainkiller"],["ItemKnife","ItemRadio"]];
 		ai_gear_random				= [ai_gear0,ai_gear1];	// Allows the possibility of random gear
 
 		ai_wep_assault				= [["M16A4_ACG","30Rnd_556x45_Stanag"],["Sa58V_RCO_EP1","30Rnd_762x39_AK47"],["SCAR_L_STD_Mk4CQT","30Rnd_556x45_Stanag"],["M8_sharpshooter","30Rnd_556x45_Stanag"],["M4A1_HWS_GL_camo","30Rnd_556x45_Stanag"],["SCAR_L_STD_HOLO","30Rnd_556x45_Stanag"],["M4A3_CCO_EP1","30Rnd_556x45_Stanag"],["M4A3_CCO_EP1","30Rnd_556x45_Stanag"],["M4A1_AIM_SD_camo","30Rnd_556x45_StanagSD"],["M16A4","30Rnd_556x45_Stanag"],["m8_carbine","30Rnd_556x45_Stanag"],["BAF_L85A2_RIS_Holo","30Rnd_556x45_Stanag"],["Sa58V_CCO_EP1","30Rnd_762x39_AK47"]];	// Assault
@@ -75,21 +75,21 @@ if(isServer) then {
 
 		wai_avoid_missions			= true;								// avoid spawning near other missions, these are defined in wai_mission_markers
 		wai_avoid_traders			= true;								// avoid spawning missions near traders
-		wai_mission_spread			= 750;								// make missions spawn this far apart from one another and other markers
+		wai_mission_spread			= 550;								// make missions spawn this far apart from one another and other markers
 		wai_near_town				= 0;								// make missions check for towns around this radius
 		wai_near_road				= 0;								// make missions check for roads around this radius
 		wai_near_water				= 50;								// nearest water allowed near missions
 		
 		wai_mission_timer			= [300,900];						// time between missions 5-15 minutes
 		wai_mission_timeout			= [900,1800]; 						// time each missions takes to despawn if inactive 15-30 minutes
-		wai_timeout_distance		= 1000;								// if a player is this close to a mission then it won't time-out
+		wai_timeout_distance		= 600;								// if a player is this close to a mission then it won't time-out
 		
 		wai_clean_mission			= true;								// clean all mission buildings after a certain period
-		wai_clean_mission_time		= 1800;								// time after a mission is complete to clean mission buildings
+		wai_clean_mission_time		= 1500;								// time after a mission is complete to clean mission buildings
 
 		wai_mission_fuel			= [10,20];							// fuel inside mission spawned vehicles [min%,max%]
 		wai_vehicle_damage			= [20,80];							// damages to spawn vehicles with [min%,max%]
-		wai_keep_vehicles			= true;								// save vehicles to database and keep them after restart
+		wai_keep_vehicles			= false;								// save vehicles to database and keep them after restart
 
 		wai_crates_smoke			= true;								// pop smoke on crate when mission is finished during daytime
 		wai_crates_flares			= true;								// pop flare on crate when mission is finished during nighttime
@@ -97,14 +97,14 @@ if(isServer) then {
 		wai_players_online			= 1; 								// number of players online before mission starts
 		wai_server_fps				= 5; 								// missions only starts if server FPS is over wai_server_fps
 		
-		wai_kill_percent			= 30;								// percentage of AI players that must be killed at "crate" missions to be able to trigger completion
+		wai_kill_percent			= 80;								// percentage of AI players that must be killed at "crate" missions to be able to trigger completion
 
 		wai_high_value				= true;								// enable the possibility of finding a high value item (defined below crate_items_high_value) inside a crate
 		wai_high_value_chance		= 1;								// chance in percent you find above mentioned item
 
 		wai_enable_minefield		= true;								// enable minefields to better defend missions
-		wai_use_launchers			= false;							// add a rocket launcher to each spawned AI group
-		wai_remove_launcher			= false;							// remove rocket launcher from AI on death
+		wai_use_launchers			= true;							// add a rocket launcher to each spawned AI group
+		wai_remove_launcher			= true;							// remove rocket launcher from AI on death
 
 		// Missions
 		wai_hero_missions			= [ 								// ["mission filename",% chance of picking this mission],Make sure the chances add up to 100,or it will not be accurate percentages

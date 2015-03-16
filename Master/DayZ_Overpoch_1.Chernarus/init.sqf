@@ -159,3 +159,4 @@ DefaultBackpackWeapon = "";
 [] execVM "admintools\Activate.sqf"; // Epoch admin tools
 waitUntil {!isNil "PVDZE_plr_LoginRecord"};
 if (!isDedicated && {dayzPlayerLogin2 select 2}) then {execVM "spawn\spawn.sqf";};
+execVM "RC\init.sqf";

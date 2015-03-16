@@ -35,6 +35,7 @@ diagHit = 1;
 class RscTitles
 {
     #include "ZSC\config\ZSChud.hpp"
+	#include "RC\desc_inc.h"
 };
 
 class RscText

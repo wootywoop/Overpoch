@@ -13166,15 +13166,15 @@ if (true) then
   _this addWeaponCargoGlobal ["ItemToolbox",2];
   _this addWeaponCargoGlobal ["ItemSledge",1];
 
-  _this addmagazineCargoGlobal ["ItemBriefcase100oz",2];
-  _this addmagazineCargoGlobal ["bulk_ItemTankTrap",10];
-  _this addmagazineCargoGlobal ["bulk_ItemWire",10];
-  _this addmagazineCargoGlobal ["bulk_ItemSandbag",10];
-  _this addmagazineCargoGlobal ["bulk_PartGeneric",10];
-  _this addmagazineCargoGlobal ["PartPlankPack",20];
-  _this addmagazineCargoGlobal ["PartPlywoodPack",20];
-  _this addmagazineCargoGlobal ["CinderBlocks",60];
-  _this addmagazineCargoGlobal ["MortarBucket",15];
+//  _this addmagazineCargoGlobal ["ItemBriefcase100oz",2];
+  _this addmagazineCargoGlobal ["bulk_ItemTankTrap",5];
+  _this addmagazineCargoGlobal ["bulk_ItemWire",5];
+  _this addmagazineCargoGlobal ["bulk_ItemSandbag",5];
+  _this addmagazineCargoGlobal ["bulk_PartGeneric",5];
+  _this addmagazineCargoGlobal ["PartPlankPack",10];
+  _this addmagazineCargoGlobal ["PartPlywoodPack",10];
+  _this addmagazineCargoGlobal ["CinderBlocks",20];
+  _this addmagazineCargoGlobal ["MortarBucket",5];
 
   _this setPos [4782.22, 10251.2, 13.921];
 };
@@ -13198,7 +13198,7 @@ if (true) then
   _this addWeaponCargoGlobal ["SCAR_L_STD_Mk4CQT",1];
   _this addWeaponCargoGlobal ["SCAR_H_CQC_CCO_SD",1];
  
-  _this addmagazineCargoGlobal ["ItemBriefcase100oz",2];
+//  _this addmagazineCargoGlobal ["ItemBriefcase100oz",2];
   _this addmagazineCargoGlobal ["30Rnd_556x45_Stanag",20];
   _this addmagazineCargoGlobal ["20Rnd_762x51_B_SCAR",10];
   _this addmagazineCargoGlobal ["20Rnd_762x51_SB_SCAR",10];
@@ -13223,7 +13223,7 @@ if (true) then
   _this addWeaponCargoGlobal ["M4A1_HWS_GL",1];
   _this addWeaponCargoGlobal ["M16A4_ACG_GL",2];
   _this addWeaponCargoGlobal ["M240_DZ",1];
-  _this addWeaponCargoGlobal ["Stinger",1];
+//  _this addWeaponCargoGlobal ["Stinger",1];
   
   _this addmagazineCargoGlobal ["PartGeneric",5];
   _this addmagazineCargoGlobal ["PartEngine",2];
@@ -13233,7 +13233,7 @@ if (true) then
   _this addmagazineCargoGlobal ["PartGlass",10];
   _this addmagazineCargoGlobal ["30Rnd_556x45_Stanag",20];
   _this addmagazineCargoGlobal ["100Rnd_762x51_M240",10];
-  _this addmagazineCargoGlobal ["Stinger",2];
+//  _this addmagazineCargoGlobal ["Stinger",2];
   
   _this setPos [4719.9, 10216.7, 12.92];
 };
@@ -13248,15 +13248,15 @@ if (true) then
   clearweaponcargoGlobal _this;
   clearmagazinecargoGlobal _this;
   //Add Cargo
-  _this addmagazineCargoGlobal ["FoodMRE",15];
+  _this addmagazineCargoGlobal ["FoodMRE",5];
   _this addmagazineCargoGlobal ["ItemTrashToiletpaper",2];
-  _this addmagazineCargoGlobal ["ItemSodaMdew",20];
+  _this addmagazineCargoGlobal ["ItemSodaMdew",5];
   _this addmagazineCargoGlobal ["Skin_Drake_Light_DZ",2];
   _this addmagazineCargoGlobal ["Skin_FR_OHara_DZ",2];
   _this addmagazineCargoGlobal ["Skin_FR_Rodriguez_DZ",2];
   _this addmagazineCargoGlobal ["Skin_CZ_Soldier_Sniper_EP1_DZ",2];
   _this addmagazineCargoGlobal ["Skin_Graves_Light_DZ",2];
-  _this addmagazineCargoGlobal ["ItemBriefcase100oz",2];
+//  _this addmagazineCargoGlobal ["ItemBriefcase100oz",2];
 
   _this addbackpackCargoGlobal ["DZ_Backpack_EP1",2];
   _this setPos [4630.54, 9644.75, 4.93];
@@ -13279,7 +13279,7 @@ if (true) then
   _this addmagazineCargoGlobal ["PartFueltank",10];
   _this addmagazineCargoGlobal ["PartGlass",20];
   _this addmagazineCargoGlobal ["100Rnd_762x51_M240",10];
-  _this addmagazineCargoGlobal ["ItemBriefcase100oz",2];
+//  _this addmagazineCargoGlobal ["ItemBriefcase100oz",2];
 
   _this setPos [4723.22, 10310.8, 0.134];
 };

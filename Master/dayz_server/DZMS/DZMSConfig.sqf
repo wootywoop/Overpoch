@@ -5,10 +5,10 @@
 
 ///////////////////////////////////////////////////////////////////////
 // Do you want your players to gain humanity from killing mission AI?
-DZMSMissHumanity = false;
+DZMSMissHumanity = true;
 
 // How Much Humanity?
-DZMSCntHumanity = 25;
+DZMSCntHumanity = 50;
 
 // Do You Want AI to use NVGs?
 //(They are deleted on death)
@@ -29,17 +29,17 @@ DZMSCleanDeath = false;
 DZMSRunGear = true;
 
 // How long before bodies disappear? (in seconds) (default = 2400)
-DZMSBodyTime = 2400;
+DZMSBodyTime = 1200;
 
 // Percentage of AI that must be dead before mission completes (default = 0)
 //( 0 is 0% of AI / 0.50 is 50% / 1 is 100% )
-DZMSRequiredKillPercent = 0.50;
+DZMSRequiredKillPercent = 0.80;
 
 // How long in seconds before mission scenery disappears (default = 1800 / 0 = disabled)
-DZMSSceneryDespawnTimer = 1800;
+DZMSSceneryDespawnTimer = 1500;
 
 // Should crates despawn with scenery? (default = false)
-DZMSSceneryDespawnLoot = false;
+DZMSSceneryDespawnLoot = true;
 
 //////////////////////////////////////////////////////////////////////////////////////////
 // You can adjust the weapons that spawn in weapon crates inside DZMSWeaponCrateList.sqf

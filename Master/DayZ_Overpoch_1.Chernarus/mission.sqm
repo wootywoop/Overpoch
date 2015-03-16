@@ -3,41 +3,52 @@ class Mission
 {
 	addOns[]=
 	{
-		"chernarus",
-		"ca_modules_animals",
-		"dayz_anim",
-		"dayz_code",
-		"dayz_communityassets",
-		"dayz_weapons",
-		"dayz_equip",
-		"dayz_epoch",
-		"dayz_vehicles",
-		"cacharacters_pmc",
-		"ca_modules_functions",
-		"glt_m300t",
-		"pook_h13",
-		"csj_gyroac",
-		"map_eu",
-		"jetskiyanahuiaddon",
-		"gms_k98",
-		"RH_m14",
-		"FHQ_Remington",
-		"FHQ_Remington_ammo",
-		"FHQ_Remington_msr",
-		"FHQ_Remington_xm2010",
-		"FHQ_Remington_acr",
-		"FHQ_Remington_rsass",
-		"VILAS_WWP",
-		"VILAS_RW_Forces",
-		"VILAS_WWP_CO",
-		"VILAS_RW_Forces_CO",
-		"ddopp_taserpack",
-		"smk_anims_lite",
-		"MicroAirVehicles",
-		"oz_is_objects",
-		"gsc_units_stalker_patch",
-		"nissan_350z",
-		"monaro"
+	  "chernarus",
+      "ca_modules_animals",
+      "dayz_anim",
+      "dayz_code",
+      "dayz_communityassets",
+      "dayz_weapons",
+      "dayz_equip",
+      "dayz_epoch",
+      "dayz_vehicles",
+      "cacharacters_pmc",
+      "ca_modules_functions",
+      "glt_m300t",
+      "pook_h13",
+      "csj_gyroac",
+      "map_eu",
+      "jetskiyanahuiaddon",
+      "warehouse",
+      "mbg_buildings_3",
+      "mbg_killhouses",
+      "aif_arma1buildings",
+      "mbg_african_buildings",
+      "gms_k98",
+      "RH_m14",
+      "FHQ_Remington",
+      "FHQ_Remington_ammo",
+      "FHQ_Remington_msr",
+      "FHQ_Remington_xm2010",
+      "FHQ_Remington_acr",
+      "FHQ_Remington_rsass",
+      "VILAS_WWP",
+      "VILAS_RW_Forces",
+      "VILAS_WWP_CO",
+      "VILAS_RW_Forces_CO",
+      "ddopp_taserpack",
+      "smk_anims_lite",
+      "MicroAirVehicles",
+      "oz_is_objects",
+      "monaro",
+      "gsc_units_stalker_patch",
+      "american_law_enforcement",
+      "CYBP_Camels_Config",
+      "nissan_350z",
+      "ussr_cheytac",
+      "bb_mercenary",
+      "frb",
+      "goosuksf"
 	};
 	addOnsAuto[]=
 	{
@@ -1191,7 +1202,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=17;
+		items=19;
 		class Item0
 		{
 			position[]={7839.6055,381.33774,8414.7324};
@@ -1314,6 +1325,22 @@ class Mission
 			type="mil_dot";
 			colorName="ColorBlue";
 		};
+		class Item17 // prison marker
+            {
+            position[]={1348.44,339,4065.91};
+            name="Prison";
+            text="Prison";
+            type="o_mech_inf";
+            colorName="ColorRed";
+        };
+		class Item18 // Woot's garage marker
+            {
+            position[]={7047.66,300,2657.9};
+            name="Wootsgarage";
+            text="Woot's garage";
+            type="mil_circle";
+            colorName="ColorBlue";
+        };  
 	};
 	class Sensors
 	{
