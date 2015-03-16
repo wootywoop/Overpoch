@@ -133,8 +133,8 @@ if (!isDedicated) then {
 
 	if (isNil 'debugMonitor') then 
 	{
-		debugMonitor = true;
-		_nill = execvm "custom\debug_monitor.sqf";
+    debugMonitor = true;
+    _nill = execvm "custom\debug_monitor.sqf";
 	};
 };
 

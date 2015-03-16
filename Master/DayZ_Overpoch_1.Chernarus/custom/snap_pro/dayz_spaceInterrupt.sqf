@@ -119,7 +119,14 @@ if (_dikCode in (actionKeys "GetOver")) then {
 //if (_dikCode == 57) then {_handled = true}; // space
 //if (_dikCode in actionKeys 'MoveForward' or _dikCode in actionKeys 'MoveBack') then {r_interrupt = true};
 if (_dikCode == 210) then {
-		_nill = execvm "\z\addons\dayz_code\actions\playerstats.sqf";
+	if (isNil 'debugMonitor') then {
+		debugMonitor = true;
+		_nill = execvm "custom\debug_monitor.sqf";
+	} else {
+		debugMonitor = !debugMonitor;
+		hintSilent '';
+		_nill = execvm "custom\debug_monitor.sqf";
+	};
 };
 
 if (_dikCode in actionKeys "ForceCommandingMode") then {_handled = true};
@@ -139,10 +146,13 @@ if (_dikCode in actionKeys "Chat" and (diag_tickTime - dayz_lastCheckBit > 10)) 
 	dayz_lastCheckBit = diag_tickTime;
 	[player,15,false,(getPosATL player)] spawn player_alertZombies;
 };
+
+/*
 if (_dikCode in actionKeys "User20" and (diag_tickTime - dayz_lastCheckBit > 5)) then {
 	dayz_lastCheckBit = diag_tickTime;
 	_nill = execvm "\z\addons\dayz_code\actions\playerstats.sqf";
 };
+*/
 
 // numpad 8 0x48 now pgup 0xC9 1
 if ((_dikCode == 0xC9 and (!_alt or !_ctrl)) or (_dikCode in actionKeys "User15")) then {

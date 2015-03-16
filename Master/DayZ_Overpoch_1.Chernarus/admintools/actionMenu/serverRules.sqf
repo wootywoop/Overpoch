@@ -6,19 +6,21 @@
 */
 
 "Server Rules" hintC parseText format ["
-<t size='1.1' shadow='1'align='left' color='#FFFFFF'>No basing in high loot areas</t><br/>
+<t size='1.1' shadow='1'align='left' color='#FFFFFF'>Respect the Admins and they will respect you.</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
-<t size='1.1' shadow='1'align='left' color='#FFFFFF'>No camping traders for any reason</t><br/>
+<t size='1.1' shadow='1'align='left' color='#FFFFFF'>No hacking/scripting/duping or anything related to the buggyness of Dayz/arma2.</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
-<t size='1.1' shadow='1'align='left' color='#FFFFFF'>No stealing from or destroying locked vehicles</t><br/>
+<t size='1.1' shadow='1'align='left' color='#FFFFFF'>Racist, sexist, homophobic or foul language will not be tolerated.</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
-<t size='1.1' shadow='1'align='left' color='#FFFFFF'>No mic in side chat</t><br/>
+<t size='1.1' shadow='1'align='left' color='#FFFFFF'>NO PVP (Unless during server events as defined by the admins).</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
-<t size='1.1' shadow='1'align='left' color='#FFFFFF'>Base raiding is allowed, just don't be a dick about it</t><br/>
+<t size='1.1' shadow='1'align='left' color='#FFFFFF'>No voice over side chat.</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
-<t size='1.1' shadow='1'align='left' color='#FFFFFF'>Only ask for admins if absolutely necessary</t><br/>
+<t size='1.1' shadow='1'align='left' color='#FFFFFF'>No stealing from players - this includes vehicles/loot/gear AND theft from missions cleared by other players without their permission.</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
-<t size='1.1' shadow='1'align='left' color='#FFFFFF'>To get admin help ask in side chat or in TeamSpeak</t><br/>
+<t size='1.1' shadow='1'align='left' color='#FFFFFF'>No destruction of player assets (vehicles, bases etc).</t><br/>
 <t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
-<t size='1.1' shadow='1'align='left' color='#FFFFFF'>Place TeamSpeak IP here</t><br/>
+<t size='1.1' shadow='1'align='left' color='#FFFFFF'>No building on high value loot spawns and other map assets (petrol stations and military assets).</t><br/>
+<t size='.7' shadow='1'align='left' color='#FFFFFF'></t><br/>
+<t size='1.1' shadow='1'align='left' color='#FFFFFF'>To get admin help raise a ticket in the action menu</t><br/>
 "];

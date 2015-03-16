@@ -1,6 +1,9 @@
+//Let Zeds know
+[player,4,true,(getPosATL player)] spawn player_alertZombies;
+
 while {debugMonitor} do
 {
-	_time = (round(180-(serverTime)/60));
+	_time = (round(240-(serverTime)/60));
 	_hours = (floor(_time/60));
 	_minutes = (_time - (_hours * 60));
 	
@@ -21,8 +24,8 @@ while {debugMonitor} do
 	// You can delete the server website here line (entire line) if you want
 	// You can also delete the entire TeamSpeak IP line if you want
 	hintSilent parseText format ["
-		<t size='1.25' font='Bitstream' align='center' color='#5882FA'>DayZ Overpoch</t><br/>
-		<t size='1.05' font='Bitstream' align='center' color='#5882FA'>www.gamingdeluxe.co.uk</t><br/>
+		<t size='1.25' font='Bitstream' align='center' color='#5882FA'>FatCat's Overpoch PVE Server</t><br/>
+		<t size='1.05' font='Bitstream' align='center' color='#5882FA'>www.fatcat.gamingdeluxe.net</t><br/> 
 		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'></t><t size='0.95 'font='Bitstream' align='right'></t><br/>
 		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>Players Online: </t><t size='0.95 'font='Bitstream' align='right'>%1</t><br/>
 		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>Murders: </t><t size='0.95' font='Bitstream' align='right'>%3</t><br/>
@@ -32,7 +35,8 @@ while {debugMonitor} do
 		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>Blood: </t><t size='0.95' font='Bitstream' align='right'>%5</t><br/>
 		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'>FPS: </t><t size='0.95' font='Bitstream' align='right'>%7</t><br/>
 		<t size='0.95' font='Bitstream' align='left' color='#FFBF00'></t><t size='0.95 'font='Bitstream' align='right'></t><br/>
-		<t size='1.15' font='Bitstream'align='center' color='#5882FA'>Press INS to toggle</t><br/>",
+		<t size='1.15' font='Bitstream'align='center' color='#5882FA'>Mumble IP - 81.19.216.155:64738 password - fatcat</t><br/>
+		<t size='1.15' font='Bitstream'align='center' color='#5882FA'>Server restart in %8:%9</t><br/>",
 			
 		(count playableUnits),
 		(player getVariable['zombieKills', 0]),
