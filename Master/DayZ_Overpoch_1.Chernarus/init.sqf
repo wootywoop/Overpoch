@@ -87,7 +87,6 @@ call compile preprocessFileLineNumbers "\z\addons\dayz_code\medical\setup_functi
 progressLoadingScreen 0.4;
 call compile preprocessFileLineNumbers "compiles.sqf";				//Compile regular functions
 call compile preprocessFileLineNumbers "custom\compiles.sqf";							 //Compile custom compiles
-call compile preprocessFileLineNumbers "addons\bike\init.sqf";                          //Deployable Bike Init
 /*ZSC*/	
 call compile preprocessFileLineNumbers "ZSC\gold\ZSCinit.sqf";
 /*ZSC*/		
