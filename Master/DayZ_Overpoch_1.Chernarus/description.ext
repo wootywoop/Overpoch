@@ -164,7 +164,7 @@ class DayZ_loadingScreen
 
 class CfgSounds
 {
-    sounds[] = {fox, Brief_Open_Sound};
+    sounds[] = {fox, Brief_Open_Sound, Radio_Message_Sound};
 	
     class fox
     {
@@ -179,6 +179,13 @@ class CfgSounds
 		sound[] = {addons\mbc\brief_open.ogg,0.4,1};
 		titles[] = {};
 	};
+	
+	class Radio_Message_Sound
+    {
+        name = "Radio_Message_Sound";
+        sound[] = {custom\remote\radio.ogg,0.4,1};
+        titles[] = {};
+    };
 };
 
 #include "custom\snap_pro\snappoints.hpp"  //Snap Build Pro

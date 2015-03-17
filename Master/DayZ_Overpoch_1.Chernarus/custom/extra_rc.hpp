@@ -15,4 +15,10 @@ class ExtraRc {
 			script = "execVM 'addons\mbc\open_brief.sqf'";
 		};
 	};
+	class ItemRadio {
+        class switchOnOff {
+            text = "Switch ON/OFF";
+            script = "execVM 'custom\remote\switch_on_off.sqf'";
+        };
+    };
 };
