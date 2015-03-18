@@ -87,9 +87,38 @@ if(isServer) then {
 	Place your vehicle patrols below this line
 	*/
 
-
-
-
+	[
+		[3977.17,10942.9,0.001],				// Position to patrol NWAF NORTH
+		[3977.17,10942.9,0.001],				// Position to spawn at
+		500,								// Radius of patrol
+		10,									// Number of waypoints to give
+		"2S6M_Tunguska",					// Classname of vehicle (make sure it has driver and gunner)
+		"extreme",							// Skill level of units (easy, medium, hard, extreme, Random)
+		"Random",							// Skin classname, use "Random" or classname here
+		"Bandit"							// AI Type, "Hero" or "Bandit".
+	] spawn vehicle_patrol;
+	
+	[
+		[4200,10760,0],				// Position to patrol NORTH NWAF
+		[4200,10760,0],				// Position to spawn at
+		500,								// Radius of patrol
+		10,									// Number of waypoints to give
+		"M1A2_TUSK_MG",					// Classname of vehicle (make sure it has driver and gunner)
+		"extreme",							// Skill level of units (easy, medium, hard, extreme, Random)
+		"Random",							// Skin classname, use "Random" or classname here
+		"Bandit"							// AI Type, "Hero" or "Bandit".
+	] spawn vehicle_patrol;
+	
+	[
+		[4500,10260,0],				// Position to patrol Mid NWAF
+		[4500,10260,0],				// Position to spawn at
+		500,								// Radius of patrol
+		10,									// Number of waypoints to give
+		"BAF_FV510_W",					// Classname of vehicle (make sure it has driver and gunner)
+		"extreme",							// Skill level of units (easy, medium, hard, extreme, Random)
+		"Random",							// Skin classname, use "Random" or classname here
+		"Bandit"							// AI Type, "Hero" or "Bandit".
+	] spawn vehicle_patrol;
 
 	/*
 	Paradropped unit custom spawn Eg.

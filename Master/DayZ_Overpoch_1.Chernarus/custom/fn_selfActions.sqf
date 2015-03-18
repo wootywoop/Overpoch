@@ -993,17 +993,3 @@ if (_dogHandle > 0) then {
 	player removeAction s_player_calldog;
 	s_player_calldog = 		-1;
 };
-
-// ---------------------------------------FIRE DANCE START------------------------------------
-if (inflamed cursorTarget and _canDo) then {
-        if (s_player_dance < 0) then {
-        s_player_dance = player addAction ["Dance!","custom\dance.sqf",cursorTarget, 0, false, true, "",""];
-//        s_player_fight = player addAction["Fight!","Scripts\dance\boxing.sqf",cursorTarget, 0, false, true, "",""];
-    };
-} else {
-    player removeAction s_player_dance;
-//    player removeAction s_player_fight;
-    s_player_dance = -1;
-//    s_player_fight = -1;
-};
-// ---------------------------------------FIRE DANCE END------------------------------------
