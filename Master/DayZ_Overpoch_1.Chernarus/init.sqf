@@ -95,6 +95,7 @@ progressLoadingScreen 0.5;
 call compile preprocessFileLineNumbers "server_traders_cherno_11.sqf";
 call compile preprocessFileLineNumbers "admintools\config.sqf"; // Epoch admin Tools config file
 call compile preprocessFileLineNumbers "admintools\variables.sqf"; // Epoch admin Tools variables
+call compile preprocessFileLineNumbers "logistic\init.sqf"; //logistics - lift and tow
 progressLoadingScreen 1.0;
 
 "filmic" setToneMappingParams [0.153, 0.357, 0.231, 0.1573, 0.011, 3.750, 6, 4]; setToneMapping "Filmic";
@@ -155,7 +156,7 @@ DefaultBackpack = "";
 DefaultBackpackWeapon = "";
 
 //Load custom scripts
-[] execVM "R3F_ARTY_AND_LOG\init.sqf";  //R3F Lift and Tow
+
 [] execvm 'AGN\agn_SafeZoneCommander.sqf';  //Trader Safe Zones
 [] execVM "admintools\Activate.sqf"; // Epoch admin tools
 waitUntil {!isNil "PVDZE_plr_LoginRecord"};
