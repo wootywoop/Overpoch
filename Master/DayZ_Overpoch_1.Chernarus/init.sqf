@@ -79,7 +79,7 @@ dayz_fullMoonNights = true;
 dayz_poleSafeArea = 90; // Default = 30m, the buildable distance
 
 //Load in compiled functions
-call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
+call compile preprocessFileLineNumbers "custom\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
 progressLoadingScreen 0.1;
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\publicEH.sqf";				//Initilize the publicVariable event handlers
 progressLoadingScreen 0.2;
