@@ -204,6 +204,3 @@ class CfgSounds
 #include "custom\extra_rc.hpp"
 // Mystery briefcase
 #include "addons\mbc\dialogs.hpp"
-//Skins
-#include "zupa\skins\SkinGui.hpp"
-#include "zupa\skins\defines.hpp"
