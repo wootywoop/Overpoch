@@ -44,7 +44,7 @@ ModList = [
 
 	// This option requires players to have the parts for building a bike (consumes the parts)
 	// Required parts: two wheels, one scrap metal
-	RequirePartsBike = false;
+	RequirePartsBike = true;
 
 	// This option dictates if players are allowed to repack a bike to get their items back
 	AllowPackBike = true;
@@ -56,7 +56,7 @@ ModList = [
 	AllowBuildMozzie = true;
 
 	// This option requires players to have a toolbox to build a Mozzie (consumes the toolbox)
-	RequireToolBoxMozzie = false;
+	RequireToolBoxMozzie = true;
 
 	// This option requires players to have the parts for building a Mozzie (consumes the parts)
 	// Required parts: main rotor, two scrap, one engine, one jerry can (full)

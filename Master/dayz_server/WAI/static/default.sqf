@@ -9,7 +9,7 @@ if(isServer) then {
 		[953.237,4486.48,0.001],			// Position
 		4,									// Number Of units
 		"Random",							// Skill level of unit (easy, medium, hard, extreme, Random)
-		"Random",							// Primary gun set number or gun and rocket launcher. Syntax is "Random", for gun only or ["Random","AT"], for gun and launcher
+		"Random",	or ["Random","at"],		// Primary gun set number and rocket launcher. "Random" for random weapon set, "at" for anti-tank, "aa" for anti-air launcher
 		4,									// Number of magazines
 		"Random",							// Backpack classname, use "Random" or classname here
 		"Random",							// Skin classname, use "Random" or classname here
@@ -66,16 +66,9 @@ if(isServer) then {
 	Place your heli patrols below
 	*/
 
-	[
-		[3900,11460,0],						// Position to patrol
-		[1200,12860,0],						// Position to spawn chopper at
-		1000,								// Radius of patrol
-		8,									// Number of waypoints to give
-		"AH1Z",								// Classname of vehicle (make sure it has driver and two gunners)
-		"extreme",							// Skill level of units (easy, medium, hard, extreme, Random)
-		"Random",							// Skin classname, use "Random" or classname here
-		"Bandit"							// AI Type, "Hero" or "Bandit".
-	] spawn heli_patrol;
+
+
+
 
 	/* 
 	Custom Vehicle patrol spawns Eg. (Watch out they are stupid)
@@ -94,38 +87,9 @@ if(isServer) then {
 	Place your vehicle patrols below this line
 	*/
 
-	[
-		[3977.17,10942.9,0.001],				// Position to patrol NWAF NORTH
-		[3977.17,10942.9,0.001],				// Position to spawn at
-		500,								// Radius of patrol
-		10,									// Number of waypoints to give
-		"2S6M_Tunguska",					// Classname of vehicle (make sure it has driver and gunner)
-		"extreme",							// Skill level of units (easy, medium, hard, extreme, Random)
-		"Random",							// Skin classname, use "Random" or classname here
-		"Bandit"							// AI Type, "Hero" or "Bandit".
-	] spawn vehicle_patrol;
-	
-	[
-		[4200,10760,0],				// Position to patrol NORTH NWAF
-		[4200,10760,0],				// Position to spawn at
-		500,								// Radius of patrol
-		10,									// Number of waypoints to give
-		"M1A2_TUSK_MG",					// Classname of vehicle (make sure it has driver and gunner)
-		"extreme",							// Skill level of units (easy, medium, hard, extreme, Random)
-		"Random",							// Skin classname, use "Random" or classname here
-		"Bandit"							// AI Type, "Hero" or "Bandit".
-	] spawn vehicle_patrol;
-	
-	[
-		[4500,10260,0],				// Position to patrol Mid NWAF
-		[4500,10260,0],				// Position to spawn at
-		500,								// Radius of patrol
-		10,									// Number of waypoints to give
-		"BAF_FV510_W",					// Classname of vehicle (make sure it has driver and gunner)
-		"extreme",							// Skill level of units (easy, medium, hard, extreme, Random)
-		"Random",							// Skin classname, use "Random" or classname here
-		"Bandit"							// AI Type, "Hero" or "Bandit".
-	] spawn vehicle_patrol;
+
+
+
 
 	/*
 	Paradropped unit custom spawn Eg.
