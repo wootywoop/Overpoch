@@ -13612,7 +13612,7 @@ if (true) then
 _vehicle_3078 = objNull;
 if (true) then
 {
-  _this = createVehicle ["USVehicleBox_EP1", [4782.22, 10251.2, 13.921], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["USVehicleBox_EP1", [3688.65, 14499.4, 10.707], [], 0, "CAN_COLLIDE"];
   _vehicle_3078 = _this;
   _this setDir 62.275021;
     //Clear Cargo	
@@ -13633,14 +13633,14 @@ if (true) then
   _this addmagazineCargoGlobal ["CinderBlocks",20];
   _this addmagazineCargoGlobal ["MortarBucket",5];
 
-  _this setPos [4782.22, 10251.2, 13.921];
+  _this setPos [3688.65, 14499.4, 10.707];
 };
 
 //HQ Gear MOVED
 _vehicle_3478 = objNull;
 if (true) then
 {
-  _this = createVehicle ["USOrdnanceBox_EP1", [4690.91, 10447.2, 3.587], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["USOrdnanceBox_EP1", [3672.96,14901.3,0.001], [], 0, "CAN_COLLIDE"];
   _vehicle_3478 = _this;
   _this setDir -94.266945;
     //Clear Cargo	
@@ -13660,14 +13660,14 @@ if (true) then
   _this addmagazineCargoGlobal ["20Rnd_762x51_B_SCAR",10];
   _this addmagazineCargoGlobal ["20Rnd_762x51_SB_SCAR",10];
   
-  _this setPos [4690.91, 10447.2, 3.587];
+  _this setPos [3672.96,14901.3,0.001];
 };
 
 //Heli Crash MOVED
 _vehicle_3484 = objNull;
 if (true) then
 {
-  _this = createVehicle ["USOrdnanceBox_EP1", [4719.9, 10216.7, 12.92], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["USOrdnanceBox_EP1", [3366.14, 14308, 4.79], [], 0, "CAN_COLLIDE"];
   _vehicle_3484 = _this;
   _this setDir -121.73288;
     //Clear Cargo	
@@ -13692,13 +13692,13 @@ if (true) then
   _this addmagazineCargoGlobal ["100Rnd_762x51_M240",10];
 //  _this addmagazineCargoGlobal ["Stinger",2];
   
-  _this setPos [4719.9, 10216.7, 12.92];
+  _this setPos [3366.14, 14308, 4.79];
 };
 //Mess Hall MOVED
 _vehicle_3486 = objNull;
 if (true) then
 {
-  _this = createVehicle ["USOrdnanceBox_EP1", [4630.54, 9644.75, 4.93], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["USOrdnanceBox_EP1", [3467.45, 14218, 12.338], [], 0, "CAN_COLLIDE"];
   _vehicle_3486 = _this;
   _this setDir -116.14831;
     //Clear Cargo	
@@ -13713,17 +13713,17 @@ if (true) then
   _this addmagazineCargoGlobal ["Skin_FR_Rodriguez_DZ",2];
   _this addmagazineCargoGlobal ["Skin_CZ_Soldier_Sniper_EP1_DZ",2];
   _this addmagazineCargoGlobal ["Skin_Graves_Light_DZ",2];
-//  _this addmagazineCargoGlobal ["ItemBriefcase100oz",2];
+//  _this addmagazineCargoGlobal ["ItemBriefcase100oz",5];
 
   _this addbackpackCargoGlobal ["DZ_Backpack_EP1",2];
-  _this setPos [4630.54, 9644.75, 4.93];
+  _this setPos [3467.45, 14218, 12.338];
 };
 
 //Abrams MOVED
 _vehicle_3121 = objNull;
 if (true) then
 {
-  _this = createVehicle ["USOrdnanceBox_EP1", [4723.22, 10310.8, 0.134], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["USOrdnanceBox_EP1", [3678.26, 14050.7, 0.222], [], 0, "CAN_COLLIDE"];
   _vehicle_3121 = _this;
   _this setDir -17.79924;
     //Clear Cargo	
@@ -13736,9 +13736,9 @@ if (true) then
   _this addmagazineCargoGlobal ["PartFueltank",10];
   _this addmagazineCargoGlobal ["PartGlass",20];
   _this addmagazineCargoGlobal ["100Rnd_762x51_M240",10];
-//  _this addmagazineCargoGlobal ["ItemBriefcase100oz",2];
+//  _this addmagazineCargoGlobal ["ItemBriefcase100oz",5];
 
-  _this setPos [4723.22, 10310.8, 0.134];
+  _this setPos [3678.26, 14050.7, 0.222];
 };
 
 };
