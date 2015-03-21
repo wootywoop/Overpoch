@@ -13623,7 +13623,7 @@ if (true) then
   _this addWeaponCargoGlobal ["ItemToolbox",2];
   _this addWeaponCargoGlobal ["ItemSledge",1];
 
-//  _this addmagazineCargoGlobal ["ItemBriefcase100oz",2];
+  _this addmagazineCargoGlobal ["ItemBriefcase100oz",5];
   _this addmagazineCargoGlobal ["bulk_ItemTankTrap",5];
   _this addmagazineCargoGlobal ["bulk_ItemWire",5];
   _this addmagazineCargoGlobal ["bulk_ItemSandbag",5];
@@ -13655,7 +13655,7 @@ if (true) then
   _this addWeaponCargoGlobal ["SCAR_L_STD_Mk4CQT",1];
   _this addWeaponCargoGlobal ["SCAR_H_CQC_CCO_SD",1];
  
-//  _this addmagazineCargoGlobal ["ItemBriefcase100oz",2];
+  _this addmagazineCargoGlobal ["ItemBriefcase100oz",5];
   _this addmagazineCargoGlobal ["30Rnd_556x45_Stanag",20];
   _this addmagazineCargoGlobal ["20Rnd_762x51_B_SCAR",10];
   _this addmagazineCargoGlobal ["20Rnd_762x51_SB_SCAR",10];
@@ -13680,7 +13680,7 @@ if (true) then
   _this addWeaponCargoGlobal ["M4A1_HWS_GL",1];
   _this addWeaponCargoGlobal ["M16A4_ACG_GL",2];
   _this addWeaponCargoGlobal ["M240_DZ",1];
-//  _this addWeaponCargoGlobal ["Stinger",1];
+  _this addWeaponCargoGlobal ["Stinger",1];
   
   _this addmagazineCargoGlobal ["PartGeneric",5];
   _this addmagazineCargoGlobal ["PartEngine",2];
@@ -13690,7 +13690,7 @@ if (true) then
   _this addmagazineCargoGlobal ["PartGlass",10];
   _this addmagazineCargoGlobal ["30Rnd_556x45_Stanag",20];
   _this addmagazineCargoGlobal ["100Rnd_762x51_M240",10];
-//  _this addmagazineCargoGlobal ["Stinger",2];
+  _this addmagazineCargoGlobal ["Stinger",2];
   
   _this setPos [3366.14, 14308, 4.79];
 };
@@ -13713,7 +13713,7 @@ if (true) then
   _this addmagazineCargoGlobal ["Skin_FR_Rodriguez_DZ",2];
   _this addmagazineCargoGlobal ["Skin_CZ_Soldier_Sniper_EP1_DZ",2];
   _this addmagazineCargoGlobal ["Skin_Graves_Light_DZ",2];
-//  _this addmagazineCargoGlobal ["ItemBriefcase100oz",5];
+  _this addmagazineCargoGlobal ["ItemBriefcase100oz",5];
 
   _this addbackpackCargoGlobal ["DZ_Backpack_EP1",2];
   _this setPos [3467.45, 14218, 12.338];
@@ -13736,7 +13736,7 @@ if (true) then
   _this addmagazineCargoGlobal ["PartFueltank",10];
   _this addmagazineCargoGlobal ["PartGlass",20];
   _this addmagazineCargoGlobal ["100Rnd_762x51_M240",10];
-//  _this addmagazineCargoGlobal ["ItemBriefcase100oz",5];
+  _this addmagazineCargoGlobal ["ItemBriefcase100oz",5];
 
   _this setPos [3678.26, 14050.7, 0.222];
 };
