@@ -31,8 +31,8 @@ if(isServer) then {
 
 		ai_kills_gain				= true;			// add kill to bandit/human kill score
 		ai_humanity_gain			= true;			// gain humanity for killing AI
-		ai_add_humanity				= 50;			// amount of humanity gained for killing a bandit AI
-		ai_remove_humanity			= 50;			// amount of humanity lost for killing a hero AI
+		ai_add_humanity				= 25;			// amount of humanity gained for killing a bandit AI
+		ai_remove_humanity			= 75;			// amount of humanity lost for killing a hero AI
 		ai_special_humanity			= 150;			// amount of humanity gain or loss for killing a special AI dependant on player alignment
 		
 		ai_skill_extreme			= [["aimingAccuracy",1.00],["aimingShake",1.00],["aimingSpeed",1.00],["endurance",1.00],["spotDistance",1.00],["spotTime",1.00],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",1.00]]; 	// Extreme
