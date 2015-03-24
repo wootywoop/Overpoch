@@ -138,17 +138,6 @@ if(isServer) then {
 
 	Place your heli patrols below
 	*/
-
-	[
-		[3475.67,14622.2,0.002],			// Position to patrol
-		[1200,12860,0],						// Position to spawn chopper at
-		1000,								// Radius of patrol
-		8,									// Number of waypoints to give
-		"AH1Z",								// Classname of vehicle (make sure it has driver and two gunners)
-		"extreme",							// Skill level of units (easy, medium, hard, extreme, Random)
-		"Random",							// Skin classname, use "Random" or classname here
-		"Bandit"							// AI Type, "Hero" or "Bandit".
-	] spawn heli_patrol;
 	
 	[
 		[3575.67,14522.2,0.002],			// Position to patrol
