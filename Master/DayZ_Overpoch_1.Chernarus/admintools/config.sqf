@@ -14,7 +14,7 @@ AdminList = [
 "999999999" // <Admin In-Game Name>
 ];
 ModList = [
-"999999999", // <Moderator In-Game Name>
+"76561198133676900", // <Moderator Temp>
 "999999999" // <Moderator In-Game Name>
 ];
 
