@@ -200,6 +200,7 @@ class CfgSounds
 #include "ZSC\config\ZSCdefines.hpp"
 #include "ZSC\advancedTrading\advancedTrading.hpp"
 #include "ZSC\config\ZSCdialogs.hpp"
+#include "ZSC\skins\SkinGui.hpp"
 // RC
 #include "custom\extra_rc.hpp"
 // Mystery briefcase
