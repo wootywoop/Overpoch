@@ -5,7 +5,7 @@ class MenClothing
 	enableSimulation = true;
 	onLoad = "uiNamespace setVariable ['MenClothing', _this select 0];";
 	class Controls {
-		class RscText_9000: ZSC_RscTextT
+		class RscText_9000: RscTextT
 		{
 			idc = 20002;
 			x = 0.30 * safezoneW + safezoneX;
@@ -14,7 +14,7 @@ class MenClothing
 			h = 0.5 * safezoneH;
 			colorBackground[] = {0,0,0,0.8};
 		};	
-		class RscListbox_9001: ZSC_RscListbox
+		class RscListbox_9001: RscListbox
 		{
 			idc = 20014;
 			x = 0.31* safezoneW + safezoneX;
@@ -24,7 +24,7 @@ class MenClothing
 			soundSelect[] = {"",0.1,1};
 			colorBackground[] = {0.1,0.1,0.1,0.8};
 		};		
-		class RscShortcutButton_9004: ZSC_RscShortcutButton
+		class RscShortcutButton_9004: RscShortcutButton
 		{
 			idc = 20005;
 			text = "Change";
@@ -34,7 +34,7 @@ class MenClothing
 			h = 0.06 * safezoneH;
 			onButtonClick = "[(lbCurSel 20014)]  call ApplySkinList;";
 		};	
-		class RscShortcutButton_9006: ZSC_RscShortcutButton
+		class RscShortcutButton_9006: RscShortcutButton
 		{
 			idc = 20006;
 			text = "Close";
@@ -44,7 +44,7 @@ class MenClothing
 			h = 0.06 * safezoneH;
 			onButtonClick = "CloseDialog 0;";
 		};		
-		class RscText_9007: ZSC_RscTextT
+		class RscText_9007: RscTextT
 		{
 			idc = 20007;
 			text = "Zupa Clothing";
@@ -55,7 +55,7 @@ class MenClothing
 			colorBackground[] = {0,0,0,0.8};	
 			colorText[] = {1,1,1,1};			
 		};
-		class RscText_9008: ZSC_RscTextT
+		class RscText_9008: RscTextT
 		{
 			idc = 20008;
 			text = "Possible Skins";

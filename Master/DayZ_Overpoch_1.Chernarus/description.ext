@@ -198,6 +198,7 @@ class CfgSounds
 #include "spawn\spawn.hpp"
 // ZSC
 #include "ZSC\config\ZSCdefines.hpp"
+#include "ZSC\skins\defines.hpp"
 #include "ZSC\advancedTrading\advancedTrading.hpp"
 #include "ZSC\config\ZSCdialogs.hpp"
 #include "ZSC\skins\SkinGui.hpp"
