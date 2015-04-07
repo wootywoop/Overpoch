@@ -164,7 +164,7 @@ class DayZ_loadingScreen
 
 class CfgSounds
 {
-    sounds[] = {fox, Brief_Open_Sound, introSong, Radio_Message_Sound};
+    sounds[] = {fox, Brief_Open_Sound, Radio_Message_Sound};
 	
     class fox
     {
@@ -179,13 +179,6 @@ class CfgSounds
 		sound[] = {addons\mbc\brief_open.ogg,0.4,1};
 		titles[] = {};
 	};
-	
-	class introSong
-    {
-		name="introSong";
-		sound[]={introSong.ogg,0.9,1};
-		titles[] = {};
-    };
 	
 	class Radio_Message_Sound
     {
