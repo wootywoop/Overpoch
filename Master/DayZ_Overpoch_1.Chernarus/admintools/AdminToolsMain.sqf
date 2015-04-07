@@ -411,6 +411,7 @@ BuildablesCinder = [
 BuildablesOther = [
 ["",true],
 	["Metal Floor",[],"", -5,[["expression",format[_EXECscript7,"MetalFloor_DZ"]]],"1","1"],
+	["Water Well",[],"", -5,[["expression",format[_EXECscript7,"Housepumpa "]]],"1","1"],
 	["Metal Panel",[],"", -5,[["expression",format[_EXECscript7,"MetalPanel_DZ"]]],"1","1"],
 	["Tank Trap",[],"", -5,[["expression",format[_EXECscript7,"Hedgehog_DZ"]]],"1","1"],
 	["Wire Fence",[],"", -5,[["expression",format[_EXECscript7,"Fort_RazorWire"]]],"1","1"],
