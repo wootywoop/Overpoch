@@ -13608,7 +13608,133 @@ if (true) then
   _this setPos [5798.1182, 10163.449, 3.0517578e-005];
 };
 
-//NWAF Crate Area MOVED
+_vehicle_4492 = objNull;
+if (true) then
+{
+  _this = createVehicle ["MAP_runway_beton", [11867.72, 12630.063, 0.20420979], [], 0, "CAN_COLLIDE"];
+  _vehicle_4492 = _this;
+  _this setDir 19.712704;
+  _this setPos [11867.72, 12630.063, 0.20420979];
+};
+
+_vehicle_4493 = objNull;
+if (true) then
+{
+  _this = createVehicle ["MAP_runway_beton", [11830.149, 12643.46, -4.5776367e-005], [], 0, "CAN_COLLIDE"];
+  _vehicle_4493 = _this;
+  _this setDir 19.712704;
+  _this setPos [11830.149, 12643.46, -4.5776367e-005];
+};
+
+_vehicle_4494 = objNull;
+if (true) then
+{
+  _this = createVehicle ["MAP_runway_beton", [11792.584, 12656.902, 6.1035156e-005], [], 0, "CAN_COLLIDE"];
+  _vehicle_4494 = _this;
+  _this setDir 19.712704;
+  _this setPos [11792.584, 12656.902, 6.1035156e-005];
+};
+
+_vehicle_4495 = objNull;
+if (true) then
+{
+  _this = createVehicle ["MAP_runway_beton", [11755.009, 12670.354, 3.0517578e-005], [], 0, "CAN_COLLIDE"];
+  _vehicle_4495 = _this;
+  _this setDir 19.712704;
+  _this setPos [11755.009, 12670.354, 3.0517578e-005];
+};
+
+_vehicle_4496 = objNull;
+if (true) then
+{
+  _this = createVehicle ["MAP_runway_main", [12480.165, 12572.751], [], 0, "CAN_COLLIDE"];
+  _vehicle_4496 = _this;
+  _this setDir -70.07972;
+  _this setPos [12480.165, 12572.751];
+};
+
+_vehicle_4497 = objNull;
+if (true) then
+{
+  _this = createVehicle ["MAP_runway_main", [12405.039, 12600.028, -0.067199707], [], 0, "CAN_COLLIDE"];
+  _vehicle_4497 = _this;
+  _this setDir -70.137962;
+  _this setPos [12405.039, 12600.028, -0.067199707];
+};
+
+_vehicle_4498 = objNull;
+if (true) then
+{
+  _this = createVehicle ["MAP_runway_main", [12330.189, 12627.022, -0.11465454], [], 0, "CAN_COLLIDE"];
+  _vehicle_4498 = _this;
+  _this setDir -70.137962;
+  _this setPos [12330.189, 12627.022, -0.11465454];
+};
+
+_vehicle_4499 = objNull;
+if (true) then
+{
+  _this = createVehicle ["MAP_runway_main", [12255.42, 12654.009, -0.16578674], [], 0, "CAN_COLLIDE"];
+  _vehicle_4499 = _this;
+  _this setDir -70.137962;
+  _this setPos [12255.42, 12654.009, -0.16578674];
+};
+
+_vehicle_4500 = objNull;
+if (true) then
+{
+  _this = createVehicle ["MAP_runway_main", [12180.584, 12681, -0.12969971], [], 0, "CAN_COLLIDE"];
+  _vehicle_4500 = _this;
+  _this setDir -70.137962;
+  _this setPos [12180.584, 12681, -0.12969971];
+};
+
+_vehicle_4501 = objNull;
+if (true) then
+{
+  _this = createVehicle ["MAP_pumpa", [12127.26, 12757.207, -6.1035156e-005], [], 0, "CAN_COLLIDE"];
+  _vehicle_4501 = _this;
+  _this setDir -70.137962;
+  _this setPos [12127.26, 12757.207, -6.1035156e-005];
+};
+
+_vehicle_4502 = objNull;
+if (true) then
+{
+  _this = createVehicle ["MAP_runway_main", [12105.729, 12708.058, -0.1159668], [], 0, "CAN_COLLIDE"];
+  _vehicle_4502 = _this;
+  _this setDir -70.137962;
+  _this setPos [12105.729, 12708.058, -0.1159668];
+};
+
+_vehicle_4503 = objNull;
+if (true) then
+{
+  _this = createVehicle ["MAP_runway_main", [12030.743, 12735.176, -0.15664673], [], 0, "CAN_COLLIDE"];
+  _vehicle_4503 = _this;
+  _this setDir -70.137962;
+  _this setPos [12030.743, 12735.176, -0.15664673];
+};
+
+_vehicle_4504 = objNull;
+if (true) then
+{
+  _this = createVehicle ["MAP_runway_main", [11955.516, 12762.297, -0.21594238], [], 0, "CAN_COLLIDE"];
+  _vehicle_4504 = _this;
+  _this setDir -70.137962;
+  _this setPos [11955.516, 12762.297, -0.21594238];
+};
+
+_vehicle_4505 = objNull;
+if (true) then
+{
+  _this = createVehicle ["MAP_runway_main", [11880.507, 12789.333, -0.21595764], [], 0, "CAN_COLLIDE"];
+  _vehicle_4505 = _this;
+  _this setDir -70.137962;
+  _this setPos [11880.507, 12789.333, -0.21595764];
+};
+
+//Bandit city ATC
 _vehicle_3078 = objNull;
 if (true) then
 {
@@ -13636,7 +13762,7 @@ if (true) then
   _this setPos [3688.65, 14499.4, 10.707];
 };
 
-//HQ Gear MOVED
+//Bandit city outer plane
 _vehicle_3478 = objNull;
 if (true) then
 {
@@ -13663,7 +13789,7 @@ if (true) then
   _this setPos [3672.96,14901.3,0.001];
 };
 
-//Heli Crash MOVED
+//Bandit city mil camp (offices)
 _vehicle_3484 = objNull;
 if (true) then
 {
@@ -13694,7 +13820,7 @@ if (true) then
   
   _this setPos [3366.14, 14308, 4.79];
 };
-//Mess Hall MOVED
+//Bandit city construction site
 _vehicle_3486 = objNull;
 if (true) then
 {
@@ -13719,7 +13845,7 @@ if (true) then
   _this setPos [3467.45, 14218, 12.338];
 };
 
-//Abrams MOVED
+//Bandit city inner plane
 _vehicle_3121 = objNull;
 if (true) then
 {

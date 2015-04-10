@@ -17,12 +17,36 @@ if(isServer) then {
 		"Bandit"							// AI Type, "Hero" or "Bandit".
 	] call spawn_group;
 
-	Place your custom group spawns below
+	Place your custom group spawns below 
 	*/
 
 	[
 		[3660.52,14883.2,0.001],			// Position
-		4,									// Number Of units
+		5,									// Number Of units
+		"extreme",							// Skill level of unit (easy, medium, hard, extreme, Random)
+		"Random",							// Primary gun set number or gun and rocket launcher. Syntax is "Random", for gun only or ["Random","AT"], for gun and launcher
+		4,									// Number of magazines
+		"Random",							// Backpack classname, use "Random" or classname here
+		"Random",							// Skin classname, use "Random" or classname here
+		"Random",							// Gearset number. "Random" for random gear set
+		"Bandit"							// AI Type, "Hero" or "Bandit".
+	] call spawn_group;
+	
+	[
+		[3688.94,14089.4,0.002],			// Position plane crash
+		5,									// Number Of units
+		"extreme",							// Skill level of unit (easy, medium, hard, extreme, Random)
+		"Random",							// Primary gun set number or gun and rocket launcher. Syntax is "Random", for gun only or ["Random","AT"], for gun and launcher
+		4,									// Number of magazines
+		"Random",							// Backpack classname, use "Random" or classname here
+		"Random",							// Skin classname, use "Random" or classname here
+		"Random",							// Gearset number. "Random" for random gear set
+		"Bandit"							// AI Type, "Hero" or "Bandit".
+	] call spawn_group;
+	
+	[
+		[3436.98,14210.6,0.001],			// Position snow man
+		5,									// Number Of units
 		"extreme",							// Skill level of unit (easy, medium, hard, extreme, Random)
 		"Random",							// Primary gun set number or gun and rocket launcher. Syntax is "Random", for gun only or ["Random","AT"], for gun and launcher
 		4,									// Number of magazines
@@ -34,7 +58,7 @@ if(isServer) then {
 
 	[
 		[3709.65,14505,0.002],			// Position
-		4,									// Number Of units
+		5,									// Number Of units
 		"extreme",							// Skill level of unit (easy, medium, hard, extreme, Random)
 		"Random",							// Primary gun set number or gun and rocket launcher. Syntax is "Random", for gun only or ["Random","AT"], for gun and launcher
 		4,									// Number of magazines
@@ -75,12 +99,26 @@ if(isServer) then {
 		"Random"							// Gearset classname, use "Random" or classname here
 	] call spawn_static;
 
-	Place your custom static weapon spawns below
+	Place your custom static weapon spawns below 
 	*/
 
 	[
 		[									// Position(s) (can be multiple) middle tower
 			[3720.82,14487.3,29.192]
+		],
+		"M2StaticMG",						// Classname of turret
+		"extreme",								// Skill level of unit (easy, medium, hard, extreme, Random)
+		"Bandit2_DZ",						// Skin classname, use "Random" or classname here
+		"Bandit",							// AI Type, "Hero" or "Bandit".
+		"Random",							// Primary gun set number. "Random" for random weapon set
+		2,									// Number of magazines
+		"Random",							// Backpack classname, use "Random" or classname here
+		"Random"							// Gearset classname, use "Random" or classname here
+	] call spawn_static;
+	
+	[
+		[									// Position(s) (can be multiple) mil camp tower
+			[3380.02,14299.4,12.687]
 		],
 		"M2StaticMG",						// Classname of turret
 		"extreme",								// Skill level of unit (easy, medium, hard, extreme, Random)
@@ -108,7 +146,7 @@ if(isServer) then {
 
 	[
 		[									// Position(s) (can be multiple) entrance right
-			[2935.64,14427.9,14.43]
+			[2925.67,14372,18.945]
 		],
 		"M2StaticMG",						// Classname of turret
 		"extreme",								// Skill level of unit (easy, medium, hard, extreme, Random)
@@ -138,7 +176,7 @@ if(isServer) then {
 
 	Place your heli patrols below
 	*/
-
+	
 	[
 		[3575.67,14522.2,0.002],			// Position to patrol
 		[1300,12960,0],						// Position to spawn chopper at
@@ -223,7 +261,7 @@ if(isServer) then {
 	*/
 
 	[
-		[2935.64,14427.9,14.43],	// Position that units will be dropped by
+		[3045.19,14363.4,0.001],	// Position that units will be dropped by
 		[1300,14960,0],							// Starting position of the heli
 		700,								// Radius from drop position a player has to be to spawn chopper
 		"UH1Y",							// Classname of chopper (Make sure it has 2 gunner seats!)
