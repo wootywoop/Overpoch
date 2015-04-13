@@ -84,7 +84,7 @@ if(isServer) then {
 
 		
 		wai_mission_timer			= [300,900];						// time between missions 5-15 minutes
-		wai_mission_timeout			= [900,1800]; 						// time each missions takes to despawn if inactive 15-30 minutes
+		wai_mission_timeout			= [1500,1800]; 						// time each missions takes to despawn if inactive 15-30 minutes
 		wai_timeout_distance		= 400;								// if a player is this close to a mission then it won't time-out
 		
 		wai_clean_mission			= true;								// clean all mission buildings after a certain period
