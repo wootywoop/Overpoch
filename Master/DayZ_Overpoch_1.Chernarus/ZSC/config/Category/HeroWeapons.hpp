@@ -29,4 +29,14 @@ class Category_477 {
 		buy[] ={55000,"Coins"};
 		sell[] ={7500,"Coins"};
 	};
+	class m107 {
+		type = "trade_weapons";
+		buy[] ={20000000,"Coins"};
+		sell[] ={90000,"Coins"};
+	};
+	class BAF_AS50_scoped {
+		type = "trade_weapons";
+		buy[] ={25000000,"Coins"};
+		sell[] ={100000,"Coins"};
+	};
 };
