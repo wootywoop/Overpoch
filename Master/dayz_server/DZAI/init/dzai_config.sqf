@@ -105,19 +105,19 @@ DZAI_respawnTimeMin = 900;
 DZAI_respawnTimeMax = 1800;
 
 //Time to allow spawned AI units to exist in seconds before being despawned when no players are present in a trigger area. Applies to both static AI and custom spawned AI (Default: 120)										
-DZAI_despawnWait = 120;										
+DZAI_despawnWait = 60;										
 
 //Respawn limits. Set to -1 for unlimited respawns. (Default: -1 for each).
-DZAI_respawnLimit0 = 3; 	//Respawn limit for low level AI found in low-value areas (Default: -1)
-DZAI_respawnLimit1 = 4; 	//Respawn limit for mid level AI found in cities and other mid-value areas (Default: -1)
-DZAI_respawnLimit2 = 6; 	//Respawn limit for high level AI found in places with military loot (Default: -1)
+DZAI_respawnLimit0 = 2; 	//Respawn limit for low level AI found in low-value areas (Default: -1)
+DZAI_respawnLimit1 = 3; 	//Respawn limit for mid level AI found in cities and other mid-value areas (Default: -1)
+DZAI_respawnLimit2 = 3; 	//Respawn limit for high level AI found in places with military loot (Default: -1)
 DZAI_respawnLimit3 = -1; 	//Respawn limit for very high level AI in places with high-grade military loot (Default: -1)
 
 //Spawn probabilities
-DZAI_spawnChance0 = 0.20;	//Spawn chance for low-skill AI typically found in small towns (Default: 0.40)
-DZAI_spawnChance1 = 0.30;	//Spawn chance for mid-level AI typically found in cities and large towns (Default: 0.60)
-DZAI_spawnChance2 = 0.50;	//Spawn chance for high-level AI typically found in places with military-grade loot (Default: 0.80)
-DZAI_spawnChance3 = 0.80;	//Spawn chance for expert-level AI found in areas with high-grade military loot (Default: 0.90)
+DZAI_spawnChance0 = 0.05;	//Spawn chance for low-skill AI typically found in small towns (Default: 0.40)
+DZAI_spawnChance1 = 0.20;	//Spawn chance for mid-level AI typically found in cities and large towns (Default: 0.60)
+DZAI_spawnChance2 = 0.30;	//Spawn chance for high-level AI typically found in places with military-grade loot (Default: 0.80)
+DZAI_spawnChance3 = 0.60;	//Spawn chance for expert-level AI found in areas with high-grade military loot (Default: 0.90)
 
 
 /*	Dynamic AI Spawning Settings
@@ -210,7 +210,6 @@ DZAI_respawnTMaxL = 900;
 
 //Classnames of land vehicle types to use, with the maximum amount of each type to spawn. UAZ_Unarmed_TK_EP1 SUV_TK_CIV_EP1
 DZAI_vehList = [
-	["LAV25",5],
 	["GAZ_Vodnik",5],
 	["HMMWV_M2",5],
 	["BAF_Jackal2_L2A1_w",5]
