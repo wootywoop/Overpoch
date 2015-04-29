@@ -447,7 +447,7 @@ if (isServer && isNil "sm_done") then {
 		
 		endLoadingScreen;
 	};
-	
+	[] call compile preprocessFileLineNumbers "\z\addons\dayz_server\DZAI\init\dzai_initserver.sqf";
 	[] ExecVM "\z\addons\dayz_server\WAI\init.sqf";
 	allowConnection = true;	
 	sm_done = true;
