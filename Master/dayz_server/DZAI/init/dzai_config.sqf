@@ -111,11 +111,11 @@ DZAI_despawnWait = 60;
 DZAI_respawnLimit0 = 2; 	//Respawn limit for low level AI found in low-value areas (Default: -1)
 DZAI_respawnLimit1 = 3; 	//Respawn limit for mid level AI found in cities and other mid-value areas (Default: -1)
 DZAI_respawnLimit2 = 3; 	//Respawn limit for high level AI found in places with military loot (Default: -1)
-DZAI_respawnLimit3 = -1; 	//Respawn limit for very high level AI in places with high-grade military loot (Default: -1)
+DZAI_respawnLimit3 = 10; 	//Respawn limit for very high level AI in places with high-grade military loot (Default: -1)
 
 //Spawn probabilities
-DZAI_spawnChance0 = 0.05;	//Spawn chance for low-skill AI typically found in small towns (Default: 0.40)
-DZAI_spawnChance1 = 0.20;	//Spawn chance for mid-level AI typically found in cities and large towns (Default: 0.60)
+DZAI_spawnChance0 = 0.00;	//Spawn chance for low-skill AI typically found in small towns (Default: 0.40)
+DZAI_spawnChance1 = 0.00;	//Spawn chance for mid-level AI typically found in cities and large towns (Default: 0.60)
 DZAI_spawnChance2 = 0.30;	//Spawn chance for high-level AI typically found in places with military-grade loot (Default: 0.80)
 DZAI_spawnChance3 = 0.60;	//Spawn chance for expert-level AI found in areas with high-grade military loot (Default: 0.90)
 
@@ -168,7 +168,7 @@ DZAI_randAreaBlacklist = [];
 --------------------------------------------------------------------------------------------------------------------*/		
 
 //Global maximum number of active AI air vehicle patrols. Set at 0 to disable (Default: 0).							
-DZAI_maxHeliPatrols = 0;
+DZAI_maxHeliPatrols = 3;
 
 //Set minimum and maximum wait time in seconds to respawn an AI vehicle patrol after vehicle is destroyed or disabled. (Default: Min 600, Max 900).
 DZAI_respawnTMinA = 900;
@@ -177,6 +177,8 @@ DZAI_respawnTMaxA = 2100;
 //Classnames of air vehicle types to use, with the maximum amount of each type to spawn.
 DZAI_heliList = [
 	["UH1H_DZ",5],
+	["AH6J_EP1",5],
+	["CH_47F_BAF",5},
 	["Mi17_DZ",5]
 ];
 
@@ -202,7 +204,7 @@ DZAI_airWeapons = [
 --------------------------------------------------------------------------------------------------------------------*/	
 
 //Global maximum number of active AI land vehicle patrols. Set at 0 to disable (Default: 0).	
-DZAI_maxLandPatrols = 3;
+DZAI_maxLandPatrols = 4;
 
 //Set minimum and maximum wait time in seconds to respawn an AI vehicle patrol after vehicle is destroyed or disabled. (Default: Min 600, Max 900).
 DZAI_respawnTMinL = 600;
@@ -212,6 +214,7 @@ DZAI_respawnTMaxL = 900;
 DZAI_vehList = [
 	["GAZ_Vodnik",5],
 	["HMMWV_M2",5],
+	["Offroad_DSHKM_Gue",5],
 	["BAF_Jackal2_L2A1_w",5]
 ];
 
@@ -371,14 +374,14 @@ DZAI_skill2 = [
 
 //AI skill settings level 3 (Skill, Minimum skill, Maximum skill). Baseline skill level: 0.80
 DZAI_skill3 = [	
-	["aimingAccuracy",0.225,0.250],
-	["aimingShake",0.80,0.89],
-	["aimingSpeed",0.80,0.89],
-	["endurance",0.80,0.89],
-	["spotDistance",0.80,0.89],
-	["spotTime",0.80,0.89],
-	["courage",0.80,0.89],
-	["reloadSpeed",0.80,0.89],
+	["aimingAccuracy",0.925,0.990],
+	["aimingShake",0.90,0.99],
+	["aimingSpeed",0.90,0.99],
+	["endurance",0.90,0.99],
+	["spotDistance",0.90,0.99],
+	["spotTime",0.90,0.99],
+	["courage",0.90,0.99],
+	["reloadSpeed",0.90,0.99],
 	["commanding",0.90,0.99],
 	["general",0.90,0.99]
 ];
