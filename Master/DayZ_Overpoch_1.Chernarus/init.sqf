@@ -61,10 +61,10 @@ DZE_GodModeBase = true;  //unbreakable bases
 DZE_requireplot = 1;   //removes need for plot pole
 DZE_HeliLift = false;     //epoch default heli lifting
 DZE_R3F_WEIGHT = true;   //remove weight system
-DZE_PlotPole = [35,50];   //plot pole radius, exclusion zone
+DZE_PlotPole = [150,400];   //plot pole radius, exclusion zone
 DZE_PlayerZed = false;    //player spawns back as zed
 DZE_ForceNameTagsInTrader = true; //Forces player names in traders
-DZE_SelfTransfuse = true; //Solf blood transfusion
+DZE_SelfTransfuse = true; //Self blood transfusion
 DZE_selfTransfuse_Values = [6000, 200, 240]; //[blood amount, infection chance, cool-down (seconds)]
 DZE_MissionLootTable = true;  //Edit for custom loot
 setViewDistance 2200;	//sets view distance
