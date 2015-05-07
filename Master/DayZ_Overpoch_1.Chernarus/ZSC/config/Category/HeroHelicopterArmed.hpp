@@ -7,7 +7,7 @@ class Category_493 {
 	class UH1H_DZE {
 		type = "trade_any_vehicle";
 		buy[] ={600000,"Coins"};
-		sell[] ={625000,"Coins"};
+		sell[] ={150000,"Coins"};
 	};
 	class Mi17_DZE {
 		type = "trade_any_vehicle";
