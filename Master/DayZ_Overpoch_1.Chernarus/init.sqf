@@ -76,7 +76,7 @@ DZE_ConfigTrader = true;
 EpochEvents = [["any","any","any","any",30,"crash_spawner"],["any","any","any","any",0,"crash_spawner"],["any","any","any","any",15,"supply_drop"]];
 dayz_fullMoonNights = true;
 
-dayz_poleSafeArea = 90; // Default = 30m, the buildable distance
+dayz_poleSafeArea = 150; // Default = 30m, the buildable distance
 
 //Load in compiled functions
 call compile preprocessFileLineNumbers "custom\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
