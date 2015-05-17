@@ -108,9 +108,9 @@ DZAI_respawnTimeMax = 1800;
 DZAI_despawnWait = 60;										
 
 //Respawn limits. Set to -1 for unlimited respawns. (Default: -1 for each).
-DZAI_respawnLimit0 = 2; 	//Respawn limit for low level AI found in low-value areas (Default: -1)
-DZAI_respawnLimit1 = 3; 	//Respawn limit for mid level AI found in cities and other mid-value areas (Default: -1)
-DZAI_respawnLimit2 = 3; 	//Respawn limit for high level AI found in places with military loot (Default: -1)
+DZAI_respawnLimit0 = 1; 	//Respawn limit for low level AI found in low-value areas (Default: -1)
+DZAI_respawnLimit1 = 1; 	//Respawn limit for mid level AI found in cities and other mid-value areas (Default: -1)
+DZAI_respawnLimit2 = 4; 	//Respawn limit for high level AI found in places with military loot (Default: -1)
 DZAI_respawnLimit3 = 10; 	//Respawn limit for very high level AI in places with high-grade military loot (Default: -1)
 
 //Spawn probabilities
@@ -168,7 +168,7 @@ DZAI_randAreaBlacklist = [];
 --------------------------------------------------------------------------------------------------------------------*/		
 
 //Global maximum number of active AI air vehicle patrols. Set at 0 to disable (Default: 0).							
-DZAI_maxHeliPatrols = 3;
+DZAI_maxHeliPatrols = 2;
 
 //Set minimum and maximum wait time in seconds to respawn an AI vehicle patrol after vehicle is destroyed or disabled. (Default: Min 600, Max 900).
 DZAI_respawnTMinA = 900;
@@ -177,8 +177,7 @@ DZAI_respawnTMaxA = 2100;
 //Classnames of air vehicle types to use, with the maximum amount of each type to spawn.
 DZAI_heliList = [
 	["UH1H_DZ",5],
-	["AH6J_EP1",5],
-	["CH_47F_BAF",5},
+	["CH_47F_BAF",5],
 	["Mi17_DZ",5]
 ];
 
@@ -204,7 +203,7 @@ DZAI_airWeapons = [
 --------------------------------------------------------------------------------------------------------------------*/	
 
 //Global maximum number of active AI land vehicle patrols. Set at 0 to disable (Default: 0).	
-DZAI_maxLandPatrols = 4;
+DZAI_maxLandPatrols = 3;
 
 //Set minimum and maximum wait time in seconds to respawn an AI vehicle patrol after vehicle is destroyed or disabled. (Default: Min 600, Max 900).
 DZAI_respawnTMinL = 600;
