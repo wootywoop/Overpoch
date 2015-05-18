@@ -11,7 +11,7 @@ _removed = ([player,"ItemHotwireKit",1] call BIS_fnc_invRemove);
 
 if (_removed == 1) then {
 
-	if((random 10) <= 4.5) then {
+	if((random 10) <= 1.5) then {
 
 		PVDZE_veh_Lock = [_vehicle,false];
 		if(player distance _vehicle < 10) then {
