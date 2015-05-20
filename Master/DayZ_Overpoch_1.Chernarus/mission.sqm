@@ -1202,7 +1202,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=19;
+		items=21;
 		class Item0
 		{
 			position[]={7839.6055,381.33774,8414.7324};
@@ -1251,7 +1251,7 @@ class Mission
 			name="Tradercitystary";
 			text="Trader City Stary";
 			type="mil_circle";
-			colorName="ColorBlack";
+			colorName="ColorBlue";
 		};
 		class Item8
 		{
@@ -1259,7 +1259,7 @@ class Mission
 			name="wholesaleSouth";
 			text="Wholesaler";
 			type="mil_dot";
-			colorName="ColorBlack";
+			colorName="ColorBlue";
 		};
 		class Item9
 		{
@@ -1267,7 +1267,7 @@ class Mission
 			name="boatTraderEast";
 			text="Wholesaler";
 			type="mil_dot";
-			colorName="ColorBlack";
+			colorName="ColorBlue";
 		};
 		class Item10
 		{
@@ -1275,7 +1275,7 @@ class Mission
 			name="BoatDealerSouth";
 			text="Boat Dealer";
 			type="mil_dot";
-			colorName="ColorBlack";
+			colorName="ColorBlue";
 		};
 		class Item11
 		{
@@ -1283,7 +1283,7 @@ class Mission
 			name="AirVehicles";
 			text="Aircraft Dealer";
 			type="mil_dot";
-			colorName="ColorGreen";
+			colorName="ColorBlue";
 		};
 		class Item12
 		{
@@ -1299,7 +1299,7 @@ class Mission
 			name="Klen";
 			text="Trader City Klen";
 			type="mil_circle";
-			colorName="ColorGreen";
+			colorName="ColorBlue";
 		};
 		class Item14
 		{
@@ -1307,7 +1307,7 @@ class Mission
 			name="BoatDealerEast";
 			text="Boat Dealer";
 			type="mil_dot";
-			colorName="ColorBlack";
+			colorName="ColorBlue";
 		};
 		class Item15
 		{
@@ -1315,7 +1315,7 @@ class Mission
 			name="TradercityBash";
 			text="Trader City Bash";
 			type="mil_circle";
-			colorName="ColorBlack";
+			colorName="ColorYellow";
 		};
 		class Item16
 		{
@@ -1323,23 +1323,39 @@ class Mission
 			name="HeroTrader";
 			text="Hero Camp";
 			type="mil_dot";
-			colorName="ColorBlue";
+			colorName="ColorGreen";
 		};
 		class Item17 // prison marker
             {
             position[]={1348.44,339,4065.91};
             name="Prison";
             text="Prison";
-            type="o_mech_inf";
-            colorName="ColorRed";
+            type="hd_join";
+            colorName="ColorBlue";
         };
 		class Item18 // Woot's garage marker
             {
-            position[]={7047.66,300,2657.9};
+            position[]={7047.66,300,2657.9}; 
             name="Wootsgarage";
             text="Woot's garage";
-            type="mil_circle";
+            type="hd_flag";
             colorName="ColorBlue";
+        };
+		class Item19 // Bandit City marker
+            {
+            position[]={3688.65,300,14499.4}; 
+            name="banditcity";
+            text="Bandit city";
+            type="hd_warning";
+            colorName="ColorRed";
+        };
+		class Item20 // Skalisty Island
+            {
+            position[]={13214.373,300,3472.0823}; 
+            name="skalistyisland";
+            text="Unknown";
+            type="hd_unknown";
+            colorName="ColorRed";
         };  
 	};
 	class Sensors
