@@ -177,7 +177,6 @@ DZAI_respawnTMaxA = 2100;
 //Classnames of air vehicle types to use, with the maximum amount of each type to spawn.
 DZAI_heliList = [
 	["UH1H_DZ",5],
-	["CH_47F_BAF",5],
 	["Mi17_DZ",5]
 ];
 
@@ -211,10 +210,9 @@ DZAI_respawnTMaxL = 900;
 
 //Classnames of land vehicle types to use, with the maximum amount of each type to spawn. UAZ_Unarmed_TK_EP1 SUV_TK_CIV_EP1
 DZAI_vehList = [
-	["GAZ_Vodnik",5],
-	["HMMWV_M2",5],
-	["Offroad_DSHKM_Gue",5],
-	["BAF_Jackal2_L2A1_w",5]
+	["GAZ_Vodnik",3],
+	["S1203_TK_CIV_EP1",3],
+	["HMMWV",3]
 ];
 
 //Difficulty level of land vehicle patrol units. Difficulty level also affects unit loadout and loot. Possible values: 0 to 3 (Default: 3)
