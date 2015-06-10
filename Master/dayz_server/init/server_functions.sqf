@@ -972,6 +972,7 @@ call compile preProcessFileLineNumbers "\z\addons\dayz_server\CUSTOMMAPS\prison.
 call compile preProcessFileLineNumbers "\z\addons\dayz_server\CUSTOMMAPS\NWAF.sqf";
 call compile preProcessFileLineNumbers "\z\addons\dayz_server\CUSTOMMAPS\bridge.sqf";
 call compile preProcessFileLineNumbers "\z\addons\dayz_server\CUSTOMMAPS\bridge2.sqf";
+call compile preProcessFileLineNumbers "\z\addons\dayz_server\CUSTOMMAPS\castle.sqf";
 
 KK_fnc_floatToString = {
 	private "_arr";
