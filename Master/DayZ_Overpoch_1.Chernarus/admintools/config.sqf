@@ -9,7 +9,7 @@ SuperAdminList = [
 ];
 AdminList = [
 "76561198128539208", // <Admin Dave>
-"999999999", // <Admin OTHER>
+"76561198085299917", // <Admin John>
 "999999999" // <Admin In-Game Name>
 ];
 ModList = [
