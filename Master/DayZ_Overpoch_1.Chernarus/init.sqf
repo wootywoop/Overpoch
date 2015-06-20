@@ -93,8 +93,6 @@ call compile preprocessFileLineNumbers "ZSC\gold\ZSCinit.sqf";
 progressLoadingScreen 0.5;
 //call compile preprocessFileLineNumbers "server_traders.sqf";				//Compile trader configs
 call compile preprocessFileLineNumbers "server_traders_cherno_11.sqf";
-call compile preprocessFileLineNumbers "admintools\config.sqf"; // Epoch admin Tools config file
-call compile preprocessFileLineNumbers "admintools\variables.sqf"; // Epoch admin Tools variables
 call compile preprocessFileLineNumbers "logistic\init.sqf"; //logistics - lift and tow
 progressLoadingScreen 1.0;
 
@@ -120,12 +118,6 @@ if (!isDedicated) then {
 	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
 	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";
 	execVM "ZSC\compiles\playerHud.sqf";
-	
-	// Epoch Admin Tools
-	if ( !((getPlayerUID player) in AdminList) && !((getPlayerUID player) in ModList)) then 
-		{
-		 [] execVM "admintools\antihack\antihack.sqf"; // Epoch Antihack with bypass
-		};
 
 	//Lights
 	//[false,12] execVM "\z\addons\dayz_code\compile\local_lights_init.sqf";
@@ -141,7 +133,7 @@ if (!isDedicated) then {
 	};
 };
 
-#include "\z\addons\dayz_code\system\REsec.sqf"
+
 
 //Start Dynamic Weather
 execVM "custom\DynamicWeatherEffects.sqf";
@@ -159,7 +151,6 @@ DefaultBackpackWeapon = "";
 //Load custom scripts
 
 [] execvm 'AGN\agn_SafeZoneCommander.sqf';  //Trader Safe Zones
-[] execVM "admintools\Activate.sqf"; // Epoch admin tools
 waitUntil {!isNil "PVDZE_plr_LoginRecord"};
 if (!isDedicated && {dayzPlayerLogin2 select 2}) then {execVM "spawn\spawn.sqf";};
 execVM "RC\init.sqf";

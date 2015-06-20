@@ -189,8 +189,6 @@ class CfgSounds
 };
 
 #include "custom\snap_pro\snappoints.hpp"  //Snap Build Pro
-// Epoch Admin Tools
-#include "admintools\dialog.hpp"
 // Spawn select
 #include "spawn\defines.hpp"
 #include "spawn\class.hpp"

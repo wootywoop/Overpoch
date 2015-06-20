@@ -1,3 +1,4 @@
+[] execVM "\z\addons\dayz_server\init\AH.sqf";
 waituntil {!isnil "bis_fnc_init"};
 
 BIS_MPF_remoteExecutionServer = {
@@ -852,7 +853,7 @@ server_checkHackers = {
 	{
 	if (!((isNil "_x") || {(isNull _x)})) then {
 		 // Epoch Admin Tools
-			if(vehicle _x != _x && !(vehicle _x in PVDZE_serverObjectMonitor) && (isPlayer _x)  && !((typeOf vehicle _x) in DZE_safeVehicle) && (vehicle _x getVariable ["MalSar",0] !=1)) then {
+			if(vehicle _x != _x && !(vehicle _x in PVDZE_serverObjectMonitor) && (isPlayer _x)  && !((typeOf vehicle _x) in DZE_safeVehicle)) then {
 			diag_log ("CLEANUP: KILLING A HACKER " + (name _x) + " " + str(_x) + " IN " + (typeOf vehicle _x));
 			(vehicle _x) setDamage 1;
 			_x setDamage 1;
