@@ -2499,6 +2499,15 @@ if (true) then
   _this setPos [13749.976, 2802.4238, 0.00058364868];
 };
 
+_vehicle_1325 = objNull;
+if (true) then
+{
+  _this = createVehicle ["Offroad_DSHKM_Gue_DZE2", [13699.222, 3265.9927, 8.2969666e-005], [], 0, "CAN_COLLIDE"];
+  _vehicle_1325 = _this;
+  _this setDir -124.67965;
+  _this setPos [13699.222, 3265.9927, 8.2969666e-005];
+};
+
 _vehicle_1333 = objNull;
 if (true) then
 {
