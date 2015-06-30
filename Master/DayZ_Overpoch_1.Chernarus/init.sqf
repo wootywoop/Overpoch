@@ -27,7 +27,7 @@ DZE_DeathMsgTitleText = false;
 spawnShoremode = 1; // Default = 1 (on shore)
 spawnArea= 1500; // This is the overall area used to determine where to spawn vehicles, road debris, and helicopter crashes. (Default: 10000) 
 MaxVehicleLimit = 300; // Controls the max overall vehicle limit if this limit is reached no new vehicles will spawn. 
-MaxDynamicDebris = 150; // Default = 100
+MaxDynamicDebris = 50; // Default = 100
 MaxMineVeins = 40;
 MaxAmmoBoxes = 15;
 dayz_MapArea = 14000; // Default = 10000
@@ -67,7 +67,7 @@ DZE_ForceNameTagsInTrader = true; //Forces player names in traders
 DZE_SelfTransfuse = true; //Self blood transfusion
 DZE_selfTransfuse_Values = [6000, 200, 240]; //[blood amount, infection chance, cool-down (seconds)]
 DZE_MissionLootTable = true;  //Edit for custom loot
-setViewDistance 2200;	//sets view distance
+setViewDistance 2000;	//sets view distance
 setTerrainGrid 20;	//sets terrain detail
 /*ZSC*/
 DZE_ConfigTrader = true;
