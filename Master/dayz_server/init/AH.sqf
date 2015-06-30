@@ -13489,49 +13489,66 @@ diag_log ("infiSTAR.de - ADDING PublicVariableEventHandlers");
 				clearWeaponCargoGlobal _b0x;
 				clearmagazinecargoGlobal _b0x;
 				_b0x setPosATL _pos;
-				{_b0x addMagazineCargoGlobal [_x, 1];} forEach ['30m_plot_kit','workbench_kit'];
-				{_b0x addMagazineCargoGlobal [_x, 25];} forEach
+				{_b0x addMagazineCargoGlobal [_x, 5];} forEach ['30m_plot_kit','workbench_kit'];
+				{_b0x addMagazineCargoGlobal [_x, 150];} forEach
 				[
 				'cinder_wall_kit'
 				];
-				{_b0x addMagazineCargoGlobal [_x, 15];} forEach
+				{_b0x addMagazineCargoGlobal [_x, 100];} forEach
 				[
 				'MortarBucket'
 				];
-				{_b0x addMagazineCargoGlobal [_x, 50];} forEach
+				{_b0x addMagazineCargoGlobal [_x, 100];} forEach
 				[
 				'CinderBlocks'
 				];
-				{_b0x addMagazineCargoGlobal [_x, 4];} forEach
+				{_b0x addMagazineCargoGlobal [_x, 10];} forEach
 				[
 				'cinder_garage_kit',
+				'cinder_door_kit',
+				'ItemWire',
 				'ItemComboLock',
 				'ItemWoodLadder'
 				];
-				{_b0x addMagazineCargoGlobal [_x, 12];} forEach
+				{_b0x addMagazineCargoGlobal [_x, 25];} forEach
 				[
 				'ItemTankTrap',
+				'light_pole_kit',
+				'PartGeneric',
+				'ItemSandbag',
 				'ItemPole'
 				];
-				{_b0x addMagazineCargoGlobal [_x, 6];} forEach
+				{_b0x addMagazineCargoGlobal [_x, 5];} forEach
 				[
-				'ItemWoodStairs'
+				'ItemWoodStairs',
+				'ItemTent',
+				'deer_stand_kit',
+				'wooden_shed_kit',
+				'sun_shade_kit',
+				'sandbag_nest_kit',
+				'rusty_gate_kit',
+				'wood_ramp_kit'
 				];
-				{_b0x addMagazineCargoGlobal [_x, 15];} forEach
+				{_b0x addMagazineCargoGlobal [_x, 50];} forEach
 				[
+				'PartPlywoodPack',
+				'metal_panel_kit',
+				'PartPlankPack',
 				'metal_floor_kit'
 				];
-				{_b0x addMagazineCargoGlobal [_x, 2];} forEach
+				{_b0x addMagazineCargoGlobal [_x, 5];} forEach
 				[
 				'ItemVault',
-				'ItemSledgeHead',
-				'ItemSledgeHandle',
+				'ItemLockbox',
+				'fuel_pump_kit',
+				'ItemFireBarrel_Kit',
 				'storage_shed_kit'
 				];
-				{_b0x addWeaponCargoGlobal [_x, 2];} forEach
+				{_b0x addWeaponCargoGlobal [_x, 10];} forEach
 				[
 				'ItemToolbox',
 				'ItemCrowbar',
+				'ItemSledge',
 				'ItemEtool'
 				];
 			};
