@@ -55,8 +55,8 @@ _unit_th1 setPos _th_killunit_spawnloc;
 
 _custmsg = _th_random_messages select floor random count _th_random_messages;
 
-thMessage = ["titleCut", format _custmsg];
-publicVariable "thMessage";
+customRemoteMessage = ["titleCut", format _custmsg];
+publicVariable "customRemoteMessage";
 
 if (_thtest == 1) then
 {
@@ -79,7 +79,7 @@ if (_thtest == 1) then
     sleep _sleeptime;
     deleteVehicle _unit_th1;
     sleep 15;
-    [_thtest, _thunitname, _thunitclass] execVM "\z\addons\dayz_server\treasurehunt\th_spawn_unit.sqf";           
+    [_thtest, _thunitname, _thunitclass] execVM "\z\addons\dayz_server\scripts\treasurehunt\th_spawn_unit.sqf";           
 };
 
 /*
