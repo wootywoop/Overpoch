@@ -123,7 +123,7 @@ if (!isDedicated) then {
 	//[false,12] execVM "\z\addons\dayz_code\compile\local_lights_init.sqf";
 	execVM "service_point\service_point.sqf";  //Auto Refuel, Repair and Rearm
 
-	_nil = [] execVM "custom\remote\remote.sqf";
+	_nil = [] execVM "custom\remote_messages.sqf";
 	_nul = [] execVM "DZAI_Client\dzai_initclient.sqf";
 	
 	if (isNil 'debugMonitor') then 

@@ -111,7 +111,7 @@ if(isServer) then {
 		wai_remove_launcher			= true;								// remove rocket launcher from AI on death
 
 		// Missions
-		wai_radio_announce			= true;								// Setting this to true will announce the missions to those that hold a radio only
+		wai_radio_announce			= false;							// Setting this to true will announce the missions to those that hold a radio only
 		wai_hero_limit				= 2;								// define how many hero missions can run at once
 		wai_bandit_limit			= 1;								// define how many bandit missions can run at once
 		/* wai_special_limit			= 1;								// define how many special missions can run at once */
