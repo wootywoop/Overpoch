@@ -7,15 +7,15 @@ _unit_th1 = objNull; 				// Declare _unit_th1 as object
 _th_position = [7087, 7960]; 		// Setting position
 _th_group = createGroup resistance; // Setting the group for _unit_th1
 _th_killunit_spawn = [
-    [1717, 3826], //pavlovo
-    [10440, 2252], // elecktro
-    [6827, 3171], //small church north east of cherno
-    [12874, 10154], //berezino church
-    [11187, 12291], // kraz
-    [6023, 7783], // stary
-    [7075, 7701], //noy
-    [2729, 5442], //zelenogorsk
-    [4563, 6407], // pogorevka
+    [1717, 3826],
+    [10440, 2252],
+    [6827, 3171],
+    [12874, 10154],
+    [11187, 12291],
+    [6023, 7783],
+    [7075, 7701],
+    [2729, 5442],
+    [4563, 6407],
     [7425, 5165],
     [9408, 8842],
     [10051, 5529],    
@@ -45,28 +45,11 @@ _unit_th1 setPos _th_killunit_spawnloc;
 
 _custmsg = _th_random_messages select floor random count _th_random_messages;
 
-customRemoteMessage = ["titleCut", format _custmsg];
-publicVariable "customRemoteMessage";
+thMessage = ["titleCut", format _custmsg];
+publicVariable "thMessage";
 
 if (_thtest == 1) then
 {
     _unit_th1 setPos [1717, 3826];
     diag_log format [_custmsg];
 };
-
-/*
-[_unit_th1, _thtest] spawn {
-    private ["_unit","_thtest"];
-    _unit = _this select 0;
-    _thtest = _this select 1;
-    while {alive _unit} do
-    {
-        _unit say3d "thsound1";
-        if (_thtest == 1) then
-        {
-            diag_log format ["Treasure Hunt: Playing Sound"];
-        };
-        sleep 30; 
-    };
-};
-*/

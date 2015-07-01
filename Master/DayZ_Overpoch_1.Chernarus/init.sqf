@@ -124,6 +124,7 @@ if (!isDedicated) then {
 	execVM "service_point\service_point.sqf";  //Auto Refuel, Repair and Rearm
 
 	_nil = [] execVM "custom\remote\remote.sqf";
+	_nil = [] execVM "treasurehunt\th_remote.sqf;
 	_nul = [] execVM "DZAI_Client\dzai_initclient.sqf";
 	
 	if (isNil 'debugMonitor') then 
