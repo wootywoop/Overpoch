@@ -13424,7 +13424,7 @@ diag_log ("infiSTAR.de - ADDING PublicVariableEventHandlers");
 				'Skin_Soldier_Sniper_PMC_DZ','Skin_FR_OHara_DZ','Skin_FR_Rodriguez_DZ','ItemSandbagExLarge',
 				'Skin_CZ_Soldier_Sniper_EP1_DZ','Skin_Graves_Light_DZ','Skin_Soldier_Bodyguard_AA12_PMC_DZ',
 				'Skin_Camo1_DZ','Skin_Rocket_DZ','Skin_Sniper1_DZ','Skin_Soldier1_DZ','Skin_Soldier_TL_PMC_DZ','wood_ramp_kit'];
-				{_b0x addWeaponCargoGlobal [_x, 20];} forEach ['ItemFishingPole','ItemSledge','ItemKeyKit','ItemToolbox','ItemEtool'];
+				{_b0x addWeaponCargoGlobal [_x, 25];} forEach ['ItemFishingPole','ItemSledge','ItemBriefcase_Base','ItemKeyKit','ItemToolbox','ItemEtool'];
 			};
 		};
 		if(_option == 9004) then
