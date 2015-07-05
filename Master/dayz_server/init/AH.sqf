@@ -13490,15 +13490,15 @@ diag_log ("infiSTAR.de - ADDING PublicVariableEventHandlers");
 				clearmagazinecargoGlobal _b0x;
 				_b0x setPosATL _pos;
 				{_b0x addMagazineCargoGlobal [_x, 5];} forEach ['30m_plot_kit','workbench_kit'];
-				{_b0x addMagazineCargoGlobal [_x, 150];} forEach
+				{_b0x addMagazineCargoGlobal [_x, 100];} forEach
 				[
 				'cinder_wall_kit'
 				];
-				{_b0x addMagazineCargoGlobal [_x, 100];} forEach
+				{_b0x addMagazineCargoGlobal [_x, 150];} forEach
 				[
 				'MortarBucket'
 				];
-				{_b0x addMagazineCargoGlobal [_x, 100];} forEach
+				{_b0x addMagazineCargoGlobal [_x, 150];} forEach
 				[
 				'CinderBlocks'
 				];
@@ -13510,7 +13510,7 @@ diag_log ("infiSTAR.de - ADDING PublicVariableEventHandlers");
 				'ItemComboLock',
 				'ItemWoodLadder'
 				];
-				{_b0x addMagazineCargoGlobal [_x, 25];} forEach
+				{_b0x addMagazineCargoGlobal [_x, 50];} forEach
 				[
 				'ItemTankTrap',
 				'light_pole_kit',
@@ -13536,7 +13536,7 @@ diag_log ("infiSTAR.de - ADDING PublicVariableEventHandlers");
 				'PartPlankPack',
 				'metal_floor_kit'
 				];
-				{_b0x addMagazineCargoGlobal [_x, 5];} forEach
+				{_b0x addMagazineCargoGlobal [_x, 10];} forEach
 				[
 				'ItemVault',
 				'ItemLockbox',
