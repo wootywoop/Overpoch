@@ -39,7 +39,7 @@ if(isServer) then {
 	[[_position select 0,_position select 1,0],4,"Hard","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_group;
 
 	//Humvee Patrol
-	[[(_position select 0) + 100, _position select 1, 0],[(_position select 0) + 100, _position select 1, 0],50,2,"LAV25","Hard","Hero","Hero",_mission] call vehicle_patrol;
+	[[(_position select 0) + 100, _position select 1, 0],[(_position select 0) + 100, _position select 1, 0],50,2,"HMMWV_Armored","Hard","Hero","Hero",_mission] call vehicle_patrol;
 	 
 	//Static Guns
 	[[[(_position select 0) - 10, (_position select 1) + 10, 0]],"M2StaticMG","Hard","Hero","Hero",0,2,"Random","Random",_mission] call spawn_static;

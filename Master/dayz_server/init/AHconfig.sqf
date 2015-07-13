@@ -35,7 +35,7 @@
 /*  DebugMonitor Action   */ _DMW = false;	/* true or false */	/* "Debug" option on mousewheel */
 /*  Mod EPOCH ?           */ _MEH =  true;	/* true or false */
 /* ********************************************************************************* */
-/*  EXPERIMENTAL CU FIX   */					_CUF = true;	/* true or false */	/* will transfer serverside units (including mission AI) to clientside */
+/*  EXPERIMENTAL CU FIX   */					_CUF = false;	/* true or false */	/* will transfer serverside units (including mission AI) to clientside */
 /*  Humanity Value added  */					_CUF_HUMANITY_REWARD = 250;	/* Amount of Humanity added when Killing A.I. */
 /* CLEAR ALL ITEMS ON AI DEATH */			_CUF_REMOVE_ALL_ITEMS_ON_DEATH = true;
 /* _CUF_REMOVE_THESE_ITEMS_ON_DEATH -> CLEAR JUST THESE ITEMS ON AI DEATH */ 
