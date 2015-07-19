@@ -9,7 +9,7 @@ if(isServer) then {
 		[953.237,4486.48,0.001],			// Position
 		4,									// Number Of units
 		"Random",							// Skill level of unit (easy, medium, hard, extreme, Random)
-		"Random",							// Primary gun set number or gun and rocket launcher. Syntax is "Random", for gun only or ["Random","AT"], for gun and launcher
+		"Random",	or ["Random","at"],		// Primary gun set number and rocket launcher. "Random" for random weapon set, "at" for anti-tank, "aa" for anti-air launcher
 		4,									// Number of magazines
 		"Random",							// Backpack classname, use "Random" or classname here
 		"Random",							// Skin classname, use "Random" or classname here
@@ -20,9 +20,137 @@ if(isServer) then {
 	Place your custom group spawns below
 	*/
 
+[
+		[14012.053, 2806.3486, 0],				
+		1,						
+		"hard",						
+		"huntingrifle",					
+		4,						
+		"Random",						
+		"Random",				
+		"Random",						
+		"Bandit"						
+	] call spawn_group;
 
+[
+		[14012.053, 2805.3486, 0],					
+		1,						
+		"easy",						
+		"LeeEnfield",					
+		4,						
+		"Random",						
+		"Random",					
+		"Random",						
+		"Bandit"						
+	] call spawn_group;
 
+[
+     		[14012.053, 2807.3486, 0],              					
+      		2,                          						
+     		"easy",                 						
+    		"Random",             					
+     		8,                          						
+     		"Random",                  						
+    		"Random",              					
+     		"Random",                  						
+     		"Bandit"                  						
+  	] call spawn_group;
 
+[
+		[13441.577, 2774.9651, 0],				
+		1,						
+		"medium",						
+		"M24",						
+		4,						
+		"Random",						
+		"Random",						
+		"Random",						
+		"Bandit"						
+	] call spawn_group;
+
+[
+		[13441.577, 2775.9651, 0],				
+		2,						
+		"easy",						
+		"Random",						
+		4,						
+		"Random",						
+		"Random",					
+		"Random",						
+		"Bandit"						
+	] call spawn_group;
+
+[
+		[13441.577, 2773.9651, 0],				
+		3,						
+		"medium",						
+		"Random",						
+		6,						
+		"Random",						
+		"Random",					
+		"Random",						
+		"Bandit"						
+	] call spawn_group;
+
+[
+		[13624.729, 3170.6475, 0],				
+		2,						
+		"medium",						
+		"Random",						
+		6,						
+		"Random",						
+		"Random",					
+		"Random",						
+		"Bandit"						
+	] call spawn_group;
+
+[
+		[13729.605, 2946.4514, 17.954422],			
+		1,						
+		"extreme",					
+		"m107_DZ",					
+		10,						
+		"DZ_LargeGunBag_EP1",				
+		"Random",				
+		"Random",						
+		"Bandit"						
+	] call spawn_group;
+
+[
+		[13699.859, 2883.9893, 0],				
+		4,						
+		"medium",						
+		"Random",						
+		10,						
+		"Random",						
+		"Random",				
+		"Random",						
+		"Bandit"						
+	] call spawn_group;
+
+[
+		[13695.068, 2943.6411, 0],				
+		3,						
+		"medium",						
+		"Random",						
+		10,						
+		"Random",						
+		"Random",				
+		"Random",						
+		"Bandit"						
+	] call spawn_group;
+
+	[
+		[14001,2761,0],					
+		1,						
+		"Random",						
+		["Random","aa"],					
+		4,						
+		"Random",						
+		"Random",						
+		"Random",						
+		"Bandit"						
+	] call spawn_group;
 
 	/*
 	Custom static weapon spawns Eg. (with mutiple positions)
@@ -45,7 +173,20 @@ if(isServer) then {
 	Place your custom static weapon spawns below
 	*/
 
-
+	[
+		[						
+			[13712.405, 2960.0889, 2.7218401],
+			[13637.78, 3204.8618, 6.9115076]
+		],
+		"M2StaticMG_US_EP1",				
+		"Random",						
+		"Random",				
+		"Bandit",						
+		"Random",						
+		4,						
+		"Random",						
+		"Random"						
+	] call spawn_static;
 
 
 
@@ -62,6 +203,7 @@ if(isServer) then {
 		"Random",							// Skin classname, use "Random" or classname here
 		"Bandit"							// AI Type, "Hero" or "Bandit".
 	] spawn heli_patrol;
+
 
 	Place your heli patrols below
 	*/
@@ -87,7 +229,60 @@ if(isServer) then {
 	Place your vehicle patrols below this line
 	*/
 
+[
+		[13200,2960,0],					
+		[13200,2960,0],					
+		300,						
+		10,						
+		"RHIB",						
+		"Random",						
+		"Random",				
+		"Bandit"						
+	] spawn vehicle_patrol;
 
+[
+		[13600,3160,0],					
+		[13600,3160,0],					
+		300,						
+		10,						
+		"HMMWV_M1151_M2_DES_EP1",			
+		"medium",						
+		"Random",						
+		"Bandit"						
+	] spawn vehicle_patrol;
+
+[
+		[13900,2960,0],					
+		[13900,2960,0],					
+		300,						
+		10,						
+		"HMMWV_M998_crows_M2_DES_EP1",			
+		"medium",						
+		"Random",						
+		"Bandit"						
+	] spawn vehicle_patrol;
+
+[
+		[13500,3060,0],					
+		[13500,3060,0],					
+		300,						
+		10,						
+		"M113_UN_EP1",					
+		"medium",						
+		"Random",						
+		"Bandit"						
+	] spawn vehicle_patrol;
+
+[
+		[14000,2760,0],					
+		[14000,2760,0],					
+		80,						
+		4,						
+		"Ural_ZU23_TK_GUE_EP1",				
+		"Random",						
+		"Random",						
+		"Bandit"						
+	] spawn vehicle_patrol;
 
 
 
@@ -101,7 +296,7 @@ if(isServer) then {
 		"UH1H_DZ",							// Classname of chopper (Make sure it has 2 gunner seats!)
 		5,									// Number of units to be para dropped
 		"Random",							// Skill level of units (easy, medium, hard, extreme, Random)
-		"Random",	or ["Random","at"],		// Primary gun set number and rocket launcher. "Random" for random weapon set, "at" for anti-tank, "aa" for anti-air launcher
+		"Random",							// Primary gun set number and rocket launcher. "Random" for random weapon set, "at" for anti-tank, "aa" for anti-air launcher
 		4,									// Number of magazines
 		"Random",							// Backpack classname, use "Random" or classname here
 		"Bandit2_DZ",						// Skin classname, use "Random" or classname here
@@ -113,6 +308,22 @@ if(isServer) then {
 	Place your paradrop spawns under this line
 	*/
 
-	diag_log "WAI: Static mission loaded";
+	[
+		[13706.369, 2928.425, 0],					
+		[0,-2640,200],						
+		50,							
+		"UH60M_EP1",						
+		5,							
+		"medium",							
+		"Random",							
+		6,							
+		"Random",							
+		"Random",					
+		"Random",							
+		"Bandit",							
+		true							
+	] spawn heli_para;
+	
+	diag_log format["WAI: Static mission for %1 loaded", missionName];
 
 };

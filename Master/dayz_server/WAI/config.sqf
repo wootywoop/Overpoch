@@ -67,7 +67,7 @@ if(isServer) then {
 		
 		ai_packs					= ["DZ_Czech_Vest_Puch","DZ_ALICE_Pack_EP1","DZ_TK_Assault_Pack_EP1","DZ_British_ACU","DZ_GunBag_EP1","DZ_CivilBackpack_EP1","DZ_Backpack_EP1","DZ_LargeGunBag_EP1"];
 		ai_hero_skin				= ["FR_AC","FR_AR","FR_Corpsman","FR_GL","FR_Marksman","FR_R","FR_Sapper","FR_TL"];
-		ai_bandit_skin				= ["Ins_Soldier_GL_DZ","TK_INS_Soldier_EP1_DZ","TK_INS_Warlord_EP1_DZ","GUE_Commander_DZ","GUE_Soldier_Sniper_DZ","GUE_Soldier_MG_DZ","GUE_Soldier_Crew_DZ","GUE_Soldier_2_DZ","GUE_Soldier_CO_DZ","BanditW1_DZ","BanditW2_DZ","Bandit1_DZ","Bandit2_DZ"];
+		ai_bandit_skin				= ["Ins_Soldier_GL_DZ","TK_INS_Soldier_EP1_DZ","TK_INS_Warlord_EP1_DZ","GUE_Commander_DZ","GUE_Soldier_Sniper_DZ","GUE_Soldier_MG_DZ","GUE_Soldier_Crew_DZ","GUE_Soldier_2_DZ","GUE_Soldier_CO_DZ","BanditW1_DZ","BanditW2_DZ","Bandit1_DZ","Bandit2_DZ","UN_CDF_Soldier_Crew_EP1","USMC_Soldier_GL","GER_Soldier_TL_EP1","US_Soldier_AA_EP1","CZ_Soldier_DES_EP1","USMC_SoldierS_Sniper","RU_Worker4","Functionary2","RU_Policeman_DZ","Citizen1","SurvivorWpink_DZ","SurvivorW3_DZ","CIV_EuroMan02_EP1"];
 		ai_special_skin				= ["Functionary1_EP1_DZ"];
 		ai_all_skin					= [ai_hero_skin,ai_bandit_skin,ai_special_skin];
 
@@ -181,12 +181,13 @@ if(isServer) then {
 
 		crate_random				= [crate_items,crate_items_food,crate_items_buildables,crate_items_vehicle_repair,crate_items_medical,crate_items_chainbullets];
 
+		
 	/* END WAI MISSIONS CONFIG */
 
 	/* STATIC MISSIONS CONFIG */
 
-		static_missions				= false;		// use static mission file
-		custom_per_world			= false;		// use a custom mission file per world
+		static_missions				= true;		// use static mission file
+		custom_per_world			= true;		// use a custom mission file per world
 
 	/* END STATIC MISSIONS CONFIG */
 
