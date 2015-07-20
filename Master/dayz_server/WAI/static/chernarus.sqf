@@ -21,135 +21,197 @@ if(isServer) then {
 	*/
 
 [
-		[14012.053, 2806.3486, 0],				
-		1,						
-		"hard",						
-		"Random",					
-		4,						
-		"Random",						
-		"Random",				
-		"Random",						
-		"Bandit"						
+      [14012.053, 2806.3486, 0],           
+      1,                 
+      "hard",                 
+      "DMR",               
+      4,                 
+      "Random",                 
+      "CIV_EuroMan02_EP1",           
+      "Random",                 
+      "Bandit"                 
+   ] call spawn_group;
+
+[
+      [14012.053, 2805.3486, 0],               
+      1,                 
+      "easy",                 
+      "VSS_Vintorez",               
+      4,                 
+      "Random",                 
+      "SurvivorW2_DZ",               
+      "Random",                 
+      "Bandit"                 
+   ] call spawn_group;
+
+[
+    [14012.053, 2807.3486, 0],                             
+    2,                                           
+    "easy",                                   
+    "M14_EP1",                           
+    8,                                           
+    "Random",                                   
+    "BanditW2_DZ",                             
+    "Random",                                   
+    "Bandit"                                   
+  ] call spawn_group;
+
+[
+      [13441.577, 2774.9651, 0],           
+      1,                 
+      "medium",                 
+      "DMR",                 
+      4,                 
+      "Random",                 
+      "Survivor2_DZ",                 
+      "Random",                 
+      "Bandit"                 
+   ] call spawn_group;
+
+[
+      [13441.577, 2775.9651, 0],           
+      2,                 
+      "easy",                 
+      "Random",                 
+      4,                 
+      "Random",                 
+      "Haris_Press_EP1_DZ",               
+      "Random",                 
+      "Bandit"                 
+   ] call spawn_group;
+
+[
+      [13441.577, 2773.9651, 0],           
+      3,                 
+      "medium",                 
+      "Random",                 
+      6,                 
+      "Random",                 
+      "Functionary1_EP1_DZ",               
+      "Random",                 
+      "Bandit"                 
+   ] call spawn_group;
+
+[
+      [13624.729, 3170.6475, 0],           
+      2,                 
+      "medium",                 
+      "Random",                 
+      6,                 
+      "Random",                 
+      "Functionary1_EP1_DZ",               
+      "Random",                 
+      "Bandit"                 
+   ] call spawn_group;
+
+[
+      [13695.613, 2925.842, 13.075159],         
+      1,                 
+      "extreme",               
+      "M110_NVG_EP1",               
+      10,                 
+      "DZ_LargeGunBag_EP1",           
+      "Sniper1_DZ",           
+      "Random",                 
+      "Bandit"                 
+   ] call spawn_group;
+
+[
+      [13699.859, 2883.9893, 0],           
+      4,                 
+      "medium",                 
+      "Random",                 
+      10,                 
+      "Random",                 
+      "Survivor2_DZ",           
+      "Random",                 
+      "Bandit"                 
+   ] call spawn_group;
+
+
+[
+      [13600,3160,0],           
+      4,                 
+      "medium",                 
+      "Random",                 
+      10,                 
+      "Random",                 
+      "Survivor2_DZ",           
+      "Random",                 
+      "Bandit"                 
+   ] call spawn_group;
+
+
+[
+      [13695.068, 2943.6411, 0],           
+      3,                 
+      "medium",                 
+      "Random",                 
+      10,                 
+      "Random",                 
+      "FR_OHara_DZ",           
+      "Random",                 
+      "Bandit"                 
+   ] call spawn_group;
+	
+	[
+		[3660.52,14883.2,0.001],			// Position
+		5,									// Number Of units
+		"extreme",							// Skill level of unit (easy, medium, hard, extreme, Random)
+		"Random",							// Primary gun set number or gun and rocket launcher. Syntax is "Random", for gun only or ["Random","AT"], for gun and launcher
+		4,									// Number of magazines
+		"Random",							// Backpack classname, use "Random" or classname here
+		"Random",							// Skin classname, use "Random" or classname here
+		"Random",							// Gearset number. "Random" for random gear set
+		"Bandit"							// AI Type, "Hero" or "Bandit".
 	] call spawn_group;
-
-[
-		[14012.053, 2805.3486, 0],					
-		1,						
-		"easy",						
-		"Random",					
-		4,						
-		"Random",						
-		"Random",					
-		"Random",						
-		"Bandit"						
+	
+	[
+		[3688.94,14089.4,0.002],			// Position plane crash
+		5,									// Number Of units
+		"extreme",							// Skill level of unit (easy, medium, hard, extreme, Random)
+		"Random",							// Primary gun set number or gun and rocket launcher. Syntax is "Random", for gun only or ["Random","AT"], for gun and launcher
+		4,									// Number of magazines
+		"Random",							// Backpack classname, use "Random" or classname here
+		"Random",							// Skin classname, use "Random" or classname here
+		"Random",							// Gearset number. "Random" for random gear set
+		"Bandit"							// AI Type, "Hero" or "Bandit".
 	] call spawn_group;
-
-[
-     		[14012.053, 2807.3486, 0],              					
-      		2,                          						
-     		"easy",                 						
-    		"Random",             					
-     		8,                          						
-     		"Random",                  						
-    		"Random",              					
-     		"Random",                  						
-     		"Bandit"                  						
-  	] call spawn_group;
-
-[
-		[13441.577, 2774.9651, 0],				
-		1,						
-		"medium",						
-		"M40A3",						
-		4,						
-		"Random",						
-		"Random",						
-		"Random",						
-		"Bandit"						
-	] call spawn_group;
-
-[
-		[13441.577, 2775.9651, 0],				
-		2,						
-		"easy",						
-		"Random",						
-		4,						
-		"Random",						
-		"Random",					
-		"Random",						
-		"Bandit"						
-	] call spawn_group;
-
-[
-		[13441.577, 2773.9651, 0],				
-		3,						
-		"medium",						
-		"Random",						
-		6,						
-		"Random",						
-		"Random",					
-		"Random",						
-		"Bandit"						
-	] call spawn_group;
-
-[
-		[13624.729, 3170.6475, 0],				
-		2,						
-		"medium",						
-		"Random",						
-		6,						
-		"Random",						
-		"Random",					
-		"Random",						
-		"Bandit"						
-	] call spawn_group;
-
-[
-		[13729.605, 2946.4514, 17.954422],			
-		1,						
-		"extreme",					
-		"M110_NVG_EP1",					
-		10,						
-		"DZ_LargeGunBag_EP1",				
-		"Random",				
-		"Random",						
-		"Bandit"						
-	] call spawn_group;
-
-[
-		[13699.859, 2883.9893, 0],				
-		4,						
-		"medium",						
-		"Random",						
-		10,						
-		"Random",						
-		"Random",				
-		"Random",						
-		"Bandit"						
-	] call spawn_group;
-
-[
-		[13695.068, 2943.6411, 0],				
-		3,						
-		"medium",						
-		"Random",						
-		10,						
-		"Random",						
-		"Random",				
-		"Random",						
-		"Bandit"						
+	
+	[
+		[3436.98,14210.6,0.001],			// Position snow man
+		5,									// Number Of units
+		"extreme",							// Skill level of unit (easy, medium, hard, extreme, Random)
+		"Random",							// Primary gun set number or gun and rocket launcher. Syntax is "Random", for gun only or ["Random","AT"], for gun and launcher
+		4,									// Number of magazines
+		"Random",							// Backpack classname, use "Random" or classname here
+		"Random",							// Skin classname, use "Random" or classname here
+		"Random",							// Gearset number. "Random" for random gear set
+		"Bandit"							// AI Type, "Hero" or "Bandit".
 	] call spawn_group;
 
 	[
-		[14001,2761,0],					
-		1,						
-		"Random",						
-		["Random","aa"],					
-		4,						
-		"Random",						
-		"Random",						
-		"Random",						
-		"Bandit"						
+		[3709.65,14505,0.002],			// Position
+		5,									// Number Of units
+		"extreme",							// Skill level of unit (easy, medium, hard, extreme, Random)
+		"Random",							// Primary gun set number or gun and rocket launcher. Syntax is "Random", for gun only or ["Random","AT"], for gun and launcher
+		4,									// Number of magazines
+		"Random",							// Backpack classname, use "Random" or classname here
+		"Random",							// Skin classname, use "Random" or classname here
+		"Random",							// Gearset number. "Random" for random gear set
+		"Bandit"							// AI Type, "Hero" or "Bandit".
+	] call spawn_group;
+	
+	[
+		[3827.2,14130.3,0.001],			// Position
+		6,									// Number Of units
+		"extreme",							// Skill level of unit (easy, medium, hard, extreme, Random)
+		"Random",							// Primary gun set number or gun and rocket launcher. Syntax is "Random", for gun only or ["Random","AT"], for gun and launcher
+		4,									// Number of magazines
+		"Random",							// Backpack classname, use "Random" or classname here
+		"Random",							// Skin classname, use "Random" or classname here
+		"Random",							// Gearset number. "Random" for random gear set
+		"Bandit"							// AI Type, "Hero" or "Bandit".
 	] call spawn_group;
 
 	/*
@@ -174,21 +236,77 @@ if(isServer) then {
 	*/
 
 	[
-		[						
-			[13712.405, 2960.0889, 2.7218401],
-			[13637.78, 3204.8618, 6.9115076]
+      [      
+         [13728.687, 2946.4109, 13.861853],           
+         [13396.714, 2856.3987, 2.4032953],
+         [13712.405, 2960.0889, 2.7218401],
+         [13637.78, 3204.8618, 6.9115076]
+      ],
+      "M2StaticMG_US_EP1",           
+      "Random",                 
+      "Survivor2_DZ",           
+      "Bandit",                 
+      "Random",                 
+      4,                 
+      "Random",                 
+      "Random"                 
+   ] call spawn_static;
+
+	[
+		[									// Position(s) (can be multiple) middle tower
+			[3720.82,14487.3,29.192]
 		],
-		"M2StaticMG_US_EP1",				
-		"Random",						
-		"Random",				
-		"Bandit",						
-		"Random",						
-		4,						
-		"Random",						
-		"Random"						
+		"M2StaticMG",						// Classname of turret
+		"extreme",								// Skill level of unit (easy, medium, hard, extreme, Random)
+		"Bandit2_DZ",						// Skin classname, use "Random" or classname here
+		"Bandit",							// AI Type, "Hero" or "Bandit".
+		"Random",							// Primary gun set number. "Random" for random weapon set
+		2,									// Number of magazines
+		"Random",							// Backpack classname, use "Random" or classname here
+		"Random"							// Gearset classname, use "Random" or classname here
+	] call spawn_static;
+	
+	[
+		[									// Position(s) (can be multiple) mil camp tower
+			[3380.02,14299.4,12.687]
+		],
+		"M2StaticMG",						// Classname of turret
+		"extreme",								// Skill level of unit (easy, medium, hard, extreme, Random)
+		"Bandit2_DZ",						// Skin classname, use "Random" or classname here
+		"Bandit",							// AI Type, "Hero" or "Bandit".
+		"Random",							// Primary gun set number. "Random" for random weapon set
+		2,									// Number of magazines
+		"Random",							// Backpack classname, use "Random" or classname here
+		"Random"							// Gearset classname, use "Random" or classname here
+	] call spawn_static;
+	
+	[
+		[									// Position(s) (can be multiple) entrance left
+			[2952.77,14334.1,19.282]
+		],
+		"M2StaticMG",						// Classname of turret
+		"extreme",								// Skill level of unit (easy, medium, hard, extreme, Random)
+		"Bandit2_DZ",						// Skin classname, use "Random" or classname here
+		"Bandit",							// AI Type, "Hero" or "Bandit".
+		"Random",							// Primary gun set number. "Random" for random weapon set
+		2,									// Number of magazines
+		"Random",							// Backpack classname, use "Random" or classname here
+		"Random"							// Gearset classname, use "Random" or classname here
 	] call spawn_static;
 
-
+	[
+		[									// Position(s) (can be multiple) entrance right
+			[2925.67,14372,18.945]
+		],
+		"M2StaticMG",						// Classname of turret
+		"extreme",								// Skill level of unit (easy, medium, hard, extreme, Random)
+		"Bandit2_DZ",						// Skin classname, use "Random" or classname here
+		"Bandit",							// AI Type, "Hero" or "Bandit".
+		"Random",							// Primary gun set number. "Random" for random weapon set
+		2,									// Number of magazines
+		"Random",							// Backpack classname, use "Random" or classname here
+		"Random"							// Gearset classname, use "Random" or classname here
+	] call spawn_static;
 
 	/*
 	Custom Chopper Patrol spawn Eg.
@@ -208,7 +326,16 @@ if(isServer) then {
 	Place your heli patrols below
 	*/
 
-
+	[
+		[3575.67,14522.2,0.002],			// Position to patrol
+		[1300,12960,0],						// Position to spawn chopper at
+		1000,								// Radius of patrol
+		8,									// Number of waypoints to give
+		"AH1Z",								// Classname of vehicle (make sure it has driver and two gunners)
+		"extreme",							// Skill level of units (easy, medium, hard, extreme, Random)
+		"Random",							// Skin classname, use "Random" or classname here
+		"Bandit"							// AI Type, "Hero" or "Bandit".
+	] spawn heli_patrol;
 
 
 
@@ -241,47 +368,36 @@ if(isServer) then {
 	] spawn vehicle_patrol;
 
 [
-		[13600,3160,0],					
-		[13600,3160,0],					
-		300,						
-		10,						
-		"HMMWV_M1151_M2_DES_EP1",			
-		"medium",						
-		"Random",						
-		"Bandit"						
+		[3750.51,14212.3,0.001],				// Position to patrol Middle
+		[3750.51,14212.3,0.001],				// Position to spawn at
+		400,								// Radius of patrol
+		10,									// Number of waypoints to give
+		"BMP3",					// Classname of vehicle (make sure it has driver and gunner)
+		"extreme",							// Skill level of units (easy, medium, hard, extreme, Random)
+		"Random",							// Skin classname, use "Random" or classname here
+		"Bandit"							// AI Type, "Hero" or "Bandit".
 	] spawn vehicle_patrol;
-
-[
-		[13900,2960,0],					
-		[13900,2960,0],					
-		300,						
-		10,						
-		"HMMWV_M998_crows_M2_DES_EP1",			
-		"medium",						
-		"Random",						
-		"Bandit"						
+	
+	[
+		[3475.67,14622.2,0.002],				// Position to patrol center of arena
+		[3475.67,14622.2,0.002],				// Position to spawn at
+		400,								// Radius of patrol
+		10,									// Number of waypoints to give
+		"2S6M_Tunguska",					// Classname of vehicle (make sure it has driver and gunner)
+		"extreme",							// Skill level of units (easy, medium, hard, extreme, Random)
+		"Random",							// Skin classname, use "Random" or classname here
+		"Bandit"							// AI Type, "Hero" or "Bandit".
 	] spawn vehicle_patrol;
-
-[
-		[13500,3060,0],					
-		[13500,3060,0],					
-		300,						
-		10,						
-		"M113_UN_EP1",					
-		"medium",						
-		"Random",						
-		"Bandit"						
-	] spawn vehicle_patrol;
-
-[
-		[14000,2760,0],					
-		[14000,2760,0],					
-		80,						
-		4,						
-		"Ural_ZU23_TK_GUE_EP1",				
-		"Random",						
-		"Random",						
-		"Bandit"						
+	
+	[
+		[3408.48,14400.2,0.001],				// Position to patrol Middle
+		[3408.48,14400.2,0.001],				// Position to spawn at
+		400,								// Radius of patrol
+		10,									// Number of waypoints to give
+		"M1A2_TUSK_MG",					// Classname of vehicle (make sure it has driver and gunner)
+		"extreme",							// Skill level of units (easy, medium, hard, extreme, Random)
+		"Random",							// Skin classname, use "Random" or classname here
+		"Bandit"							// AI Type, "Hero" or "Bandit".
 	] spawn vehicle_patrol;
 
 
@@ -309,20 +425,52 @@ if(isServer) then {
 	*/
 
 	[
-		[13706.369, 2928.425, 0],					
-		[0,-2640,200],						
-		50,							
-		"UH60M_EP1",						
-		5,							
-		"medium",							
-		"Random",							
-		6,							
-		"Random",							
-		"Random",					
-		"Random",							
-		"Bandit",							
-		true							
+		[3045.19,14363.4,0.001],	// Position that units will be dropped by
+		[1300,14960,0],							// Starting position of the heli
+		700,								// Radius from drop position a player has to be to spawn chopper
+		"UH1Y",							// Classname of chopper (Make sure it has 2 gunner seats!)
+		10,									// Number of units to be para dropped
+		"extreme",							// Skill level of units (easy, medium, hard, extreme, Random)
+		"Random",							// Primary gun set number and rocket launcher. "Random" for random weapon set, "at" for anti-tank, "aa" for anti-air launcher
+		4,									// Number of magazines
+		"Random",							// Backpack classname, use "Random" or classname here
+		"Bandit2_DZ",						// Skin classname, use "Random" or classname here
+		"Random",							// Gearset number. "Random" for random gear set.
+		"Bandit",							// AI Type, "Hero" or "Bandit".
+		true								// true: Aircraft will stay at position and fight. false: Heli will leave if not under fire. 
 	] spawn heli_para;
+	
+[
+      [13706.369, 2928.425, 0],               
+      [0,-2640,200],                 
+      50,                     
+      "UH60M_EP1",                 
+      5,                     
+      "medium",                     
+      "SCAR_H_LNG_Sniper_SD",                     
+      6,                     
+      "Random",                     
+      "FR_Rodriguez_DZ",               
+      "Random",                     
+      "Bandit",                     
+      true                     
+   ] spawn heli_para;
+
+[
+      [13600,3260,0],               
+      [16500,12860,200],                 
+      700,                   
+      "Mi171Sh_CZ_EP1",                 
+      3,                     
+      "medium",                     
+      "VSS_Vintorez",                     
+      6,                     
+      "Random",                     
+      "CZ_Soldier_Sniper_EP1_DZ",               
+      "Random",                     
+      "Bandit",                     
+      true                     
+   ] spawn heli_para;
 	
 	diag_log format["WAI: Static mission for %1 loaded", missionName];
 
