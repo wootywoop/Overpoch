@@ -24,7 +24,7 @@ if(isServer) then {
       [14012.053, 2806.3486, 0],           
       1,                 
       "hard",                 
-      "DMR",               
+      "Random",               
       4,                 
       "Random",                 
       "CIV_EuroMan02_EP1",           
@@ -36,7 +36,7 @@ if(isServer) then {
       [14012.053, 2805.3486, 0],               
       1,                 
       "easy",                 
-      "VSS_Vintorez",               
+      "Random",               
       4,                 
       "Random",                 
       "SurvivorW2_DZ",               
@@ -48,7 +48,7 @@ if(isServer) then {
     [14012.053, 2807.3486, 0],                             
     2,                                           
     "easy",                                   
-    "M14_EP1",                           
+    "Random",                           
     8,                                           
     "Random",                                   
     "BanditW2_DZ",                             
@@ -60,7 +60,7 @@ if(isServer) then {
       [13441.577, 2774.9651, 0],           
       1,                 
       "medium",                 
-      "DMR",                 
+      "Random",                 
       4,                 
       "Random",                 
       "Survivor2_DZ",                 
@@ -96,7 +96,7 @@ if(isServer) then {
       [13624.729, 3170.6475, 0],           
       2,                 
       "medium",                 
-      "Random",                 
+      ["Random","aa"],                 
       6,                 
       "Random",                 
       "Functionary1_EP1_DZ",               
@@ -108,7 +108,7 @@ if(isServer) then {
       [13695.613, 2925.842, 13.075159],         
       1,                 
       "extreme",               
-      "M110_NVG_EP1",               
+      "ai_wep3",              
       10,                 
       "DZ_LargeGunBag_EP1",           
       "Sniper1_DZ",           
@@ -146,7 +146,7 @@ if(isServer) then {
       [13695.068, 2943.6411, 0],           
       3,                 
       "medium",                 
-      "Random",                 
+      ["Random","at"],                 
       10,                 
       "Random",                 
       "FR_OHara_DZ",           
@@ -254,48 +254,9 @@ if(isServer) then {
 
 	[
 		[									// Position(s) (can be multiple) middle tower
-			[3720.82,14487.3,29.192]
-		],
-		"M2StaticMG",						// Classname of turret
-		"extreme",								// Skill level of unit (easy, medium, hard, extreme, Random)
-		"Bandit2_DZ",						// Skin classname, use "Random" or classname here
-		"Bandit",							// AI Type, "Hero" or "Bandit".
-		"Random",							// Primary gun set number. "Random" for random weapon set
-		2,									// Number of magazines
-		"Random",							// Backpack classname, use "Random" or classname here
-		"Random"							// Gearset classname, use "Random" or classname here
-	] call spawn_static;
-	
-	[
-		[									// Position(s) (can be multiple) mil camp tower
-			[3380.02,14299.4,12.687]
-		],
-		"M2StaticMG",						// Classname of turret
-		"extreme",								// Skill level of unit (easy, medium, hard, extreme, Random)
-		"Bandit2_DZ",						// Skin classname, use "Random" or classname here
-		"Bandit",							// AI Type, "Hero" or "Bandit".
-		"Random",							// Primary gun set number. "Random" for random weapon set
-		2,									// Number of magazines
-		"Random",							// Backpack classname, use "Random" or classname here
-		"Random"							// Gearset classname, use "Random" or classname here
-	] call spawn_static;
-	
-	[
-		[									// Position(s) (can be multiple) entrance left
-			[2952.77,14334.1,19.282]
-		],
-		"M2StaticMG",						// Classname of turret
-		"extreme",								// Skill level of unit (easy, medium, hard, extreme, Random)
-		"Bandit2_DZ",						// Skin classname, use "Random" or classname here
-		"Bandit",							// AI Type, "Hero" or "Bandit".
-		"Random",							// Primary gun set number. "Random" for random weapon set
-		2,									// Number of magazines
-		"Random",							// Backpack classname, use "Random" or classname here
-		"Random"							// Gearset classname, use "Random" or classname here
-	] call spawn_static;
-
-	[
-		[									// Position(s) (can be multiple) entrance right
+			[3720.82,14487.3,29.192],
+			[3380.02,14299.4,12.687],
+			[2952.77,14334.1,19.282],
 			[2925.67,14372,18.945]
 		],
 		"M2StaticMG",						// Classname of turret
@@ -307,6 +268,7 @@ if(isServer) then {
 		"Random",							// Backpack classname, use "Random" or classname here
 		"Random"							// Gearset classname, use "Random" or classname here
 	] call spawn_static;
+
 
 	/*
 	Custom Chopper Patrol spawn Eg.
@@ -443,14 +405,14 @@ if(isServer) then {
 [
       [13706.369, 2928.425, 0],               
       [0,-2640,200],                 
-      50,                     
+      100,                     
       "UH60M_EP1",                 
       5,                     
       "medium",                     
-      "SCAR_H_LNG_Sniper_SD",                     
+      "Random",                     
       6,                     
       "Random",                     
-      "FR_Rodriguez_DZ",               
+      "Random",               
       "Random",                     
       "Bandit",                     
       true                     
@@ -463,10 +425,10 @@ if(isServer) then {
       "Mi171Sh_CZ_EP1",                 
       3,                     
       "medium",                     
-      "VSS_Vintorez",                     
+      "Random",                     
       6,                     
       "Random",                     
-      "CZ_Soldier_Sniper_EP1_DZ",               
+      "Random",               
       "Random",                     
       "Bandit",                     
       true                     
