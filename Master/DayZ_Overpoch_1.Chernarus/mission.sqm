@@ -1353,8 +1353,8 @@ class Mission
             {
             position[]={13214.373,300,3472.0823}; 
             name="skalistyisland";
-            text="Unknown";
-            type="hd_unknown";
+            text="Blue's Island";
+            type="hd_warning";
             colorName="ColorRed";
         };  
 	};
