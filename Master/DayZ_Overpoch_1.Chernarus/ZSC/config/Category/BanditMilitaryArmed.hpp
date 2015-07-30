@@ -36,7 +36,7 @@ class Category_569 {
 	};
 	class HMMWV_M2 {
 		type = "trade_any_vehicle";
-		buy[] ={30000,"Coins"};
+		buy[] ={300000,"Coins"};
 		sell[] ={75000,"Coins"};
 	};
 	class HMMWV_Armored {
