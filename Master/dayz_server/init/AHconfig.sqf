@@ -120,7 +120,7 @@ _cMenu =
 	"RscDisplaySpawnSelecter","RscWatchMoreDir","#GETIN","RscStatus",
 	"RscCombatMode","RscFormations","RscTeam","RscSelectTeam","RscReply",
 	"RscCallSupport","#ACTION","#CUSTOM_RADIO","RscRadio","RscGroupRootMenu",
-	"BTC_Hud","PlotManagement"
+	"BTC_Hud","PlotManagement","#USER:_keyMenu"
 ];
 
 /*  ALLOWED Actions "_dayzActions" are only used if you have "_CSA =  true;"  */
