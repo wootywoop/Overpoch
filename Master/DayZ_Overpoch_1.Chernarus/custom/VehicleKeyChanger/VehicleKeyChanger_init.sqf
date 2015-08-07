@@ -13,7 +13,7 @@
 /////////////////////////////////////////////////
 /// Claim Vehicles that does not yet need Key ///
 ///////// 0 = Not allowed | 1 = Allowed /////////
-vkc_claiming = 1;
+vkc_claiming = 0;
 /////////////////////////////////////////////////
 //////// Claim Vehicles costs this Item /////////
 /// Any Item can be used here, some examples: ///
