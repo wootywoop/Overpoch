@@ -42,7 +42,7 @@ menu_TK_GUE_Soldier_5_EP1 = [
 menu_GUE_Soldier_MG = [
 	[["Ammunition",577],["Clothing",575],["Helicopter Armed",512],["Military Armed",569],["Trucks Armed",534],["Weapons",627],["Money",700]],
 	[],
-	"hero"
+	"bandit"
 ];
 menu_Worker2 = [
 	[["Airplanes",517],["Helicopter Unarmed",519],["Overwatch Camel",1014]],

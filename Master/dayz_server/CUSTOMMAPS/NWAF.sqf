@@ -1,5 +1,5 @@
 if (isServer) then {
-
+/*
 _vehicle_3 = objNull;
 if (true) then
 {
@@ -5893,7 +5893,7 @@ if (true) then
   _this setDir 47.833946;
   _this setPos [2927.0295, 14341.945, 0.012226406];
 };
-  
+ */
 _vehicle_2068 = objNull;
 if (true) then
 {
@@ -13733,7 +13733,7 @@ if (true) then
   _this setDir -70.137962;
   _this setPos [11880.507, 12789.333, -0.21595764];
 };
-
+/*
 //Bandit city ATC
 _vehicle_3078 = objNull;
 if (true) then
@@ -13866,5 +13866,5 @@ if (true) then
 
   _this setPos [3678.26, 14050.7, 0.222];
 };
-
+*/
 };
