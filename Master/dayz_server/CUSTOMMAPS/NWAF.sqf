@@ -1,5 +1,5 @@
 if (isServer) then {
-/*
+
 _vehicle_3 = objNull;
 if (true) then
 {
@@ -5893,7 +5893,7 @@ if (true) then
   _this setDir 47.833946;
   _this setPos [2927.0295, 14341.945, 0.012226406];
 };
- */
+
 _vehicle_2068 = objNull;
 if (true) then
 {
