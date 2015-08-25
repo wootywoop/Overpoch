@@ -10,7 +10,7 @@
 /* *********************************www.infiSTAR.de********************************* */
 /* *******************Developed by infiSTAR (infiSTAR23@gmail.com)****************** */
 /* **************infiSTAR Copyright®© 2011 - 2015 All rights reserved.************** */
-/* ********************************29-07-2015-v1419********************************* */
+/* ********************************20-08-2015-v1424********************************* */
 /* ********************************************************************************* */
 comment 'Antihack & AdminTools - Christian Lorenzen - www.infiSTAR.de - License: (CC)';
 private['_dstring','_cconfig','_OpenMenuKey','_LAdmins','_NAdmins','_SAdmins','_BLOCKED','_TopOfESC','_LowerTop','_LowerBottom','_EscColor',
@@ -180,7 +180,7 @@ if((preProcessFileLineNumbers ("blacklist.sqf")) != "")then{
 		};
 	};
 };
-iproductVersion = '29-07-2015-v1419';
+iproductVersion = '20-08-2015-v1424';
 diag_log format['infiSTAR.de - iproductVersion: %1 | Server productVersion: %2 | worldName: %3 | dayz_instance: %4 | missionName: %5',iproductVersion,productVersion,worldName,dayz_instance,missionName];
 _version = productVersion select 3;
 if(_version < 103718)then
@@ -510,11 +510,13 @@ _AHstring = "
 						if(isNil'_needle')exitWith{};
 						if(typeName _needle != 'STRING')exitWith{};
 						if(_needle == '')exitWith{};
+						_needle = toLower _needle;
 						
 						_haystack = _this select 1;
 						if(isNil'_haystack')exitWith{};
 						if(typeName _haystack != 'STRING')exitWith{};
 						if(_haystack == '')exitWith{};
+						_haystack = toLower _haystack;
 						_haystack = toArray _haystack;
 						
 						
@@ -761,7 +763,26 @@ fnc_infiSTAR_PlayerLog =
 				'76561198078172204','76561198055471095','76561197960467080','76561198118209085',
 				'76561198011490662','76561198022405783','76561198027331216','76561198114242869',
 				'76561198162162807','76561198237695830','76561198042948243','76561198057310735',
-				'76561198187861275',
+				'76561198187861275','76561198238674404','76561198126469689','76561198181631658',
+				'76561198127804243','76561198128979984',
+				'76561198146144708','76561198068907073','76561198164247939','76561198148223170',
+				'76561198047018267','76561198184224578','76561198172490317','76561198173428738',
+				'76561198210776896','76561198129964301','76561198044300581','76561198166717996',
+				'76561198094231683','76561198146805802','76561198136802935','76561198142441881',
+				'76561198094338696','76561198187781961','76561198121223518','76561198079449269',
+				'76561198023101324','76561198048022387','76561198119570372','76561198062096431',
+				'76561198088378782','76561198041393774','76561198112323494','76561198053677121',
+				'76561198123519274','76561198077284437','76561198026740442','76561198069250693',
+				'76561198138303388','76561198091003467','76561198017261414','76561198073940740',
+				'76561198164142409','76561198098582005','76561198084042518','76561198073676505',
+				'76561198070426992','76561198076212577','76561198060659549','76561198145259582',
+				'76561198081773132','76561198110573817','76561198139466386','76561198068520666',
+				'76561198068528830','76561198158612874','76561198044658952','76561198014606692',
+				'76561198032376675','76561198039419073','76561198189482407','76561198171310895',
+				'76561198050072698','76561198119196103','76561198071434263','76561198221956984',
+				'76561197966465862','76561198148707032','76561198095625242','76561198037926903',
+				'76561198179253387','76561198196027789','76561198084447626','76561198098036022',
+				'76561198202546240','76561198230777872','76561198228832592','76561198168882924',
 				'0'
 				];
 				if(_puid in (_young_boys_that_like_to_copy_paste+_people_that_have_been_caught_for_hacking_or_other_bad_things))then
@@ -1190,7 +1211,7 @@ if("+str _UDC+")then
 					};
 				} forEach ['hhahaaaaar','CharlieSheenkeybinds','KickOFF','yolo','runonce','notakeybind','GEFClear','GEFClose','GEFWhite','GEFRed','GEFGreen','GEFCyan','FirstHint','LoganIsTired',
 				'MonsterCheats_Admin_Options','MonsterCheats_Toggle_Mods','MonsterCheats_Toggle','Jkeyszz','n2','monkyinterrupt','T0ol_it3ms','A11','fnx14','startmenu','menu0','Nute_Dat_Bomber',
-				'whipbut','MainMenu','UserFuncs','BB__gps__B3'];
+				'whipbut','MainMenu','UserFuncs','BB__gps__B3','killdatshit','UPDATED_check_load','bypass_by_36'];
 				{
 					if(!isNull (findDisplay _x))then
 					{
@@ -2271,8 +2292,8 @@ publicVariable '"+_randvar28+"';
 				(findDisplay 46) displayRemoveAllEventHandlers 'KeyUp';
 				(findDisplay 46) displayAddEventHandler ['KeyUp','_this call "+_randvar6+"'];
 				
-				_shouldbe = 0;
 				_kdID = 0;
+				_shouldbe = 0;
 				_checknow = false;
 				
 				_veh = vehicle player;
@@ -2280,8 +2301,6 @@ publicVariable '"+_randvar28+"';
 				{
 					(findDisplay 46) displayRemoveAllEventHandlers 'MouseMoving';
 					(findDisplay 46) displayRemoveAllEventHandlers 'MouseHolding';
-					
-					
 					"; if((_RCK)&&(!_CKD))then{ _AHstring = _AHstring + "
 						(findDisplay 46) displayRemoveAllEventHandlers 'KeyDown';
 						(findDisplay 46) displayAddEventHandler ['KeyDown','_this call "+_randvar6+"'];
@@ -3786,7 +3805,7 @@ publicVariable '"+_randvar28+"';
 					_m = [(format['%1\tele.sqf',_name]),(format['%1\DefaultMenu.sqf',_name]),(format['%1\initmenu.sqf',_name]),(format['%1\Startup.sqf',_name])];
 					_farray =
 					[
-						'xoia24rfadfhw2\alishcahc.sqf','001.sqf',
+						'xoia24rfadfhw2\alishcahc.sqf','001.sqf','FinisTxTMenu\MainFile.sqf','FinisTxTMenu\cumpile\dahR_E.sqf',
 						'WhippyV4\execv4.sqf','WhippyV4\Keybindiezz.sqf','V3\B1ND.sqf','l33tH4x0or\L33TMenu.sqf','run.sqf',
 						'JHAction.sqf','V4Run.sqf','Whippymenu\activate.sqf','Whippymenu\keybindfz.sqf','WhippyV4\WHRSupplies.sqf',
 						'oefexec.dll','stdafx.h','whippy\execute.sqf','MSSM\main.sqf','ScriptName.sqf','RommelV1\Rexecv1.sqf',
@@ -3983,10 +4002,9 @@ publicVariable '"+_randvar28+"';
 								_voicecount = _voicecount + 1;
 								if(_voicecount > 3)then
 								{
-									player setDamage 5;
 									_log = format['Voice over Side Chat (KILLED) @%1',mapGridPosition player];
 									[name player,getPlayerUID player,'SLOG',toArray (_log)] call "+_randvar286537+";
-									uiSleep 5;
+									uiSleep 3;
 									findDisplay 46 closeDisplay 0;
 								};
 							};
@@ -4387,10 +4405,46 @@ publicVariable '"+_randvar28+"';
 		};
 	};
 	[_name,_puid] spawn {
+		disableSerialization;
 		_name = _this select 0;_puid = _this select 1;
 		_idcount = 0;
 		_startTime = time;
-		disableSerialization;
+		_fnc_inString = {
+			private ['_needle','_haystack','_needleLen','_hay','_found'];
+			_needle = _this select 0;
+			if(isNil'_needle')exitWith{};
+			if(typeName _needle != 'STRING')exitWith{};
+			if(_needle == '')exitWith{};
+			_needle = toLower _needle;
+			
+			_haystack = _this select 1;
+			if(isNil'_haystack')exitWith{};
+			if(typeName _haystack != 'STRING')exitWith{};
+			if(_haystack == '')exitWith{};
+			_haystack = toLower _haystack;
+			_haystack = toArray _haystack;
+			
+			
+			_needleLen = count toArray _needle;
+			_hay = +_haystack;
+			_hay resize _needleLen;
+			_found = false;
+			for '_i' from _needleLen to count _haystack do {
+				if(toString _hay == _needle)exitWith {_found = true};
+				_hay set [_needleLen, _haystack select _i];
+				_hay set [0, 'x'];
+				_hay = _hay - ['x']
+			};
+			_found
+		};
+		_veryBadTexts =
+		[
+			'/item','/gunbox','/run','/backpack','/morph','/start','/exec','/menu','/skin','/ban','adminstart','admin_start','.ban','.sqf','bbhelp','bbammo','bbbox','bbdel','bbesp','bbgod','bbtp','bbunlock',
+			'/pesp','/pmarkers','/ptp','/pdel','/pammo','/pnuke','/pgunbox','/pepochbox','/pteleportall','/pgod','t3l3all','n00k3','t3p3','4mm0','3sp','j3sus','v3hj3sus','m4rk3rs','z3dz','inf4mm0','b0mb4ll','bombtrgt',
+			'/troll','/troll funces','/trollf','/trollfu','/trollfun','/trollfunk','/trollfunks','/troll funks','/trollf','/trollfuc','/trollfuck','/trollfucku','/trollfuckup','/spawn100','iRap3','iRap3bt','iRap3eX','iRap3mrK',
+			'iRap35P','iRap37A','iRap3d3l','/bot','/tp','/2ndtp','/playermarker','/safemarkers','/fini','/finikillall','/banall','/givecoins','/itemspawn','/itemmassspawn','/vehspawn','/finitpall','/finiinfistar',
+			'/finiactivatere','/kickall','/finialldance','/god'
+		];
 		while{1 == 1}do
 		{
 			if(!isNil 'dayzPlayerLogin')then
@@ -4539,6 +4593,26 @@ publicVariable '"+_randvar28+"';
 							if("+str _UDN+")then{systemChat '!vote day,/vote day, vote day,!vote night,/vote night, vote night';};
 							systemChat '/killme, killme, /suicide, suicide';
 							systemChat '/cry, cry, !cry';
+						};
+						if(_txt in _veryBadTexts)then
+						{
+							(_display) closeDisplay 0;
+							_log = format['BadText: %1',_txt];
+							[_name,_puid,'HLOG_SKICK',toArray (_log)] call "+_randvar286537+";
+							(findDisplay 46)closeDisplay 0;
+						}
+						else
+						{
+							{
+								_found = [_x,_txt] call _fnc_inString;
+								if(_found)exitWith
+								{
+									(_display) closeDisplay 0;
+									_log = format['BadText: %1',_txt];
+									[_name,_puid,'HLOG_SKICK',toArray (_log)] call "+_randvar286537+";
+									(findDisplay 46)closeDisplay 0;
+								};
+							} forEach _veryBadTexts;
 						};
 						if(_txt in ['/m'])then
 						{
@@ -4760,6 +4834,21 @@ publicVariable '"+_randvar28+"';
 					};
 				};
 			};
+			"; if(_LEM)then{ _AHstring = _AHstring + "
+				'PVDZE_maintainArea' addPublicVariableEventHandler
+				{
+					private['_input','_player','_targetObj'];
+					_input = (_this select 1);
+					_player = _input select 0;
+					_targetObj = _input select 2;
+					
+					_log = format['%1(%2) maintained %3 @%4',name _player,getPlayerUID _player,typeOf _targetObj,mapGridPosition _targetObj];
+					'ARMA_LOG' callExtension format['A2_MAINTAIN:%1%2',_log,DAYZ_INSTANCE_LOGGING];
+					diag_log (LOGGEDTIME+_log);
+					
+					_input spawn server_maintainArea
+				};
+			"; }; _AHstring = _AHstring + "
 			'remExField' addPublicVariableEventHandler
 			{
 				remExFieldTEST = remExField;
@@ -5216,7 +5305,7 @@ publicVariable '"+_randvar28+"';
 	{
 		systemChat '<infiSTAR.de>: Successfully Loaded In.';
 		if("+str _DMS+")then{systemChat '<infiSTAR.de>: -END- key toggles the debugmonitor';};
-		diag_log format['infiSTAR.de - 29-07-2015-v1419 - Successfully Loaded on Client ID2865 (%1)',time];
+		diag_log format['infiSTAR.de - 20-08-2015-v1424 - Successfully Loaded on Client ID2865 (%1)',time];
 	}
 	else
 	{
@@ -5402,23 +5491,18 @@ fnc_VoteTimeServer =
 			'ARMA_LOG' callExtension _dllcall;
 			diag_log (LOGGEDTIME+_log);
 			
+			if(_what == 'SLOG_NP')exitWith
+			{
+				"+_randvar13+"NEWPLAYER = format['%1 (%2)   Time: %3h %4min',_name,_puid,_hours,_minutes2];
+				publicVariable '"+_randvar13+"NEWPLAYER';
+			};
+			
 			_log2 = format['%3h %4min | %1 (%2) | %5',_name,_puid,_hours,_minutes2,_work];
 			PV_SurveillanceLog = PV_SurveillanceLog + [[[_name,_puid,_log2],'','0','1','0','0',[]]];
 			publicVariable 'PV_SurveillanceLog';
 			
 			if(_what == 'SLOG_SKICK')then{
 				[_name,_puid] call fnc_infiSTAR_ServerkickNew;
-			};
-		};
-		if(typeName _work == 'STRING')exitWith
-		{
-			_asave = toArray _work;
-			_asave resize 10;
-			_asave;
-			if(str _asave == '[78,101,119,32,80,108,97,121,101,114]')then
-			{
-				"+_randvar13+"NEWPLAYER = format['%1 (%2)   Time: %3h %4min',_name,_puid,_hours,_minutes2];
-				publicVariable '"+_randvar13+"NEWPLAYER';
 			};
 		};
 	};
@@ -7121,17 +7205,17 @@ diag_log ("infiSTAR.de - ADDING PublicVariableEventHandlers");
 					_BackPack = getText (configfile >> 'CfgVehicles' >> _item >> 'vehicleClass') == 'BackPacks';
 					if(_BackPack)then
 					{
-						_crate addBackpackCargoGlobal [_item,_x select 1];
+						_b0x addBackpackCargoGlobal [_item,_x select 1];
 					}
 					else
 					{
 						if(isClass (configFile >> 'CfgWeapons' >> _item))then
 						{
-							_crate addWeaponCargoGlobal [_item,_x select 1];
+							_b0x addWeaponCargoGlobal [_item,_x select 1];
 						};
-						if(isClass (configFile >> 'CfgMagazines' >> _this))then
+						if(isClass (configFile >> 'CfgMagazines' >> _item))then
 						{
-							_crate addMagazineCargoGlobal [_item,_x select 1];
+							_b0x addMagazineCargoGlobal [_item,_x select 1];
 						};
 					};
 				}
@@ -7141,17 +7225,17 @@ diag_log ("infiSTAR.de - ADDING PublicVariableEventHandlers");
 					_BackPack = getText (configfile >> 'CfgVehicles' >> _item >> 'vehicleClass') == 'BackPacks';
 					if(_BackPack)then
 					{
-						_crate addBackpackCargoGlobal [_item,1];
+						_b0x addBackpackCargoGlobal [_item,1];
 					}
 					else
 					{
 						if(isClass (configFile >> 'CfgWeapons' >> _item))then
 						{
-							_crate addWeaponCargoGlobal [_item,1];
+							_b0x addWeaponCargoGlobal [_item,1];
 						};
-						if(isClass (configFile >> 'CfgMagazines' >> _this))then
+						if(isClass (configFile >> 'CfgMagazines' >> _item))then
 						{
-							_crate addMagazineCargoGlobal [_item,1];
+							_b0x addMagazineCargoGlobal [_item,1];
 						};
 					};
 				};

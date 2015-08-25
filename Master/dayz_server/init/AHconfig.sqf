@@ -5,6 +5,16 @@
 	
 	Description:
 	Arma AntiHack & AdminTools - infiSTAR.de
+	
+	
+	______ _____  ___ ______  ______ _____ _     _____  _    _ 
+	| ___ \  ___|/ _ \|  _  \ | ___ \  ___| |   |  _  || |  | |
+	| |_/ / |__ / /_\ \ | | | | |_/ / |__ | |   | | | || |  | |
+	|    /|  __||  _  | | | | | ___ \  __|| |   | | | || |/\| |
+	| |\ \| |___| | | | |/ /  | |_/ / |___| |___\ \_/ /\  /\  /
+	\_| \_\____/\_| |_/___/   \____/\____/\_____/\___/  \/  \/ 
+	
+	Don't forget to read the readme.txt
 	-
 	Make sure to have proper settings!
 */
@@ -25,13 +35,13 @@
 /*  Use Player White-list */ _UPW = false;	/* true or false */
 /*  WHITELIST UIDs HERE   */ _WHITELIST = ["0","0","0"]; //do not have a , at the end.
 /* ********************************************************************************* */
-/*  Top esc menu TXT      */ _TopOfESC = "FatCat's Overpoch Server"; //do not use " in this text.
+/*  Top esc menu TXT      */ _TopOfESC = "FatCat's Overpoch server"; //do not use " in this text.
 /*  Bottom esc menu TXT   */ _LowerTop = "AntiHack / AdminTool"; //do not use " in this text.
 /*  Bottom esc menu TXT2  */ _LowerBottom = "by infiSTAR.de"; //do not use " in this text.
 /*  Color esc menu TXT    */ _EscColor = [0.6,0,0,1];
 /*  DebugMonitor TXT      */ _BottomDebug = "infiSTAR.de"; //do not use " in this text.
 /*  DebugMonitor Key      */ _ODK =  0xCF;	/* google DIK_KeyCodes (0xCF is END) */
-/*  Use DebugMonitor      */ _DMS =  false;	/* true or false */	/* starts up with debugmonitor ON if true */
+/*  Use DebugMonitor      */ _DMS =  true;	/* true or false */	/* starts up with debugmonitor ON if true */
 /*  DebugMonitor Action   */ _DMW = false;	/* true or false */	/* "Debug" option on mousewheel */
 /*  Mod EPOCH ?           */ _MEH =  true;	/* true or false */
 /* ********************************************************************************* */
@@ -58,14 +68,17 @@ _blockDamageFrom = [
 	'PipeBomb','TimeBomb',
 	'Mine','MineE',
 	'GrenadeHand','GrenadeHand_stone','grenadecore',
-	'B_30mm_HE','B_30mm_AP',
 	'R_57mm_HE','M_9M311_AA',
-	'M_AT2_AT','G_30mm_HE','M_AT5_AT','M_AT6_AT','M_AT9_AT','M_AT13_AT','B_23mm_AA','Bo_GBU12_LGB','Bo_FAB_250','G_Camel_HE','M_Ch29_AT','Sh_122_HE','Sh_125_SABOT','Sh_125_HE','R_Hydra_HE',
-	'B_30mmA10_AP','B_25mm_HE','R_GRAD','B_23mm_APHE','M_Hellfire_AT','M_Igla_AA','B_145x115_AP','Sh_105_HE','B_20mm_AA','B_20mm_AP','B_30x113mm_M789_HEDP','Sh_120_SABOT','Sh_120_HE',
+	'M_AT2_AT','M_AT5_AT','M_AT6_AT','M_AT9_AT','M_AT13_AT','Bo_GBU12_LGB','Bo_FAB_250','G_Camel_HE','M_Ch29_AT','Sh_122_HE','Sh_125_SABOT','Sh_125_HE','R_Hydra_HE',
+	'R_GRAD','M_Hellfire_AT','M_Igla_AA','Sh_105_HE','B_20mm_AA','B_30x113mm_M789_HEDP','Sh_120_SABOT','Sh_120_HE',
 	'M_Maverick_AT','G_40mm_HE','Bo_Mk82','R_MLRS','M_R73_AA','R_80mm_HE','R_S8T_AT','M_Sidewinder_AA','M_Sidewinder_AA_F35','R_PG9_AT','R_OG9_HE','M_Stinger_AA','M_TOW_AT','M_TOW2_AT',
-	'M_Vikhr_AT','B_127x108_APHE','Sh_85_AP','Sh_85_HE','ARTY_Sh_122_HE','ARTY_Sh_122_WP','ARTY_Sh_105_HE','ARTY_Sh_105_WP','ARTY_Sh_81_HE','ARTY_Sh_81_WP','ARTY_Sh_82_HE','ARTY_Sh_82_WP',
-	'ARTY_R_227mm_HE_Rocket','ARTY_R_120mm_HE_Rocket'
+	'M_Vikhr_AT','Sh_85_AP','Sh_85_HE','ARTY_Sh_122_HE','ARTY_Sh_122_WP','ARTY_Sh_105_HE','ARTY_Sh_105_WP','ARTY_Sh_81_HE','ARTY_Sh_81_WP','ARTY_Sh_82_HE','ARTY_Sh_82_WP',
+	'ARTY_R_227mm_HE_Rocket','ARTY_R_120mm_HE_Rocket','ARTY_Sh_82_ILLUM','ARTY_Sh_105_SADARM','ARTY_Sh_105_LASER','ARTY_Sh_105_SMOKE','ARTY_Sh_105_ILLUM','ARTY_Sh_122_SADARM',
+	'ARTY_Sh_122_LASER','ARTY_Sh_122_SMOKE','ARTY_Sh_122_ILLUM','ARTY_Sh_81_ILLUM'	
 ];
+
+
+
 /*  Use Loaded Check(s)   */ _AHL = false;	/* true or false */	/* "AH NOT LOADED ON PLAYER" */
 /*  _timedif for _AHL     */ _TDI =    130;	/*   45 - 300   */	/* only used if "_AHL = true;" -> takes longer to detect if the AH is loaded on a player or not. */
 
@@ -89,20 +102,21 @@ _blockDamageFrom = [
 /*  Use cut-scene ?       */ _UCS =  true;	/* true or false */	/* dynamicText ~ often colored, animated or used in credits */
 /*  Use Damage Check ?    */ _UDC =  true;	/* true or false */	/* try to catch Hacks that change the damage value of weapons */
 
-/*  Remove "itemsAdded"   */ _RAI =  true;	/* true or false */	/* might remove items from a custom crafting system.. */
+/*  Remove "itemsAdded"   */ _RAI =  false;	/* true or false */	/* might remove items from a custom crafting system.. */
 /*  HACKED BOX Check ?    */ _CHB =  false;	/* true or false */	/* custom crates might be deleted if "Max Cargo Count" is to low */
-/*  Max Cargo Count ?     */ _MCC =  2050;
+/*  Max Cargo Count ?     */ _MCC =  3000;
 
 /*  MouseMoving EH check  */ _MOH =  false;	/* true or false */	/* will say: "MouseMoving EventHandler added" - needs to be disabled for UAV scripts and such.. */
-/*  Close Dialogs ?       */ _CUD =  true;	/* true or false */	/* Closes custom Dialogs (Menus) that are not in _ALLOWED_Dialogs */
+/*  Close Dialogs ?       */ _CUD =  false;	/* true or false */	/* Closes custom Dialogs (Menus) that are not in _ALLOWED_Dialogs */
 /*  check MapSingleClick  */ _OMC =  true;	/* true or false */	/* announces: "MapSingleClick modified", if modification is found - NEEDS _MBC to be true! */
-/*  Remove Keybinds ?     */ _RCK =  false;	/* true or false */	/* Removes custom Keybinds and sets back the default ones */
-/*  Check Keybinds ?      */ _CKD =  false;	/* true or false */	/* checks for additional keybinds.. */
-/*  Check CMDMenus ?      */ _CCM = true;	/* true or false */	/* only disable this if you know what you are doing. */
-/*  BLOCK ALL CMDMenus    */ _BCM = true;	/* true or false */	/* we don't need commandingMenus. so have this true. */
+/*  Remove Keybinds ?     */ _RCK =  true;	/* true or false */	/* Removes custom Keybinds and sets back the default ones */
+/*  Check Keybinds ?      */ _CKD =  true;	/* true or false */	/* checks for additional keybinds.. */
+/*  Check CMDMenus ?      */ _CCM =  true;	/* true or false */	/* only disable this if you know what you are doing. I strongly recommend to use this! */
+/*  BLOCK ALL CMDMenus    */ _BCM =  true;	/* true or false */	/* we don't need commandingMenus. so have this true as well. */
 /*  Check Actions ?       */ _CSA = false;	/* true or false */	/* this checks mousewheel actions */
 /*  Force Terrain Grid ?  */ _FTG =    25;	/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 */
-/*  Use Clutter check ?   */ _UBC =  true;	/* true or false */	/* BadSize: %1 - Plants and/or Clutter pbo(s) removed..! */ 
+/*  Use Clutter check ?   */ _UBC =  true;	/* true or false */	/* BadSize: %1 - Plants and/or Clutter pbo(s) removed..! */
+/*  Log Epoch Maintain    */ _LEM =  true;	/* true or false */
 /* ********************************************************************************* */
 /*  ALLOWED Custom Dialogs "_ALLOWED_Dialogs" are only used if you have "_CUD =  true;"  */
 /*  If you want install custom scripts using dialog windows, you can add IDD numbers  */
@@ -133,7 +147,7 @@ _ALLOWED_Vehicles = ["ALL IF _UVW = false","Tractor","Policecar"];
 /*  If "_UVC =  true;" this will delete all vehicles that are in "_FORBIDDEN_Vehicles"  */
 _FORBIDDEN_Vehicles =
 [
-
+	
 ];
 
 /*  ALLOWED CMDMenus "_cMenu" are only used if you have "_BCM = false;" which I would not recommend.  */
@@ -144,7 +158,7 @@ _cMenu =
 	"RscDisplaySpawnSelecter","RscWatchMoreDir","#GETIN","RscStatus",
 	"RscCombatMode","RscFormations","RscTeam","RscSelectTeam","RscReply",
 	"RscCallSupport","#ACTION","#CUSTOM_RADIO","RscRadio","RscGroupRootMenu",
-	"BTC_Hud","PlotManagement","#USER:_keyMenu"
+	"BTC_Hud","PlotManagement"
 ];
 
 /*  ALLOWED Actions "_dayzActions" are only used if you have "_CSA =  true;"  */
@@ -200,7 +214,7 @@ _dayzActions =
 ];
 /* ********************************************************************************* */
 	//	NEW (EXPERIMENTAL):
-	_UDP = false;	// Use Dupe Protection			/* true or false */
+	_UDP = true;	// Use Dupe Protection			/* true or false */
 	_URG = false;	// Antirefuel & AntiCargod		/* true or false */
 	_UIC = false;	//	Vehicle ID Check	/* true or false */
 	_UCL =  true;	// Use Anti Combat Log	/* true or false */
@@ -238,6 +252,10 @@ _dayzActions =
 		When "_BHF =  true;" which it always should be in my opinion, then this will check if "_BHF" is persistent.
 	*/
 	_FRC =  true;	/* true or false */
+	
+	
+	
+	
 /*
 	custom Box content:
 	just an item like it is in the example with   'ItemMap'   will put the item once in the box.
@@ -245,7 +263,7 @@ _dayzActions =
 */
 _SupportBox1Content =
 [
-	'ItemMap',['ItemGPS',3],'ItemWatch'
+	['ItemCrowbar', 15],['cinder_wall_kit', 150],['cinder_garage_kit', 25],['cinder_door_kit', 25],['ItemWoodWallWindowLg', 30],['light_pole_kit', 20],['ItemWoodWallwithDoorLg', 10],['ItemWoodFloorHalf', 30],['ItemWoodWallLg', 30],['ItemWoodWall', 30],['ItemWoodStairsSupport', 10],['MortarBucket', 100],['metal_panel_kit', 20],['metal_floor_kit', 100],['ItemWoodStairs', 10],['ItemWoodLadder', 10],['ItemWoodFloorQuarter', 30],['ItemWoodFloor', 30],['ItemVault', 5],['ItemFireBarrel_Kit', 5],['ItemTankTrap', 45],['ItemSandbag', 30],['ItemPole', 40],['ItemLockbox', 5],['ItemComboLock', 5],['ItemEtool', 5],['ItemHatchet_DZE', 5],['ItemToolbox', 5],['ItemSledge', 5],['ItemMatchbox_DZE', 5],['30m_plot_kit', 5],['bulk_ItemTankTrap', 25],['bulk_ItemWire',  25],['CinderBlocks', 150]
 ];
 
 _SupportBox2Content =

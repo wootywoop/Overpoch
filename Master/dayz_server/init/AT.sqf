@@ -1870,13 +1870,13 @@ PV_AdminMainCode = {
 			_ctrl ctrlSetPosition [safezoneX, safezoneY, safeZoneW, 0.02];
 			_ctrl ctrlSetText "No Admin";
 			if(getPlayerUID player in PV_LowLevel_List)then{
-				_ctrl ctrlSetText format["Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  25-07-2015-v1418",count playableUnits,_hours,_minutes2];
+				_ctrl ctrlSetText format["Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  20-08-2015-v1424",count playableUnits,_hours,_minutes2];
 			};
 			if(getPlayerUID player in PV_NormalLevel_List)then{
-				_ctrl ctrlSetText format["Higher Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  25-07-2015-v1418",count playableUnits,_hours,_minutes2];
+				_ctrl ctrlSetText format["Higher Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  20-08-2015-v1424",count playableUnits,_hours,_minutes2];
 			};
 			if(getPlayerUID player in PV_SuperLevel_List)then{
-				_ctrl ctrlSetText format["Super Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  25-07-2015-v1418",count playableUnits,_hours,_minutes2];
+				_ctrl ctrlSetText format["Super Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  20-08-2015-v1424",count playableUnits,_hours,_minutes2];
 			};
 			_ctrl ctrlSetForegroundColor [0,0,0,0];
 			_ctrl ctrlCommit 0;
@@ -1915,13 +1915,13 @@ PV_AdminMainCode = {
 			_ctrl ctrlSetPosition [safezoneX, safezoneY, safeZoneW, 0.02];
 			_ctrl ctrlSetText "No Admin";
 			if(getPlayerUID player in PV_LowLevel_List)then{
-				_ctrl ctrlSetText format["Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  25-07-2015-v1418",count playableUnits,_hours,_minutes2];
+				_ctrl ctrlSetText format["Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  20-08-2015-v1424",count playableUnits,_hours,_minutes2];
 			};
 			if(getPlayerUID player in PV_NormalLevel_List)then{
-				_ctrl ctrlSetText format["Higher Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  25-07-2015-v1418",count playableUnits,_hours,_minutes2];
+				_ctrl ctrlSetText format["Higher Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  20-08-2015-v1424",count playableUnits,_hours,_minutes2];
 			};
 			if(getPlayerUID player in PV_SuperLevel_List)then{
-				_ctrl ctrlSetText format["Super Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  25-07-2015-v1418",count playableUnits,_hours,_minutes2];
+				_ctrl ctrlSetText format["Super Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  20-08-2015-v1424",count playableUnits,_hours,_minutes2];
 			};
 			_ctrl ctrlCommit 0;
 			
@@ -1956,13 +1956,13 @@ PV_AdminMainCode = {
 			_ctrl ctrlSetPosition [safezoneX, safezoneY, safeZoneW, 0.02];
 			_ctrl ctrlSetText "No Admin";
 			if(getPlayerUID player in PV_LowLevel_List)then{
-				_ctrl ctrlSetText format["Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  25-07-2015-v1418",count playableUnits,_hours,_minutes2];
+				_ctrl ctrlSetText format["Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  20-08-2015-v1424",count playableUnits,_hours,_minutes2];
 			};
 			if(getPlayerUID player in PV_NormalLevel_List)then{
-				_ctrl ctrlSetText format["Higher Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  25-07-2015-v1418",count playableUnits,_hours,_minutes2];
+				_ctrl ctrlSetText format["Higher Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  20-08-2015-v1424",count playableUnits,_hours,_minutes2];
 			};
 			if(getPlayerUID player in PV_SuperLevel_List)then{
-				_ctrl ctrlSetText format["Super Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  25-07-2015-v1418",count playableUnits,_hours,_minutes2];
+				_ctrl ctrlSetText format["Super Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  20-08-2015-v1424",count playableUnits,_hours,_minutes2];
 			};
 			_ctrl ctrlCommit 0;
 			
@@ -1997,13 +1997,13 @@ PV_AdminMainCode = {
 			_ctrl ctrlSetPosition [safezoneX, safezoneY, safeZoneW, 0.02];
 			_ctrl ctrlSetText "No Admin";
 			if(getPlayerUID player in PV_LowLevel_List)then{
-				_ctrl ctrlSetText format["Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  25-07-2015-v1418",count playableUnits,_hours,_minutes2];
+				_ctrl ctrlSetText format["Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  20-08-2015-v1424",count playableUnits,_hours,_minutes2];
 			};
 			if(getPlayerUID player in PV_NormalLevel_List)then{
-				_ctrl ctrlSetText format["Higher Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  25-07-2015-v1418",count playableUnits,_hours,_minutes2];
+				_ctrl ctrlSetText format["Higher Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  20-08-2015-v1424",count playableUnits,_hours,_minutes2];
 			};
 			if(getPlayerUID player in PV_SuperLevel_List)then{
-				_ctrl ctrlSetText format["Super Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  25-07-2015-v1418",count playableUnits,_hours,_minutes2];
+				_ctrl ctrlSetText format["Super Admin Menu  ---  PLAYER: %1  ---  SERVER UP FOR: %2h %3min"+ADMINHASH+"  ---  20-08-2015-v1424",count playableUnits,_hours,_minutes2];
 			};
 			_ctrl ctrlCommit 0;
 			
