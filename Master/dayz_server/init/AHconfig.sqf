@@ -112,8 +112,8 @@ _blockDamageFrom = [
 /*  Remove Keybinds ?     */ _RCK =  true;	/* true or false */	/* Removes custom Keybinds and sets back the default ones */
 /*  Check Keybinds ?      */ _CKD =  false;	/* true or false */	/* checks for additional keybinds.. */
 /*  Check CMDMenus ?      */ _CCM =  true;	/* true or false */	/* only disable this if you know what you are doing. I strongly recommend to use this! */
-/*  BLOCK ALL CMDMenus    */ _BCM =  true;	/* true or false */	/* we don't need commandingMenus. so have this true as well. */
-/*  Check Actions ?       */ _CSA =   true;	/* true or false */	/* this checks mousewheel actions */
+/*  BLOCK ALL CMDMenus    */ _BCM =  false;	/* true or false */	/* we don't need commandingMenus. so have this true as well. */
+/*  Check Actions ?       */ _CSA =  false;	/* true or false */	/* this checks mousewheel actions */
 /*  Force Terrain Grid ?  */ _FTG =    25;	/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 */
 /*  Use Clutter check ?   */ _UBC =  true;	/* true or false */	/* BadSize: %1 - Plants and/or Clutter pbo(s) removed..! */
 /*  Log Epoch Maintain    */ _LEM =  true;	/* true or false */
@@ -158,7 +158,7 @@ _cMenu =
 	"RscDisplaySpawnSelecter","RscWatchMoreDir","#GETIN","RscStatus",
 	"RscCombatMode","RscFormations","RscTeam","RscSelectTeam","RscReply",
 	"RscCallSupport","#ACTION","#CUSTOM_RADIO","RscRadio","RscGroupRootMenu",
-	"BTC_Hud","PlotManagement"
+	"BTC_Hud","PlotManagement","#USER:_keyMenu"
 ];
 
 /*  ALLOWED Actions "_dayzActions" are only used if you have "_CSA =  true;"  */
