@@ -113,7 +113,7 @@ _blockDamageFrom = [
 /*  Check Keybinds ?      */ _CKD =  false;	/* true or false */	/* checks for additional keybinds.. */
 /*  Check CMDMenus ?      */ _CCM =  true;	/* true or false */	/* only disable this if you know what you are doing. I strongly recommend to use this! */
 /*  BLOCK ALL CMDMenus    */ _BCM =  true;	/* true or false */	/* we don't need commandingMenus. so have this true as well. */
-/*  Check Actions ?       */ _CSA = false;	/* true or false */	/* this checks mousewheel actions */
+/*  Check Actions ?       */ _CSA =   true;	/* true or false */	/* this checks mousewheel actions */
 /*  Force Terrain Grid ?  */ _FTG =    25;	/* 50, 25, 12.5  */	/* if set to 50 grass will be very low for better client FPS.. default is 25 */
 /*  Use Clutter check ?   */ _UBC =  true;	/* true or false */	/* BadSize: %1 - Plants and/or Clutter pbo(s) removed..! */
 /*  Log Epoch Maintain    */ _LEM =  true;	/* true or false */
@@ -210,7 +210,7 @@ _dayzActions =
 	"s_player_setVectorsBack","s_player_setVectorsLeft","s_player_setVectorsRight","s_player_setVectors1","s_player_setVectors5","s_player_setVectors45",
 	"s_player_setVectors90","s_player_paint","DoorManagement","Entercode","s_player_packtentinfected","s_player_debugCheck","s_player_destorytent",
 	"s_player_attach_bomb","s_player_upgradestroage","s_player_Drinkfromhands","s_player_lockhouse","s_player_unlockhouse","s_player_openGate",
-	"s_player_CloseGate","s_player_breakinhouse","s_player_setCode"
+	"s_player_CloseGate","s_player_breakinhouse","s_player_setCode","s_player_copyToKey"
 ];
 /* ********************************************************************************* */
 	//	NEW (EXPERIMENTAL):
