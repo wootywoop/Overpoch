@@ -25,7 +25,7 @@
 /* ********************************************************************************* */
 /*  infiSTAR.de .dll path */  /* REMOVED */
 /*  Key to open the menu  */ _OpenMenuKey = 0x3C;    /* google DIK_KeyCodes (0x3C is F2) */
-/*  LOW ADMIN HERE        */ _LAdmins = ["0","0","0"]; //do not have a , at the end.
+/*  LOW ADMIN HERE        */ _LAdmins = ["76561198186075906","0","0"]; //do not have a , at the end.
 /*  NORMAL ADMIN HERE     */ _NAdmins = ["0","0","0"]; //do not have a , at the end.
 /*  SUPER ADMIN HERE      */ _SAdmins = ["76561198003411083","76561198128539208","76561198085299917"]; //do not have a , at the end.
 /*  BANNED UIDs HERE      */ _BLOCKED = ["0","0","0"]; //do not have a , at the end.
