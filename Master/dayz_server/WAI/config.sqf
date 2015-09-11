@@ -15,7 +15,7 @@ if(isServer) then {
 
 		ai_clear_body 				= false;		// instantly clear bodies
 		ai_clean_dead 				= true;			// clear bodies after certain amount of time
-		ai_cleanup_time 			= 1800;			// time to clear bodies in seconds
+		ai_cleanup_time 			= 1200;			// time to clear bodies in seconds
 		ai_clean_roadkill			= false; 		// clean bodies that are roadkills
 		ai_roadkill_damageweapon	= 0;			// percentage of chance a roadkill will destroy weapon AI is carrying
 
@@ -25,13 +25,13 @@ if(isServer) then {
 		ai_hero_combatmode			= "RED";		// combatmode of hero AI
 		ai_hero_behaviour			= "COMBAT";		// behaviour of hero AI
 
-		ai_friendly_behaviour		= false;		// make ai friendly towards comrades
+		ai_friendly_behaviour		= true;		// make ai friendly towards comrades
 
 		player_bandit				= -5000;		// this is the amount you declare someone to be a bandit on your server, bandit AI will not attack you if ai_friendly_behaviour is true
 		player_hero					= 5000;			// this is the amount you declare someone to be a hero on your server, hero AI will not attack you if ai_friendly_behaviour is true
 
 		ai_share_info				= true;			// AI share info on player position
-		ai_share_distance			= 800;			// distance from killed AI for AI to share your rough position
+		ai_share_distance			= 300;			// distance from killed AI for AI to share your rough position
 
 		ai_kills_gain				= true;			// add kill to bandit/human kill score
 		ai_humanity_gain			= true;			// gain humanity for killing AI
@@ -91,10 +91,10 @@ if(isServer) then {
 		wai_timeout_distance		= 700;								// if a player is this close to a mission then it won't time-out
 		
 		wai_clean_mission			= true;								// clean all mission buildings after a certain period
-		wai_clean_mission_time		= 1800;								// time after a mission is complete to clean mission buildings
+		wai_clean_mission_time		= 1200;								// time after a mission is complete to clean mission buildings
 
-		wai_mission_fuel			= [5,60];							// fuel inside mission spawned vehicles [min%,max%]
-		wai_vehicle_damage			= [20,70];							// damages to spawn vehicles with [min%,max%]
+		wai_mission_fuel			= [5,30];							// fuel inside mission spawned vehicles [min%,max%]
+		wai_vehicle_damage			= [40,70];							// damages to spawn vehicles with [min%,max%]
 		wai_keep_vehicles			= false;								// save vehicles to database and keep them after restart
 		wai_linux_server			= false;							// false = Windows (HiveExt.dll)		true = Linux Server (writer.pl)		has no effect when "wai_keep_vehicles = false;"
 		wai_lock_vehicles			= false;								// lock mission vehicles and add keys to random AI bodies (be careful with ai_clean_dead if this is true

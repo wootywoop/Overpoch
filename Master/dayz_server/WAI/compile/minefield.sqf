@@ -21,6 +21,7 @@ if(isServer) then {
 			
 			waitUntil
 			{
+				sleep 0.9;
 				_vehicle_near = false;
 				{
 					if((isPlayer _x) && (vehicle _x != _x) && (vehicle _x distance _this < 4)) then {
