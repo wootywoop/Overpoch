@@ -121,13 +121,13 @@ if(isServer) then {
 
 		wai_hero_missions			= [ 								// ["mission filename",% chance of picking this mission],Make sure the chances add up to 100,or it will not be accurate percentages
 										["patrol",10],
-										["black_hawk_crash",11],
+										["black_hawk_crash",8],
 										["armed_vehicle",11],
 										["bandit_base",7],
 										["captured_mv22",6],
-										["ikea_convoy",7],
+										["ikea_convoy",8],
 										["destroyed_ural",10],
-										["disabled_milchopper",9],
+										["disabled_milchopper",11],
 										["mayors_mansion",9],
 										["weapon_cache",10],
 										["bandit_patrol",10]
@@ -135,14 +135,14 @@ if(isServer) then {
 		wai_bandit_missions			= [
 										["patrol",10],
 										["armed_vehicle",10],
-										["black_hawk_crash",10],
-										["captured_mv22",6],
-										["broken_down_ural",12],
-										["hero_base",6],
+										["black_hawk_crash",6],
+										["captured_mv22",7],
+										["broken_down_ural",11],
+										["hero_base",8],
 										["ikea_convoy",8],
-										["medi_camp",14],
-										["presidents_mansion",6],
-										["sniper_extraction",8],
+										["medi_camp",11],
+										["presidents_mansion",7],
+										["sniper_extraction",12],
 										["weapon_cache",10]
 									];
 		
