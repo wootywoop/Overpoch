@@ -13865,6 +13865,141 @@ if (true) then
   _this addmagazineCargoGlobal ["ItemBriefcase100oz",5];
 
   _this setPos [3678.26, 14050.7, 0.222];
-};
+}; // END OF OLD CRATES
 */
+
+//Bandit city ATC START OF NEW CRATES
+_vehicle_4507 = objNull;
+if (true) then
+{
+  _this = createVehicle ["BAF_BasicAmmunitionBox", [13441.147, 2786.5151, 3.0258501], [], 0, "CAN_COLLIDE"];
+  _vehicle_4507 = _this;
+  _this setDir 35.799538;
+    //Clear Cargo	
+  clearweaponcargoGlobal _this;
+  clearmagazinecargoGlobal _this;
+  //Add Cargo
+  _this addWeaponCargoGlobal ["ItemEtool",2];
+  _this addWeaponCargoGlobal ["ItemToolbox",2];
+  _this addWeaponCargoGlobal ["ItemSledge",1];
+
+  _this addmagazineCargoGlobal ["ItemBriefcase100oz",5];
+  _this addmagazineCargoGlobal ["bulk_ItemTankTrap",5];
+  _this addmagazineCargoGlobal ["bulk_ItemWire",5];
+  _this addmagazineCargoGlobal ["bulk_ItemSandbag",5];
+  _this addmagazineCargoGlobal ["bulk_PartGeneric",5];
+  _this addmagazineCargoGlobal ["PartPlankPack",10];
+  _this addmagazineCargoGlobal ["PartPlywoodPack",10];
+  _this addmagazineCargoGlobal ["CinderBlocks",20];
+  _this addmagazineCargoGlobal ["MortarBucket",5];
+
+  _this setPos [13441.147, 2786.5151, 3.0258501];
+};
+
+//  Hidden somewhere in the village
+_vehicle_4508 = objNull;
+if (true) then
+{
+  _this = createVehicle ["BAF_BasicAmmunitionBox", [13682.852, 2926.2644, 2.5399418], [], 0, "CAN_COLLIDE"];
+  _vehicle_4508 = _this;
+  _this setDir 84.248787;
+    //Clear Cargo	
+  clearweaponcargoGlobal _this;
+  clearmagazinecargoGlobal _this;
+  //Add Cargo
+  _this addWeaponCargoGlobal ["Binocular",2];
+  _this addWeaponCargoGlobal ["Binocular_Vector",2];
+  _this addWeaponCargoGlobal ["NVGoggles",2];
+  _this addWeaponCargoGlobal ["ItemGPS",2];
+  _this addWeaponCargoGlobal ["SCAR_L_CQC_Holo",1];
+  _this addWeaponCargoGlobal ["SCAR_L_STD_Mk4CQT",1];
+  _this addWeaponCargoGlobal ["SCAR_H_CQC_CCO_SD",1];
+ 
+  _this addmagazineCargoGlobal ["ItemBriefcase100oz",5];
+  _this addmagazineCargoGlobal ["30Rnd_556x45_Stanag",20];
+  _this addmagazineCargoGlobal ["20Rnd_762x51_B_SCAR",10];
+  _this addmagazineCargoGlobal ["20Rnd_762x51_SB_SCAR",10];
+  
+  _this setPos [13682.852, 2926.2644, 2.5399418];
+};
+
+//Hidden in the Industrial place
+_vehicle_4509 = objNull;
+if (true) then
+{
+  _this = createVehicle ["BAF_BasicAmmunitionBox", [13615.528, 3182.1331, -1.9073486e-005], [], 0, "CAN_COLLIDE"];
+  _vehicle_4509 = _this;
+  _this setDir 5.2036695;
+    //Clear Cargo	
+  clearweaponcargoGlobal _this;
+  clearmagazinecargoGlobal _this;
+  //Add Cargo
+  _this addWeaponCargoGlobal ["ItemEtool",1];
+  _this addWeaponCargoGlobal ["ItemToolbox",1];
+  _this addWeaponCargoGlobal ["NVGoggles",1];
+  _this addWeaponCargoGlobal ["M4A1_HWS_GL",1];
+  _this addWeaponCargoGlobal ["M16A4_ACG_GL",2];
+  _this addWeaponCargoGlobal ["M240_DZ",1];
+  _this addWeaponCargoGlobal ["Stinger",1];
+  
+  _this addmagazineCargoGlobal ["PartGeneric",5];
+  _this addmagazineCargoGlobal ["PartEngine",2];
+  _this addmagazineCargoGlobal ["PartVRotor",2];
+  _this addmagazineCargoGlobal ["PartWheel",16];
+  _this addmagazineCargoGlobal ["PartFueltank",1];
+  _this addmagazineCargoGlobal ["PartGlass",10];
+  _this addmagazineCargoGlobal ["30Rnd_556x45_Stanag",20];
+  _this addmagazineCargoGlobal ["100Rnd_762x51_M240",10];
+  _this addmagazineCargoGlobal ["Stinger",2];
+  
+  _this setPos [13615.528, 3182.1331, -1.9073486e-005];
+};
+//Hidden Somewhere Special
+_vehicle_4510 = objNull;
+if (true) then
+{
+  _this = createVehicle ["BAF_BasicAmmunitionBox", [13635.213, 2936.9873, 0.27571151], [], 0, "CAN_COLLIDE"];
+  _vehicle_4510 = _this;
+  _this setDir -19.262968;
+    //Clear Cargo	
+  clearweaponcargoGlobal _this;
+  clearmagazinecargoGlobal _this;
+  //Add Cargo
+  _this addmagazineCargoGlobal ["FoodMRE",5];
+  _this addmagazineCargoGlobal ["ItemTrashToiletpaper",2];
+  _this addmagazineCargoGlobal ["ItemSodaMdew",5];
+  _this addmagazineCargoGlobal ["Skin_Drake_Light_DZ",2];
+  _this addmagazineCargoGlobal ["Skin_FR_OHara_DZ",2];
+  _this addmagazineCargoGlobal ["Skin_FR_Rodriguez_DZ",2];
+  _this addmagazineCargoGlobal ["Skin_CZ_Soldier_Sniper_EP1_DZ",2];
+  _this addmagazineCargoGlobal ["Skin_Graves_Light_DZ",2];
+  _this addmagazineCargoGlobal ["ItemBriefcase100oz",5];
+
+  _this addbackpackCargoGlobal ["DZ_Backpack_EP1",2];
+  _this setPos [13635.213, 2936.9873, 0.27571151];
+};
+
+//Hidden at the Farmside
+_vehicle_4511 = objNull;
+if (true) then
+{
+  _this = createVehicle ["BAF_BasicAmmunitionBox", [14038.501, 2811.5994, -0.056037672], [], 0, "CAN_COLLIDE"];
+  _vehicle_4511 = _this;
+  _this setDir -139.36105;
+    //Clear Cargo	
+  clearweaponcargoGlobal _this;
+  clearmagazinecargoGlobal _this;
+  //Add Cargo
+  _this addmagazineCargoGlobal ["PartGeneric",20];
+  _this addmagazineCargoGlobal ["PartEngine",10];
+  _this addmagazineCargoGlobal ["PartWheel",16];
+  _this addmagazineCargoGlobal ["PartFueltank",10];
+  _this addmagazineCargoGlobal ["PartGlass",20];
+  _this addmagazineCargoGlobal ["100Rnd_762x51_M240",10];
+  _this addmagazineCargoGlobal ["ItemBriefcase100oz",5];
+
+  _this setPos [14038.501, 2811.5994, -0.056037672];
+};
+
+
 };
