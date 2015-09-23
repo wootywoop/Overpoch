@@ -153,7 +153,7 @@ if(isServer) then {
       "Random",                 
       "Bandit"                 
    ] call spawn_group;
-/*
+
 	[
 		[3660.52,14883.2,0.001],			// Position
 		5,									// Number Of units
@@ -213,7 +213,7 @@ if(isServer) then {
 		"Random",							// Gearset number. "Random" for random gear set
 		"Bandit"							// AI Type, "Hero" or "Bandit".
 	] call spawn_group;
-*/
+
 	/*
 	Custom static weapon spawns Eg. (with mutiple positions)
 
@@ -251,7 +251,7 @@ if(isServer) then {
       "Random",                 
       "Random"                 
    ] call spawn_static;
-/*
+
 	[
 		[									// Position(s) (can be multiple) middle tower
 			[3720.82,14487.3,29.192],
@@ -269,7 +269,7 @@ if(isServer) then {
 		"Random"							// Gearset classname, use "Random" or classname here
 	] call spawn_static;
 
-*/
+
 	/*
 	Custom Chopper Patrol spawn Eg.
 
@@ -288,18 +288,17 @@ if(isServer) then {
 	Place your heli patrols below
 	*/
 
-	/*
+
 	[
 		[3575.67,14522.2,0.002],			// Position to patrol
 		[1300,12960,0],						// Position to spawn chopper at
 		1000,								// Radius of patrol
 		8,									// Number of waypoints to give
-		"AH1Z",								// Classname of vehicle (make sure it has driver and two gunners)
+		"UH1Y",								// Classname of vehicle (make sure it has driver and two gunners)
 		"extreme",							// Skill level of units (easy, medium, hard, extreme, Random)
 		"Random",							// Skin classname, use "Random" or classname here
 		"Bandit"							// AI Type, "Hero" or "Bandit".
 	] spawn heli_patrol;
-*/
 
 
 	/* 
@@ -329,13 +328,13 @@ if(isServer) then {
 		"Random",				
 		"Bandit"						
 	] spawn vehicle_patrol;
-/*
+
 [
 		[3750.51,14212.3,0.001],				// Position to patrol Middle
 		[3750.51,14212.3,0.001],				// Position to spawn at
 		400,								// Radius of patrol
 		10,									// Number of waypoints to give
-		"BMP3",					// Classname of vehicle (make sure it has driver and gunner)
+		"2S6M_Tunguska",					// Classname of vehicle (make sure it has driver and gunner)
 		"extreme",							// Skill level of units (easy, medium, hard, extreme, Random)
 		"Random",							// Skin classname, use "Random" or classname here
 		"Bandit"							// AI Type, "Hero" or "Bandit".
@@ -363,7 +362,6 @@ if(isServer) then {
 		"Bandit"							// AI Type, "Hero" or "Bandit".
 	] spawn vehicle_patrol;
 
-*/
 
 	/*
 	Paradropped unit custom spawn Eg.
@@ -387,8 +385,7 @@ if(isServer) then {
 	Place your paradrop spawns under this line
 	*/
 
-	/*
-	
+
 	[
 		[3045.19,14363.4,0.001],	// Position that units will be dropped by
 		[1300,14960,0],							// Starting position of the heli
@@ -405,7 +402,6 @@ if(isServer) then {
 		true								// true: Aircraft will stay at position and fight. false: Heli will leave if not under fire. 
 	] spawn heli_para;
 	
-	*/
 	
 [
       [13706.369, 2928.425, 0],               
