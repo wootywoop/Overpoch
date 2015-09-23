@@ -1202,7 +1202,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=20;
+		items=21;
 		class Item0
 		{
 			position[]={7839.6055,381.33774,8414.7324};
@@ -1343,12 +1343,20 @@ class Mission
         };
 		class Item19 //Skalisty Island
             {
-           position[]={13214.373,300,3472.0823}; 
+			position[]={13214.373,300,3472.0823}; 
             name="skalistyisland";
             text="Blue's Island";
             type="hd_warning";
             colorName="ColorRed";
         };
+		class Item20 //Bandit city
+			{
+			position[]={3688.65,300,14499.4}; 
+            name="banditcity";
+            text="Bandit city";
+            type="hd_warning";
+            colorName="ColorRed";
+		};
 	};
 	class Sensors
 	{
