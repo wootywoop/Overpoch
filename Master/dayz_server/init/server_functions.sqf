@@ -994,3 +994,7 @@ KK_fnc_positionToString = {
 		_this select 2 call KK_fnc_floatToString
 	]
 };
+
+currentInvites = [];
+publicVariable "currentInvites";
+"currentInvites" addPublicVariableEventHandler {publicVariable "currentInvites";};

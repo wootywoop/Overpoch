@@ -1546,13 +1546,13 @@ publicVariable '"+_randvar28+"';
 							_puid = _this select 0;
 							_mytime = 0;while{1 == 1}do {_mytime = _mytime + 1;if(_mytime >= 20)exitWith {};if((!isNil 'dayz_animalCheck') || (!isNil 'dayz_medicalH') || (!isNil 'dayz_slowCheck') || (!isNil 'dayz_gui'))exitWith {};uiSleep 1;};
 							allGroups=[];setVehicleInit='no';processInitCommands='no';
-							lbsetpicture='no';createDiaryRecord='no';createTask='no';createSimpleTask='no';buttonSetAction='no';processDiaryLink='no';createDiaryLink='no';
-							lbSetData='no';createTeam='no';exec='no';addGroupIcon='no';setGroupIconParams='no';addWeaponCargo='no';addMagazineCargo='no';setVehicleAmmoDef='no';
+							createDiaryRecord='no';createTask='no';createSimpleTask='no';buttonSetAction='no';processDiaryLink='no';createDiaryLink='no';
+							createTeam='no';exec='no';addGroupIcon='no';setGroupIconParams='no';addWeaponCargo='no';addMagazineCargo='no';setVehicleAmmoDef='no';
 							setWeaponReloadingTime='no';addMPEventHandler='no';createVehicleLocal='no';inputAction='no';setWaypointStatements='no';addWaypoint='no';
 							loadFile='no';rcallVarcode='no';saveStatus='no';loadStatus='no';saveVar='no';drawIcon='no';setMarkerType='no';setMarkerShape='no';setMarkerSize='no';
-							markerText='no';setMarkerAlpha='no';setMarkerBrush='no';setMarkerColor='no';setMarkerDir='no';setMarkerPos='no';setMarkerTypeLocal='no';setMarkerColorLocal='no';
-							createMarker='no';setMarkerDirLocal='no';setMarkerAlphaLocal='no';setMarkerPosLocal='no';setMarkerTextLocal='no';setMarkerBrushLocal='no';setMarkerSizeLocal='no';
-							setMarkerShapeLocal='no';createMarkerLocal='no';
+							markerText='no';setMarkerAlpha='no';setMarkerBrush='no';setMarkerColor='no';setMarkerDir='no';setMarkerPos='no';
+							createMarker='no';setMarkerDirLocal='no';setMarkerAlphaLocal='no';setMarkerPosLocal='no';setMarkerBrushLocal='no';setMarkerSizeLocal='no';
+							setMarkerShapeLocal='no';
 							if("+str _FRC+")then{
 								uiSleep 1;
 								_bye = false;
@@ -1566,12 +1566,12 @@ publicVariable '"+_randvar28+"';
 										[_name,_puid,'HLOG_SKICK',toArray (_log)] call "+_randvar286537+";
 									};
 									true
-								} count ['lbsetpicture','createDiaryRecord','createTask','createSimpleTask','buttonSetAction','processDiaryLink','createDiaryLink','lbSetData','createTeam',
+								} count ['createDiaryRecord','createTask','createSimpleTask','buttonSetAction','processDiaryLink','createDiaryLink','createTeam',
 								'exec','addGroupIcon','setGroupIconParams','addWeaponCargo','addMagazineCargo','setVehicleAmmoDef','setWeaponReloadingTime','addMPEventHandler','createVehicleLocal',
 								'inputAction','setWaypointStatements','addWaypoint','setMarkerBrushLocal','loadFile','rcallVarcode','saveStatus','loadStatus','saveVar','drawIcon','setMarkerText',
 								'setMarkerType','markerText','setMarkerAlpha','setMarkerBrush','setMarkerColor','setMarkerDir','setMarkerPos','setMarkerShape','setMarkerSize','createMarker',
-								'setMarkerDirLocal','setMarkerAlphaLocal','setMarkerPosLocal','setMarkerTextLocal','setMarkerTypeLocal','setMarkerColorLocal','setMarkerSizeLocal','setMarkerShapeLocal',
-								'createMarkerLocal','setVehicleInit','processInitCommands'];
+								'setMarkerDirLocal','setMarkerAlphaLocal','setMarkerPosLocal','setMarkerSizeLocal','setMarkerShapeLocal',
+								'setVehicleInit','processInitCommands'];
 								if(_bye)then{
 									_log = 'RunInitFunctions twice';
 									_name = 'DEAD';if((alive player)&&(getPlayerUID player != ''))then{_name = name player;};
@@ -3106,8 +3106,8 @@ publicVariable '"+_randvar28+"';
 					showcommandingMenu '';
 				"; }; _AHstring = _AHstring + "
 				if("+str _BHF+")then{
-					if(isNil 'playableUnits')then{playableUnits = [player];} else {
-						if(typeName playableUnits != 'ARRAY')then{playableUnits = [player];YOLO = true;} else {
+					if(isNil 'playableUnits')then{} else {
+						if(typeName playableUnits != 'ARRAY')then{YOLO = true;} else {
 							if(str playableUnits == '[]')then{
 								[] spawn "+_randvar2+";
 								_log = format['FNCbroken: playableUnits - %1',playableUnits];

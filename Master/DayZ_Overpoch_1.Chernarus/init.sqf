@@ -118,7 +118,8 @@ if (!isDedicated) then {
 	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
 	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";
 	execVM "ZSC\compiles\playerHud.sqf";
-
+	execVM "dzgm\init.sqf";
+	
 	//Lights
 	//[false,12] execVM "\z\addons\dayz_code\compile\local_lights_init.sqf";
 	execVM "service_point\service_point.sqf";  //Auto Refuel, Repair and Rearm
@@ -154,4 +155,3 @@ DefaultBackpackWeapon = "";
 [] execvm 'AGN\agn_SafeZoneCommander.sqf';  //Trader Safe Zones
 waitUntil {!isNil "PVDZE_plr_LoginRecord"};
 if (!isDedicated && {dayzPlayerLogin2 select 2}) then {execVM "spawn\spawn.sqf";};
-execVM "RC\init.sqf";

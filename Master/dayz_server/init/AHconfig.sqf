@@ -121,7 +121,7 @@ _blockDamageFrom = [
 /*  ALLOWED Custom Dialogs "_ALLOWED_Dialogs" are only used if you have "_CUD =  true;"  */
 /*  If you want install custom scripts using dialog windows, you can add IDD numbers  */
 /*  from the custom script's desc.h file included through MPMIssions/description.ext  */
-_ALLOWED_Dialogs = [-1,106,2200,6900,6901,6902,6903,420420,41144,711194,666,667];
+_ALLOWED_Dialogs = [-1,106,2200,6900,6901,6902,6903,420420,41144,711194,666,667,55510];
 //	-1			Epoch Safe/Lockbox Keycode UI
 //	106		Inventory (Gear)
 //	2200		Blood Test

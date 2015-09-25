@@ -32,10 +32,12 @@ aiKills = 1;
 diagRadio = 1;
 diagHit = 1;
 
+#include "dzgm\defines.hpp"
+
 class RscTitles
 {
     #include "ZSC\config\ZSChud.hpp"
-	#include "RC\desc_inc.h"
+	#include "dzgm\icons.hpp"
 };
 
 class RscText
@@ -204,3 +206,4 @@ class CfgSounds
 #include "custom\extra_rc.hpp"
 // Mystery briefcase
 #include "addons\mbc\dialogs.hpp"
+#include "dzgm\groupManagement.hpp"
