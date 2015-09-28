@@ -25,6 +25,19 @@ if (_dikCode == 0x01 && r_player_dead) then {
 	_handled = true;
 };
 
+if (_dikCode == 0x16) then
+    {
+        if (soundVolume == 1) then {
+            1 fadeSound 0.25;
+            hintSilent "Earplugs Inserted";
+        }
+            else
+        {
+            1 fadeSound 1;
+            hintSilent "Earplugs Removed";
+        };
+    };
+
 // surrender 
 if (_dikCode in actionKeys "Surrender") then {
 	

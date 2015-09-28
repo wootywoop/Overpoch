@@ -152,6 +152,6 @@ DefaultBackpackWeapon = "";
 
 //Load custom scripts
 
-[] execvm 'AGN\agn_SafeZoneCommander.sqf';  //Trader Safe Zones
+[] execVM 'SafeZone.sqf';
 waitUntil {!isNil "PVDZE_plr_LoginRecord"};
 if (!isDedicated && {dayzPlayerLogin2 select 2}) then {execVM "spawn\spawn.sqf";};
