@@ -16,19 +16,19 @@ USE_POSITIONS = true;   // to use own positions and radius
 USE_AI_REMOVER = true; // use this to remove Missionbots (AI) within 100m of a player if the player is in a SafeZone
 USE_AntiSteal = true;   // use this to block opening gear if another player is within 3m!
 USE_SPEEDLIMIT = true;  // very secret function, nobody is supposed to find out what it does.
-        SPEEDLIMIT = 15;                // Only used if USE_SPEEDLIMIT is true.
+        SPEEDLIMIT = 25;                // Only used if USE_SPEEDLIMIT is true.
 USE_SIGNS = true;               // use this to build signs around the SafeZone
 LOG_EnterLeave = true;  // This will log to your .rpt when a player enters or leaves a SafeZone! (only works with infiSTAR.de Admintools / AntiHack)
 /* You can use USE_CANBUILD or/and (works together) the custom positions below (USE_POSITIONS) [position or zone,radius] */
 _infiSZ =
 [
-        [[6325.6772,7807.7412,0],150,true],
-        [[4063.4226,11664.19,0],150,true],
-        [[11447.472,11364.504,0],150,true],
-        [[1606.6443,7803.5156,0],150,true],
-        [[12944.227,12766.889,0],150,true],
-        [[5068.6636,9723.4248,0],100,true],
-        [[12060,12640,0],200,true]
+        [[6325.6772,7807.7412,0],150,true], //stary
+        [[4063.4226,11664.19,0],150,true], //BASH
+        [[11447.472,11364.504,0],150,true], // KLEN
+        [[1606.6443,7803.5156,0],150,true], //bandit trader?
+        [[12944.227,12766.889,0],150,true], //hero trader
+        //[[5068.6636,9723.4248,0],100,true],
+        [[12060,12640,0],200,true] // aircraft trader
 ];
 if (isServer) exitWith
 {
