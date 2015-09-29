@@ -11,7 +11,10 @@ if(isServer) then {
 
 	_position		= [30] call find_position;
 	[_mission,_position,"Medium",format["Disabled %1",_vehname],"MainBandit",true] call mission_init;
-	
+	// Send Top Right message to users , requires Remote message script
+	_hint = parseText format["<t align='left' color='#00FF11' shadow='2' size='1.75'>New Mission:</t><br/><t align='left' color='#FFFFF9F'>Heroes have taken an armed vehicle from the bandits! Check your map for the location!</t>"];
+	[nil, nil, rHINT, _hint] call RE;
+
 	diag_log 		format["WAI: [Mission:[Bandit] Armed Vehicle]: Starting... %1",_position];
 
 	//Setup the crate
@@ -20,10 +23,12 @@ if(isServer) then {
 	
 	//Troops
 	_rndnum = (2 + round (random 4));
-	[[_position select 0,_position select 1,0],_rndnum,"Medium",["Random","AT"],3,"Random","Hero","Random","Hero",_mission] call spawn_group;
-	[[_position select 0,_position select 1,0],_rndnum,"Medium","Random",3,"Random","Hero","Random","Hero",_mission] call spawn_group;
-	[[_position select 0,_position select 1,0],_rndnum,"Medium","Random",3,"Random","Hero","Random","Hero",_mission] call spawn_group;
-
+	[[(_position select 0) -100, (_position select 1) +100, 0],_rndnum,"Medium","Random",3,"Random","Hero","Random","Hero",_mission] call spawn_rpg;
+	[[(_position select 0) +100, (_position select 1) -100, 0],_rndnum,"Medium","Random",3,"Random","Hero","Random","Hero",_mission] call spawn_rpg;
+	[[(_position select 0) +100, (_position select 1) +100, 0],_rndnum,"Medium","Random",3,"Random","Hero","Random","Hero",_mission] call spawn_rpg;
+	[[(_position select 0) -100, (_position select 1) -100, 0],_rndnum,"Medium","Random",3,"Random","Hero","Random","Hero",_mission] call spawn_rpg;
+	[[_position select 0,_position select 1,0],_rndnum,"Medium","Random",3,"Random","Hero","Random","Hero",_mission] call spawn_stinger;
+	
 	//Static Guns
 	_static_gun = ai_static_weapons call BIS_fnc_selectRandom;
 	[[
@@ -48,7 +53,7 @@ if(isServer) then {
 	] call mission_winorfail;
 
 	if(_complete) then {
-		[_crate,0,0,[25,crate_items_chainbullets],2] call dynamic_crate;
+		[_crate,[10,ai_wep_box],0,[25,crate_items_chainbullets],1,[100,ammo_list]] call dynamic_crate;
 	};
 
 	diag_log format["WAI: [Mission:[Bandit] Armed Vehicle]: Ended at %1",_position];

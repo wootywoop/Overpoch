@@ -7,6 +7,9 @@ if(isServer) then {
 
 	_position		= [30] call find_position;
 	[_mission,_position,"Hard","Captured MV22","MainBandit",true] call mission_init;
+	// Send Top Right message to users , requires Remote message script
+	_hint = parseText format["<t align='left' color='#00FF11' shadow='2' size='1.75'>New Mission:</t><br/><t align='left' color='#FFFFF9F'>A group of red cross volunteers are giving away medical supplies, they are heavily guarded by trained soldiers</t>"];
+	[nil, nil, rHINT, _hint] call RE;
 
 	diag_log 		format["WAI: [Mission:[Bandit] Captured MV22]: Starting... %1",_position];
 
@@ -20,12 +23,12 @@ if(isServer) then {
 
 	//Troops
 	_rndnum = 4 + round (random 3);
-	[[_position select 0,_position select 1,0],_rndnum,"Hard",["Random","AT"],4,"Random","Hero","Random","Hero",_mission] call spawn_group;
-	[[_position select 0,_position select 1,0],_rndnum,"Hard","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_group;
-	[[_position select 0,_position select 1,0],_rndnum,"Hard","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_group;
+	[[(_position select 0) -100, (_position select 1) +100, 0],_rndnum,"Hard","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_rpg;
+	[[(_position select 0) +100, (_position select 1) -100, 0],_rndnum,"Hard","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_rpg;
+	[[(_position select 0) +100, (_position select 1) +100, 0],_rndnum,"Hard","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_rpg;
+	[[(_position select 0) -100, (_position select 1) -100, 0],_rndnum,"Hard","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_rpg;
+	[[_position select 0,_position select 1,0],_rndnum,"Hard","Random",4,"Random","Hero","Random","Hero",_mission] call spawn_stinger;
 	
-	[[_position select 0, _position select 1, 0],_rndnum,"Hard","Random",4,"Random","Doctor","Random",["Hero",200],_mission] call spawn_group;
-	 
 	//Static Guns
 	[[
 		[(_position select 0) + 10, (_position select 1) + 10, 0],
@@ -51,8 +54,8 @@ if(isServer) then {
 	] call mission_winorfail;
 
 	if(_complete) then {
-		[_crate,0,0,[80,crate_items_medical],0] call dynamic_crate;
-	};
+		[_crate,[15,ai_wep_box],4,[30,crate_items_buildables],1,[100,ammo_list]] call dynamic_crate;
+		};
 
 	diag_log format["WAI: [Mission:[Bandit] Captured MV22]: Ended at %1",_position];
 	

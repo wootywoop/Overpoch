@@ -5,9 +5,9 @@ if(isServer) then {
 	markerready = false;
 
 	if(use_blacklist) then {
-		_safepos		= [getMarkerPos "center",0,8500,(_this select 0),0,0.5,0,blacklist];
+		_safepos		= [getMarkerPos "center",0,13500,(_this select 0),0,0.5,0,blacklist];
 	} else {
-		_safepos		= [getMarkerPos "center",0,8500,(_this select 0),0,0.5,0];
+		_safepos		= [getMarkerPos "center",0,13500,(_this select 0),0,0.5,0];
 	};
 
 	_validspot 	= false;

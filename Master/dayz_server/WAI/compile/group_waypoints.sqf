@@ -14,17 +14,18 @@ if (isServer) then {
 		_skill = _this select 2;
 	
 		call {
-			if(_skill == "easy") 	exitWith { _wp_rad = 20; };
-			if(_skill == "medium") 	exitWith { _wp_rad = 40; };
-			if(_skill == "hard") 	exitWith { _wp_rad = 80; };
-			if(_skill == "extreme") exitWith { _wp_rad = 120; };
-			if(_skill == "random") 	exitWith { _wp_rad = random(100); };
+			if(_skill == "supereasy") 	exitWith { _wp_rad = 150; };
+			if(_skill == "easy") 	exitWith { _wp_rad = 175; };
+			if(_skill == "medium") 	exitWith { _wp_rad = 200; };
+			if(_skill == "hard") 	exitWith { _wp_rad = 225; };
+			if(_skill == "extreme") exitWith { _wp_rad = 250; };
+			if(_skill == "random") 	exitWith { _wp_rad = random(250); };
 		};
 
 	};
 
 	{
-		_wp = _unitGroup addWaypoint [_x,10];
+		_wp = _unitGroup addWaypoint [_x,25];
 		_wp setWaypointType "MOVE";
 
 	} count [[_pos_x,(_pos_y+_wp_rad),0],[(_pos_x+_wp_rad),_pos_y,0],[_pos_x,(_pos_y-_wp_rad),0],[(_pos_x-_wp_rad),_pos_y,0]];

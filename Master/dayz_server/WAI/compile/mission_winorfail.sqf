@@ -10,20 +10,16 @@ if(isServer) then {
 	_msgwin		= _this select 4;
 	_msglose	= _this select 5;
 
-	_position		= position _crate;
-	_timeout 		= false;
-	_player_near	= false;
-	_complete		= false;
-	_starttime 		= time;
-	_start 			= false;
-	_timeout_time	= ((wai_mission_timeout select 0) + random((wai_mission_timeout select 1) - (wai_mission_timeout select 0)));
-	_max_ai			= (wai_mission_data select _mission) select 0;
-	_killpercent 	= _max_ai - (_max_ai * (wai_kill_percent / 100));
-	_mission_units	= [];
-
-	if(_type == "patrol") then {
-		_start = true
-	};
+	_position				= position _crate;
+	_timeout 				= false;
+	_player_near			= false;
+	_complete				= false;
+	_starttime 				= time;
+	_start 					= false;
+	_timeout_time			= ((wai_mission_timeout select 0) + random((wai_mission_timeout select 1) - (wai_mission_timeout select 0)));
+	_max_ai					= (wai_mission_data select _mission) select 0;
+	_killpercent 			= _max_ai - (_max_ai * (wai_kill_percent / 100));
+	_mission_units			= [];
 
 	{
 		
@@ -59,7 +55,6 @@ if(isServer) then {
 			if((isPlayer _x) && (_x distance _position <= 1500)) then {
 				_start = true
 			};
-
 		} count playableUnits;
 
 		if (_currenttime - _starttime >= _timeout_time) then {
@@ -123,12 +118,6 @@ if(isServer) then {
 				};
 			};
 
-			if (_type == "patrol") exitWith {
-				if(((wai_mission_data select _mission) select 0) == 0) then {
-					_complete = true;
-				};
-			};
-			
 			if (_type == "assassinate") exitWith {
 				_objectivetarget = (_this select 1) select 1;
 				{

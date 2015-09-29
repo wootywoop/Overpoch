@@ -1,22 +1,19 @@
 if(isServer) then {
 
 	spawn_group				= compile preprocessFileLineNumbers "\z\addons\dayz_server\WAI\compile\spawn_group.sqf";
+	spawn_rpg				= compile preprocessFileLineNumbers "\z\addons\dayz_server\WAI\compile\spawn_rpg.sqf";
+	spawn_stinger			= compile preprocessFileLineNumbers "\z\addons\dayz_server\WAI\compile\spawn_stinger.sqf";
 	spawn_static			= compile preprocessFileLineNumbers "\z\addons\dayz_server\WAI\compile\spawn_static.sqf";
 	group_waypoints			= compile preprocessFileLineNumbers "\z\addons\dayz_server\WAI\compile\group_waypoints.sqf";
 	heli_para				= compile preprocessFileLineNumbers "\z\addons\dayz_server\WAI\compile\heli_para.sqf";
 	heli_patrol				= compile preprocessFileLineNumbers "\z\addons\dayz_server\WAI\compile\heli_patrol.sqf";
 	vehicle_patrol			= compile preprocessFileLineNumbers "\z\addons\dayz_server\WAI\compile\vehicle_patrol.sqf";
-
 	on_kill					= compile preprocessFileLineNumbers "\z\addons\dayz_server\WAI\compile\on_kill.sqf";
-	hero_behaviour			= compile preprocessFileLineNumbers "\z\addons\dayz_server\WAI\compile\hero_behaviour.sqf";
-	bandit_behaviour		= compile preprocessFileLineNumbers "\z\addons\dayz_server\WAI\compile\bandit_behaviour.sqf";
-
 	dynamic_crate 			= compile preprocessFileLineNumbers "\z\addons\dayz_server\WAI\compile\dynamic_crate.sqf";
-
+	
 	ai_monitor				= compile preprocessFileLineNumbers "\z\addons\dayz_server\WAI\compile\ai_monitor.sqf";
 	vehicle_monitor			= compile preprocessFileLineNumbers "\z\addons\dayz_server\WAI\compile\vehicle_monitor.sqf";
 	find_position			= compile preprocessFileLineNumbers "\z\addons\dayz_server\WAI\compile\find_position.sqf";
-	load_ammo				= compile preprocessFileLineNumbers "\z\addons\dayz_server\WAI\compile\load_ammo.sqf";
 
 	call 					compile preprocessFileLineNumbers "\z\addons\dayz_server\WAI\compile\functions.sqf";
 
