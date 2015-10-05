@@ -91,7 +91,7 @@ _thloot_backpacks = [
 ];
 
 _thloot_items = [
-    ["ItemBriefcase100oz", 90],
+    ["ItemBriefcase100oz", 40],
     ["FoodCanBakedBeans", 10],
     ["ItemSodaCoke", 10],
     ["ItemGoldBar10oz", 40],    

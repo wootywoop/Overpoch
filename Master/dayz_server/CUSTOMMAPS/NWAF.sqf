@@ -13733,7 +13733,7 @@ if (true) then
   _this setDir -70.137962;
   _this setPos [11880.507, 12789.333, -0.21595764];
 };
-
+/*
 //Bandit city ATC
 _vehicle_3078 = objNull;
 if (true) then
@@ -13866,7 +13866,7 @@ if (true) then
 
   _this setPos [3678.26, 14050.7, 0.222];
 }; // END OF OLD CRATES
-
+*/
 
 //Island crate ATC START OF NEW CRATES
 _vehicle_4507 = objNull;
