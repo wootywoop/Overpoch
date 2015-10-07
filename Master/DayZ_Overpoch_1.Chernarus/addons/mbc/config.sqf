@@ -28,17 +28,17 @@ _vehicle_repair_group = ["PartEngine","PartFueltank","PartGeneric","PartGlass","
 _tools_group = ["ItemKeyKit","Binocular","Binocular_Vector","ItemCompass","ItemCrowbar","ItemEtool","ItemFishingPole","ItemFlashlightRed","ItemGPS","ItemHatchet_DZE","ItemKnife","ItemMachete","ItemMatchbox_DZE","ItemToolbox","NVGoggles"];
 
 _common_group = ["ItemPlotDeed","ItemComboLock","ItemSledgeHead","ItemSledgeHandle","Skin_Sniper1_DZ","bulk_ItemSandbag"];
-_assault_group = ["M16A4_ACG","Sa58V_RCO_EP1","SCAR_L_STD_Mk4CQT","M8_sharpshooter","M4A1_HWS_GL_camo","SCAR_L_STD_HOLO","M4A3_CCO_EP1","M4A1_AIM_SD_camo","M16A4","m8_carbine","BAF_L85A2_RIS_Holo","Sa58P_EP1","Sa58V_CCO_EP1","Sa58V_EP1","AKS_74_kobra","AKS_74_U","AKS_GOLD","AK_47_M","AK_74","FN_FAL","FN_FAL_ANPVS4","m8_compact","G36A_camo","G36C","m8_holo_sd","G36C_camo","G36K_camo","G36_C_SD_camo","M16A2","M16A2GL","M4A1","M4A1_Aim"];
+_assault_group = ["RH_hk417sgleotech","RH_hk417aim","RH_hk417eotech","RH_hk417saim","RH_hk417seotech","RH_hk417sglaim","RH_m1ssp","RH_m14aim","RH_m14eot","RH_m1sshd","RH_m1staim","RH_m1steot","RH_m1stshd","RH_m1stsp","RH_masaim","RH_sc2shd","RH_masbaim","RH_masbeotech","RH_maseotech","RH_sc2aim","RH_sc2eot","RH_sc2sp","RH_sc2shd","FHQ_ACR_BLK_CCO","FHQ_ACR_BLK_CCO_F","FHQ_ACR_BLK_CCO_GL","FHQ_ACR_BLK_CCO_GL_F","FHQ_ACR_BLK_HWS","FHQ_ACR_BLK_HWS_F","FHQ_ACR_BLK_HWS_GL","FHQ_ACR_BLK_HWS_GL_F","M16A4_ACG","Sa58V_RCO_EP1","SCAR_L_STD_Mk4CQT","M8_sharpshooter","M4A1_HWS_GL_camo","SCAR_L_STD_HOLO","M4A3_CCO_EP1","M4A1_AIM_SD_camo","M16A4","m8_carbine","BAF_L85A2_RIS_Holo","Sa58P_EP1","Sa58V_CCO_EP1","Sa58V_EP1","AKS_74_kobra","AKS_74_U","AKS_GOLD","AK_47_M","AK_74","FN_FAL","FN_FAL_ANPVS4","m8_compact","G36A_camo","G36C","m8_holo_sd","G36C_camo","G36K_camo","G36_C_SD_camo","M16A2","M16A2GL","M4A1","M4A1_Aim"];
 _lmg_group = ["RPK_74","M249_EP1_DZ","M249_DZ","M240_DZ","m240_scoped_EP1_DZE","M249_m145_EP1_DZE","M60A4_EP1_DZE"];
 _sniper_group = ["M14_EP1","SVD_CAMO","SVD","VSS_Vintorez","DMR_DZ","M40A3","M24","M24_des_EP1","SVD_des_EP1"];
 _chainbullets_group = ["2000Rnd_762x51_M134","200Rnd_762x51_M240","100Rnd_127x99_M2","150Rnd_127x107_DSHKM"];
 
 // Rares
-_rares_group = ["ItemVault","ItemBriefcase100oz","ItemLockbox","30m_plot_kit"];
+_rares_group = ["ItemLockbox","30m_plot_kit"];
 _rare_weapons_group = ["KSVK_DZE","MK_48_DZ","Pecheneg_DZ","M110_NVG_EP1","SCAR_H_LNG_Sniper_SD","M107_DZ","BAF_LRR_scoped"];
 
 // Legendaries
-_legend_group = ["PipeBomb","ItemRadio"];
+_legend_group = ["PipeBomb","ItemRadio","ItemBriefcase100oz","ItemVault"];
 _chainsaw_group = ["Chainsaw","ChainsawB","ChainsawG","ChainsawP"];
 _gem_group = ["ItemObsidian","ItemCitrine","ItemTopaz","ItemRuby","ItemSapphire","ItemEmerald","ItemAmathyst"]; //You can use this if your server uses gems as currency
 
@@ -95,6 +95,6 @@ MBC_REWARDLIST = [
 	,["magazine","ItemBriefcase_Base",1,4,1]
 	,["magazine","CinderBlocks",30,4,1]
 	// If you have the Single Currency script here's an example of coins as a reward:
-	//	,["coins","Coins",25000,2,10] //25000 being the amount of coins rewarded
+	,["coins","Coins",25000,2,10] //25000 being the amount of coins rewarded
 	
 ];
