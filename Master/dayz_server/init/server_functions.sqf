@@ -999,4 +999,4 @@ currentInvites = [];
 publicVariable "currentInvites";
 "currentInvites" addPublicVariableEventHandler {publicVariable "currentInvites";};
 
-execVM "\z\addons\dayz_server\scripts\aerial.sqf
+execVM "\z\addons\dayz_server\scripts\aerial.sqf";
