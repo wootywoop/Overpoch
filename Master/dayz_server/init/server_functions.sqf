@@ -998,3 +998,5 @@ KK_fnc_positionToString = {
 currentInvites = [];
 publicVariable "currentInvites";
 "currentInvites" addPublicVariableEventHandler {publicVariable "currentInvites";};
+
+execVM "\z\addons\dayz_server\scripts\aerial.sqf
