@@ -12,7 +12,7 @@ while {true} do {
 	};
 	if (_isHeliLoot) then {
 		if (s_colect_heli < 0) then {
-			_heliTxt = "The heli convoy has been taken down! Loot has been spotted at the crash sites.";
+			_heliTxt = "Loot this convoy wreck!";
 			if (alive _donn_cursorTarget) then {_heliTxt = "Collect heli items!";};
 			s_colect_heli = player addaction[("<t color=""#6666bb"">" + _heliTxt + "</t>"),"andre_heliConvoy_itens.sqf",_donn_cursorTarget,5,false,true,"",""];
 		};
