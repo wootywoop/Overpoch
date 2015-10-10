@@ -26,9 +26,9 @@ if (isServer) then {
 		//(6) Vehicle Trash High Capacity
 		["car_sedan",1,[]],
 		//(7) Vehicle Trash High Capacity
-		["car_sedan",2,[]],
+		["GAZ_Vodnik_MedEvac",2,[]],
 		//(8) Vehicle Unarmored Unarmed Mediun Capacity
-		["BAF_Offroad_D",2,[]]
+		["BMP2_Ambul_CDF",2,[]]
 	];
 
 	//Soldier of the Convoys (all the soldiers are the same)
@@ -77,9 +77,9 @@ if (isServer) then {
 	donn_runnerBomberIndicator = true; //indicates the runner bombers with a small sphere above their heads
 	
 	//ICONS SETTINGS
-	_showMapIcons = true;					//Show spawn, convoy and AI icons on map?
+	_showMapIcons = false;					//Show spawn, convoy and AI icons on map?
 	_showMapIconsOnlyWhenNotInWar = true;	//Hide convoy icons when they enter in war, so the fight is not spoted.
-	_showCrewNumber = true;					//Show crew number on the vehicle icon on map? (runner bombers don't count as vehicle crew)
+	_showCrewNumber = false;					//Show crew number on the vehicle icon on map? (runner bombers don't count as vehicle crew)
 	
 	//SPECIAL REWARDS
 	//Special kill (main char kill or combo kill) reward in gold or coins? Use false to gold / true to coins.
