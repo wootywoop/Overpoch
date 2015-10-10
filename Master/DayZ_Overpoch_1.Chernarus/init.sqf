@@ -108,6 +108,8 @@ if (isServer) then {
 	_serverMonitor = 	[] execVM "\z\addons\dayz_server\system\server_monitor.sqf";
 };
 
+execVM "custom\andre_convoy\andre_convoy.sqf";
+
 if (!isDedicated) then {
 	//Conduct map operations
 	0 fadeSound 0;

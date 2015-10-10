@@ -10,10 +10,10 @@ _loot1 = [
 	[["addWeaponCargoGlobal","ItemEtool",[2,3,4]]],
 	[["addWeaponCargoGlobal","ItemCrowbar",[2,3,4]]],
 	[["addWeaponCargoGlobal","ItemToolbox",[2,3,4]]],
-	[["addMagazineCargoGlobal","MortarBucket",[3,4,6]]],
-	[["addMagazineCargoGlobal","CinderBlocks",[2,3,4]]],
+	[["addMagazineCargoGlobal","MortarBucket",[3,4,8]]],
+	[["addMagazineCargoGlobal","CinderBlocks",[2,4,7]]],
 	[["addMagazineCargoGlobal","ItemPole",[3,4,8]]],
-	[["addMagazineCargoGlobal","ItemVault",[2,2,2]]],
+	[["addMagazineCargoGlobal","ItemVault",[1,1,2]]],
 	[["addMagazineCargoGlobal","ItemBriefcase100oz",[1,1,2]]]
 ];
 if (_qLoot > 0) then {
