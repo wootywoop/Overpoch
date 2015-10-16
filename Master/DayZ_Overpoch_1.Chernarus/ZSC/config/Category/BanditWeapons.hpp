@@ -29,7 +29,7 @@ class Category_627 {
 		buy[] ={55000,"Coins"};
 		sell[] ={7500,"Coins"};
 	};
-	class m107 {
+	class M107_DZ {
 		type = "trade_weapons";
 		buy[] ={20000000,"Coins"};
 		sell[] ={90000,"Coins"};
