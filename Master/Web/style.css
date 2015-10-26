@@ -2,10 +2,11 @@
 body {
 	margin: 0px;
 	color: #000000;
-	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	background-color: #000000;
-	background-image: url(background.jpg);
+	background-image: url(images/background.jpg);
 	background-repeat: no-repeat;
+	background-attachment:fixed;
 	background-position: center;
 }
 #wrapper {
@@ -25,18 +26,18 @@ body {
 }
 
 h1 {
-	font-size: 72px;
+	font-size: 60px;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	text-align: center;
-	color: #000000;
+	color: #FFFFFF;
 }
 h2 {
 	margin-top: 0.5em;
 }
 #main {
 	width: 58%;
-	margin-left: 350px;
+	margin-left: 400px;
 	float: left;
 	margin-right: 30px;
 	margin-top: 30px;
@@ -48,7 +49,8 @@ h2 {
 figure {
 	display: block;
 	width: 420px;
-	text-align: center;
+	margin-left: 335px;
+	
 	color: #FFFFFF
 }
 figure img {
@@ -102,19 +104,17 @@ a:hover, a:active, a:focus {
 }
 #mainnav ul {
 	list-style-type: none;
-	margin-left: 350px;
+	margin-left: 315px;
 	padding-top: 0px;
 	padding-right: 0px;
 	padding-bottom: 0px;
 	padding-left: 0px;
 }
 article {
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	text-align: center;
 	text-decoration: none;
-	font-size: large;
-	font-style: oblique;
-	color: #000000;
+	color: #FFFFFF;
 }
 
 #mainnav a {
