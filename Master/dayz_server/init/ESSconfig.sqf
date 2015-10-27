@@ -46,6 +46,8 @@ vipListClass = [
 	"76561197970706543", // Alexander's loadout
 	"76561198060093841", // Wellzey's loadout
 	"76561198111412880", // Walde's loadout
+	"76561198203509268", // Ghosty's loadout
+	"76561198027110085", // Trash Gordon's loadout
 	"0"
 ];
 
@@ -79,6 +81,8 @@ vipListClasses = [
 	["Alex's Loadout","Sniper1_DZ",["5Rnd_127x99_as50","5Rnd_127x99_as50","5Rnd_127x99_as50","5Rnd_127x99_as50","5Rnd_127x99_as50","5Rnd_127x99_as50","5Rnd_127x99_as50","5Rnd_127x99_as50","5Rnd_127x99_as50","5Rnd_127x99_as50","5Rnd_127x99_as50","RH_15Rnd_9x19_uspsd","RH_15Rnd_9x19_uspsd","RH_15Rnd_9x19_uspsd","RH_15Rnd_9x19_uspsd","ItemBandage","ItemBandage","ItemBandage","ItemBandage"],["BAF_AS50_scoped","RH_uspsd","Binocular_Vector","NVGoggles","ItemHatchet_DZE","ItemKnife","ItemEtool","ItemGPS","ItemMap","ItemCrowbar","ItemToolbox","ItemRadio","ItemCompass"],"DZ_LargeGunBag_EP1",["ItemTunaCooked","ItemTunaCooked","ItemBloodbag","ItemBloodbag","ItemMorphine","ItemSodaPepsi","ItemSodaPepsi","ItemPainkiller","ItemPainkiller","ItemPainkiller","ItemPainkiller"],[],0,0],
 	["Wellzey's Loadout","Soldier_Sniper_PMC_DZ",["5Rnd_127x99_as50","5Rnd_127x99_as50","5Rnd_127x99_as50","5Rnd_127x99_as50","5Rnd_127x99_as50","30Rnd_9x19_UZI_SD","30Rnd_9x19_UZI_SD","30Rnd_9x19_UZI_SD","ItemAntibiotic","ItemBloodbag","ItemMorphine","ItemBandage"],["BAF_AS50_scoped","UZI_SD_EP1","Binocular_Vector","NVGoggles","ItemHatchet_DZE","ItemKnife","ItemEtool","ItemGPS","ItemCrowbar","ItemToolbox","ItemRadio"],"DZ_LargeGunBag_EP1",[],[],0,0],
 	["Walde's Loadout","GUE_Soldier_Sniper_DZ",["FHQ_rem_7Rnd_338Lapua_MSR_NT","FHQ_rem_7Rnd_338Lapua_MSR_NT","FHQ_rem_7Rnd_338Lapua_MSR_NT","FHQ_rem_7Rnd_338Lapua_MSR_NT","30Rnd_9x19_UZI_SD","30Rnd_9x19_UZI_SD","30Rnd_9x19_UZI_SD","ItemAntibiotic","ItemBloodbag","ItemMorphine","ItemBandage"],["FHQ_MSR_NV_DESERT","UZI_SD_EP1","Binocular_Vector","NVGoggles","ItemHatchet_DZE","ItemKnife","ItemEtool","ItemGPS","ItemCrowbar","ItemToolbox","ItemRadio"],"DZ_LargeGunBag_EP1",[],[],0,0],
+	["Ghosty's Loadout","Survivor3_DZ",["10Rnd_127x99_m107","5Rnd_127x99_as50","5Rnd_127x99_as50","5Rnd_127x99_as50","5Rnd_127x99_as50","5Rnd_127x99_as50","5Rnd_127x99_as50","RH_7Rnd_50_AE","RH_7Rnd_50_AE","RH_7Rnd_50_AE","RH_7Rnd_50_AE","FoodSteakCooked","ItemSodaCoke","ItemBloodbag","ItemMorphine","ItemBandage","ItemBandage","ItemBandage"],["BAF_AS50_scoped","RH_Deaglemzb","Binocular_Vector","NVGoggles","ItemEtool","ItemGPS","ItemCrowbar","ItemToolbox","ItemRadio"],"DZ_Backpack_EP1",[],[],0,0],
+	["Trash Gordon's Loadout","GUE_Soldier_Sniper_DZ",["FHQ_rem_7Rnd_338Lapua_MSR_NT","FHQ_rem_7Rnd_338Lapua_MSR_NT","FHQ_rem_7Rnd_338Lapua_MSR_NT","FHQ_rem_7Rnd_338Lapua_MSR_NT","30Rnd_9x19_UZI_SD","30Rnd_9x19_UZI_SD","30Rnd_9x19_UZI_SD","ItemAntibiotic","ItemBloodbag","ItemMorphine","ItemBandage"],["FHQ_MSR_NV_DESERT","UZI_SD_EP1","Binocular_Vector","NVGoggles","ItemHatchet_DZE","ItemKnife","ItemEtool","ItemGPS","ItemCrowbar","ItemToolbox","ItemRadio"],"DZ_LargeGunBag_EP1",[],[],0,0],
 	[]
 ];
 
