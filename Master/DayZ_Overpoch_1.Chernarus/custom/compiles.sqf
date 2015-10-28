@@ -11,4 +11,10 @@ if (!isDedicated) then {
 	fnc_SetPitchBankYaw =       compile preprocessFileLineNumbers "custom\BuildVectors\fnc_SetPitchBankYaw.sqf";
     DZE_build_vector_file =         "custom\BuildVectors\build_vectors.sqf";
     build_vectors =                 compile preprocessFileLineNumbers DZE_build_vector_file;
+	/*Plot*/
+	PlotGetFriends 		= compile preprocessFileLineNumbers "plotManagement\plotGetFriends.sqf";
+	PlotNearbyHumans 	= compile preprocessFileLineNumbers "plotManagement\plotNearbyHumans.sqf";
+	PlotAddFriend 		= compile preprocessFileLineNumbers "plotManagement\plotAddFriend.sqf";
+	PlotRemoveFriend 	= compile preprocessFileLineNumbers "plotManagement\plotRemoveFriend.sqf";
+	/*Plot End*/
 };
