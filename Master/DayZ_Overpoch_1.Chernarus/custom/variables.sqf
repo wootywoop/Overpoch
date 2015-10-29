@@ -293,7 +293,6 @@ dayz_resetSelfActions = {
 	s_player_lockUnlock_crtl = -1;
 	s_player_claimvehicle = -1;
 	s_player_copyToKey = -1;
-	s_player_plotManagement = -1;
 };
 call dayz_resetSelfActions;
 

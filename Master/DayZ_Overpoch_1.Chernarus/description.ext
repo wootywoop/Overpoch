@@ -202,7 +202,8 @@ class CfgSounds
 #include "ZSC\advancedTrading\advancedTrading.hpp"
 #include "ZSC\config\ZSCdialogs.hpp"
 #include "ZSC\skins\SkinGui.hpp"
-#include "ZSC\plotManagement\plotManagement.hpp"
+// RC
+#include "custom\extra_rc.hpp"
 // Mystery briefcase
 #include "addons\mbc\dialogs.hpp"
 #include "dzgm\groupManagement.hpp"

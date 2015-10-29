@@ -63,19 +63,14 @@ _object_position = {
 
 _object_inventory = {
 	private["_inventory","_previous","_key"];
-		if (typeOf (_object) == "Plastic_Pole_EP1_DZ") then{
-		_inventory = _object getVariable ["plotfriends", []]; //We're replacing the inventory with UIDs for this item
-		} else {
-			_inventory = [
+		_inventory = [
 			getWeaponCargo _object,
 			getMagazineCargo _object,
-			getBackpackCargo _object
-				/*ZSC*/
-				_object getVariable["bankMoney",0]
-				/*ZSC*/
-			];
-		};
-			
+			getBackpackCargo _object,
+			/*ZSC*/
+			_object getVariable["bankMoney",0]
+			/*ZSC*/
+		];
 		_previous = str(_object getVariable["lastInventory",[]]);
 		if (str(_inventory) != _previous) then {
 			_object setVariable["lastInventory",_inventory];
