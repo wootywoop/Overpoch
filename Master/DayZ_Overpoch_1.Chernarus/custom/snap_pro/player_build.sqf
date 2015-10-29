@@ -37,7 +37,7 @@ if(isNil "vectorBuildVariables") then{
 
 // disallow building if too many objects are found within (30m by default) add DZE_checkNearbyRadius = 30; to your init.sqf to change
 _pos = [player] call FNC_GetPos;
-_cnt = count (_pos nearObjects ["All",DZE_PlotPole select 0]; 
+_cnt = count (_pos nearObjects ["All",DZE_checkNearbyRadius]); 
  if (_cnt >= DZE_BuildingLimit) exitWith { //end script if too many objects nearby
  	DZE_ActionInProgress = false;
  	cutText [(localize "str_epoch_player_41"), "PLAIN DOWN"];
