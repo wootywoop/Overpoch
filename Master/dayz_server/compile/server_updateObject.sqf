@@ -69,7 +69,7 @@ _object_inventory = {
 			_inventory = [
 			getWeaponCargo _object,
 			getMagazineCargo _object,
-			getBackpackCargo _object
+			getBackpackCargo _object,
 				/*ZSC*/
 				_object getVariable["bankMoney",0]
 				/*ZSC*/
