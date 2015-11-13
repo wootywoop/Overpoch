@@ -170,7 +170,7 @@ ai_wep_assault = [["RH_hk417sgleotech","20Rnd_762x51_DMR"],
 
 		// Missions
 		wai_radio_announce			= true;								// Setting this to true will announce the missions to those that hold a radio only
-		wai_hero_limit				= 3;								// define how many hero missions can run at once
+		wai_hero_limit				= 1;								// define how many hero missions can run at once
 		wai_bandit_limit			= 1;								// define how many bandit missions can run at once
 		/* wai_special_limit			= 1;								// define how many special missions can run at once */
 		wai_hero_missions			= [ 								// ["mission filename",% chance of picking this mission],Make sure the chances add up to 100,or it will not be accurate percentages
@@ -243,8 +243,8 @@ ai_wep_assault = [["RH_hk417sgleotech","20Rnd_762x51_DMR"],
 
 	/* STATIC MISSIONS CONFIG */
 
-		static_missions				= true;		// use static mission file
-		custom_per_world			= true;		// use a custom mission file per world
+		static_missions				= false;		// use static mission file
+		custom_per_world			= false;		// use a custom mission file per world
 
 	/* END STATIC MISSIONS CONFIG */
 
