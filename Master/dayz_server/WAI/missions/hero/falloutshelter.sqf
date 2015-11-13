@@ -55,7 +55,7 @@ if(isServer) then {
 	//Condition
 	_complete = [
 		[_mission,_crate],	// mission number and crate
-		["kill"], 			// ["crate"], or ["kill"], or ["assassinate", _unitGroup],
+		["crate"], 			// ["crate"], or ["kill"], or ["assassinate", _unitGroup],
 		[_baserunover], 	// cleanup objects
 		"Some Outlaws are trying to get loot from an abandoned fallout shelter. Kill them and get the loot first!",	// mission announcement
 		"Survivors have secured the fallout shelter!",																	// mission success

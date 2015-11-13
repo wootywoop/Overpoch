@@ -87,7 +87,7 @@ _blockDamageFrom = [
 /*  unitRecoil checks     */ _URC =  true;	/* true or false */	/* checks unitRecoilCoefficient and resets default unitRecoilCoefficient */
 /*  Log Bad Keys pressed  */ _LBK =  false;	/* true or false */	/* will be logged to surveillancelog.. can become huge spam I would have it disabled */
 /*  Punish Forbidden Keys */ _PBK =  false;	/* true or false */	/* will freeze the user on BadKey click for ~3 seconds! */
-/*  Forbid VON Sidechat   */ _VON =  true;	/* true or false */	/* talking on sidechat will put out a warning and kick if continue */
+/*  Forbid VON Sidechat   */ _VON =  false;	/* true or false */	/* talking on sidechat will put out a warning and kick if continue */
 /*  Use Chat Functions    */ _UCF =  true;	/* true or false */	/* Enables Chatfunctions like /dance */
 
 /*  Break Functions ?     */ _BHF = false;	/* true or false */	/* break some known functions used by hacks! */

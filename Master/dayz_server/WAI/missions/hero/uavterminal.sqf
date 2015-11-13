@@ -51,16 +51,17 @@ _drone lock true;
 	//Condition
 	_complete = [
 		[_mission,_crate],	// mission number and crate
-		["kill"], 			// ["crate"], or ["kill"], or ["assassinate", _unitGroup],
+		["crate"], 			// ["crate"], or ["kill"], or ["assassinate", _unitGroup],
 		[_baserunover], 	// cleanup objects
 		"A group of crazy engineers are setting up a drone from a military camp. Stop them before they can launch it!",	// mission announcement
 		"Survivors stopped the launch of the drone!",																	// mission success
-		"The drone was defective and the engineers fled the area."														// mission fail
+		"The drone was defective and the group fled."															// mission fail
 	] call mission_winorfail;
 
 	diag_log format["WAI: [Mission:[Hero] Fallout Shelter]: Ended at %1",_position];
 
   if(_complete) then {
+    if (isEngineOn _drone) then {_drone engineOn false};
 		[_crate,[15,ai_wep_box],10,[50,crate_items_buildables],1,[100,ammo_list]] call dynamic_crate;
 	};
 
