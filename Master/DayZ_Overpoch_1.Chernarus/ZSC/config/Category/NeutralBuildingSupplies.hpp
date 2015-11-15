@@ -94,11 +94,6 @@ class Category_662 {
 		buy[] ={100000,"Coins"};
 		sell[] ={100000,"Coins"};
 	};
-	class ItemHotwireKit {
-		type = "trade_items";
-		buy[] ={500000,"Coins"};
-		sell[] ={100000,"Coins"};
-	};
 	class ItemTentDomed {
 		type = "trade_items";
 		buy[] ={2000,"Coins"};

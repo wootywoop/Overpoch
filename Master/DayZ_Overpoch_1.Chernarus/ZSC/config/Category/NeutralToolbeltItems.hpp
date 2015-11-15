@@ -40,6 +40,11 @@ class Category_510 {
 		buy[] ={60,"Coins"};
 		sell[] ={30,"Coins"};
 	};
+	//class ItemHotwireKit {
+	//	type = "trade_items";
+	//	buy[] ={100000,"Coins"};
+	//	sell[] ={50000,"Coins"};
+	//};
 	class ItemKnife {
 		type = "trade_weapons";
 		buy[] ={60,"Coins"};
