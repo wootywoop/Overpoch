@@ -1202,7 +1202,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=22;
+		items=21;
 		class Item0
 		{
 			position[]={7839.6055,381.33774,8414.7324};
@@ -1356,14 +1356,6 @@ class Mission
             text="Bandit city";
             type="hd_warning";
             colorName="ColorRed";
-		};
-		class Item21 // Ghosty base
-			{
-			position[]={4600,300,6860}; 
-            name="Ghosty's base";
-            text="Ghosty's base";
-            type="hd_flag";
-            colorName="ColorGreen";
 		};
 	};
 	class Sensors

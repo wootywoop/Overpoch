@@ -81,4 +81,9 @@ class Category_598 {
 		buy[] ={20000,"Coins"};
 		sell[] ={5000,"Coins"};
 	};
+	class BMP2_Ambul_CDF {
+		type = "trade_any_vehicle";
+		buy[] ={2000000,"Coins"};
+		sell[] ={500000,"Coins"};
+	};
 };
