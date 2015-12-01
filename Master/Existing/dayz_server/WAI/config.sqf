@@ -174,19 +174,20 @@ ai_wep_assault = [["RH_hk417sgleotech","20Rnd_762x51_DMR"],
 		wai_bandit_limit			= 1;								// define how many bandit missions can run at once
 		/* wai_special_limit			= 1;								// define how many special missions can run at once */
 		wai_hero_missions			= [ 								// ["mission filename",% chance of picking this mission],Make sure the chances add up to 100,or it will not be accurate percentages
-									["armed_vehicle",8],
-									["bandit_base",8],
-									["black_hawk_crash",6],
-									["c130",6],
-									["c130_supply",8],
-									["captured_mv22",6],
-									["comm",8],
-									["destroyed_ural",6],
-									["disabled_milchopper",6],
-									["ikea_convoy",8],
-									["mayors_mansion",8],
-									["uavterminal",8],
-									["falloutshelter",8],
+									["armed_vehicle",4],
+									["bandit_base",6],
+									["black_hawk_crash",4],
+									["c130",4],
+									["c130_supply",6],
+									["captured_mv22",4],
+									["comm",6],
+									["destroyed_ural",4],
+									["disabled_milchopper",4],
+									["ikea_convoy",4],
+									["mayors_mansion",6],
+									["uavterminal",6],
+									["falloutshelter",6],
+									["christmas",30],
 									["weapon_cache",6]	
 									];
 			wai_bandit_missions		= [

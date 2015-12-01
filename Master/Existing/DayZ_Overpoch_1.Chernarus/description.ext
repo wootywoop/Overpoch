@@ -68,6 +68,17 @@ class RscPicture
 	lineSpacing=0;
 	text="";
 };
+class CfgFunctions 
+{
+    class DZN {
+        class Functions {
+            class snowfall {
+                description = "Simple snowfall script";
+                file = "custom\fn_dzn_snowfall.sqf";
+            };
+        };
+    };
+};
 class RscLoadingText : RscText
 {
 	style = 2;
