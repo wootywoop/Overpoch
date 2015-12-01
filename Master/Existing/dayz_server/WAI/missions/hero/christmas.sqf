@@ -37,12 +37,12 @@ if(isServer) then {
   _snwman = createVehicle ["MAP_snowman",[(_position select 0), (_position select 1)-4,0],[], 0, "CAN_COLLIDE"]; 
 	
 	//Troops
-	_rndnum 	= (2 + round(random 3));
+	_rndnum 	= (3 + round(random 3));
 	[[(_position select 0) -100, (_position select 1) +100, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
-	[[(_position select 0) +100, (_position select 1) -100, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
-	[[(_position select 0) +100, (_position select 1) +100, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
-	[[(_position select 0) -100, (_position select 1) -100, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
-	[[(_position select 0) -50, (_position select 1) +50, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_stinger;
+	[[(_position select 0) +100, (_position select 1) -100, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+	[[(_position select 0) +100, (_position select 1) +100, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+	[[(_position select 0) -100, (_position select 1) -100, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+	[[(_position select 0) -50, (_position select 1) +50, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
 	[[(_position select 0) +50, (_position select 1) -50, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_stinger;
 
 
@@ -52,7 +52,7 @@ if(isServer) then {
 		[(_position select 0) - 30, (_position select 1), 0],	
     [(_position select 0), (_position select 1) + 30, 0],
 		[(_position select 0), (_position select 1) - 30, 0]
-	],"KORD_high_TK_EP1","Hard","Bandit","Bandit",0,2,"Random","Random",_mission] call spawn_static;
+	],"M2StaticMG","Hard","Bandit","Bandit",0,2,"Random","Random",_mission] call spawn_static;
 
 
 
@@ -63,14 +63,14 @@ if(isServer) then {
 		[_mission,_crate],	// mission number and crate
 		["crate"],			// ["crate"], or ["kill",wai_kill_percent], or ["assassinate", _unitGroup],
 		[_baserunover,_tree,_snwman],					// cleanup objects
-		"FatCat's admins wish you a merry Christmas and a happy new year!",	// mission announcement
-		"Merry Christmas! :-D",									// mission success
-		"NO Christmas FOR YOU! >:-("							// mission fail
+		"Your FatCat-Team wish you a merry christmas and a happy new year!",	// mission announcement
+		"Merry Christmas!",									// mission success
+		"NO CHRISTMAS FOR YOU! >:("							// mission fail
 	] call mission_winorfail;
 
 	if(_complete) then {
 
-		//Firework
+		//Firework: Smoke is attached to each flare
 		_flare1 = createVehicle ["F_40mm_green",[(_position select 0),(_position select 1),150],[],0,"CAN_COLLIDE"];
   	_flare2 = createVehicle ["F_40mm_green",[(_position select 0),(_position select 1),150],[],0,"CAN_COLLIDE"];
   	_flare3 = createVehicle ["F_40mm_red",[(_position select 0),(_position select 1),150],[],0,"CAN_COLLIDE"];
@@ -83,8 +83,8 @@ if(isServer) then {
 		
 		//Spawn the Christmas loot
 		[_crate,[30,ai_wep_box],4,0,1,[100,ammo_list]] call dynamic_crate;
-		[_crate2,[4,crate_weapons_buildables],[7,crate_tools_buildable],[50,crate_items_buildables],1,[100,ammo_list]] call dynamic_crate;
-		[_crate3,[25,crate_random],[15,crate_items],[40,crate_items_medical],1,[100,crate_items_food]] call dynamic_crate;
+		[_crate2,[2,crate_weapons_buildables],[7,crate_tools_buildable],[60,crate_items_buildables],1,[100,ammo_list]] call dynamic_crate;
+		[_crate3,[30,crate_random],[20,crate_items],[45,crate_items_medical],1,[100,crate_items_food]] call dynamic_crate;
 
 	};
 
