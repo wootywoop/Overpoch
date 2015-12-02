@@ -54,7 +54,7 @@ _maximumFog = 0.1;
 
 // Overcast intensity never falls below this value. Must be between 0 and 1 and less than or equal to _maximumOvercast
 // (0 = no overcast, 1 = maximum overcast). (Suggested value: 0).
-_minimumOvercast = 0.5;
+_minimumOvercast = 0;
 
 // Overcast intensity never exceeds this value. Must be between 0 and 1 and greater than or equal to _minimumOvercast
 // (0 = no overcast, 1 = maximum overcast). (Suggested value: 1).
@@ -66,15 +66,15 @@ _minimumRain = 0;
 
 // When raining, rain intensity never exceeds this value. Must be between 0 and 1 and greater than or equal to _minimumRain
 // (0 = no rain, 1 = maximum rain intensity). (Suggested value: 0.8);
-_maximumRain = 0.3;
+_maximumRain = 0.1;
 
 // When snow fall, snow intensity never falls below this value. Must be between 0 and 1 and less than or equal to _maximumSnow
 // (0 = no snow, 1 = maximum snow intensity). (Suggested value: 0);
-_minimumSnow = 0.7;
+_minimumSnow = 0;
 
 // When snow fall, snow intensity never exceeds this value. Must be between 0 and 1 and greater than or equal to _minimumSnow
 // (0 = no snow, 1 = maximum snow intensity). (Suggested value: 0.8);
-_maximumSnow = 1.0;
+_maximumSnow = 0.4;
 
 // Wind vector strength never falls below this value. Must be greater or equal to 0 and less than or equal to _maximumWind.
 // (Suggested value: 0);
