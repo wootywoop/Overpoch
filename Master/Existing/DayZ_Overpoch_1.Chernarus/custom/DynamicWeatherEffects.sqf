@@ -70,7 +70,7 @@ _maximumRain = 0.3;
 
 // When snow fall, snow intensity never falls below this value. Must be between 0 and 1 and less than or equal to _maximumSnow
 // (0 = no snow, 1 = maximum snow intensity). (Suggested value: 0);
-_minimumSnow = 0.5;
+_minimumSnow = 0.7;
 
 // When snow fall, snow intensity never exceeds this value. Must be between 0 and 1 and greater than or equal to _minimumSnow
 // (0 = no snow, 1 = maximum snow intensity). (Suggested value: 0.8);
