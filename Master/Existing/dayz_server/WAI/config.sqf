@@ -37,8 +37,8 @@ if(isServer) then {
 
 		ai_kills_gain				= true;			// add kill to bandit/human kill score
 		ai_humanity_gain			= true;			// gain humanity for killing AI
-		ai_add_humanity				= 50;			// amount of humanity gained for killing a bandit AI
-		ai_remove_humanity			= 50;			// amount of humanity lost for killing a hero AI
+		ai_add_humanity				= 150;			// amount of humanity gained for killing a bandit AI
+		ai_remove_humanity			= 150;			// amount of humanity lost for killing a hero AI
 		ai_special_humanity			= 150;			// amount of humanity gain or loss for killing a special AI dependant on player alignment
 		
 		ai_skill_extreme			= [["aimingAccuracy",1.00],["aimingShake",1.00],["aimingSpeed",1.00],["endurance",1.00],["spotDistance",1.00],["spotTime",1.00],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",1.00]]; 	// Extreme
@@ -60,7 +60,7 @@ if(isServer) then {
 		ai_gear4					= [["ItemBandage","ItemEpinephrine","ItemPainkiller"],["ItemGPS","ItemKeyKit"]];
 		ai_gear_random				= [ai_gear0,ai_gear1,ai_gear2,ai_gear3,ai_gear4];	// Allows the possibility of random gear
 
-ai_wep_assault				= ["M16A4_ACG","Sa58V_RCO_EP1","FHQ_ACR_BLK_HWS_GL_F","RH_m14aim","FHQ_ACR_BLK_HWS_GL","RH_m1saim","FHQ_ACR_BLK_HWS_F","RH_sc2shd","RH_sc2eot","RH_sc2sp","FHQ_ACR_BLK_HWS","RH_sc2shd","FHQ_ACR_BLK_CCO_GL_F","RH_sc2aim","FHQ_ACR_BLK_CCO_GL","RH_maseotech","FHQ_ACR_BLK_CCO_F","RH_masaim","RH_m1seot","FHQ_ACR_BLK_CCO","RH_m14eot","SCAR_L_STD_Mk4CQT","RH_hk417aim","RH_hk417eotech","RH_hk417eotech","RH_hk417saim","RH_hk417seotech","RH_hk417sglaim","RH_m1ssp","M8_sharpshooter","M4A1_HWS_GL_camo","SCAR_L_STD_HOLO","M4A3_CCO_EP1","M4A3_CCO_EP1","M4A1_AIM_SD_camo","M16A4","m8_carbine","BAF_L85A2_RIS_Holo","Sa58V_CCO_EP1"];	// Assault
+ai_wep_assault				= ["M16A4_ACG","Sa58V_RCO_EP1","SCAR_L_STD_Mk4CQT","M4A1_HWS_GL_camo","SCAR_L_STD_HOLO","M4A3_CCO_EP1","M4A3_CCO_EP1","M4A1_AIM_SD_camo","M16A4","m8_carbine","BAF_L85A2_RIS_Holo","Sa58V_CCO_EP1"];	// Assault
 		ai_wep_machine				= ["RPK_74","MK_48_DZ","M249_EP1_DZ","Pecheneg_DZ","M60A4_EP1_DZE","Pecheneg_DZ","M240_DZ"];	// Light machine guns
 		ai_wep_sniper				= ["M14_EP1","m107_DZ","SCAR_H_LNG_Sniper_SD","M110_NVG_EP1","BAF_LRR_scoped","SVD_CAMO","VSS_Vintorez","DMR_DZ","M40A3"];	// Sniper rifles
 		ai_wep_random				= [ai_wep_assault,ai_wep_assault,ai_wep_assault,ai_wep_sniper,ai_wep_machine];	// random weapon 60% chance assault rifle,20% light machine gun,20% sniper rifle
@@ -81,19 +81,19 @@ ai_wep_assault				= ["M16A4_ACG","Sa58V_RCO_EP1","FHQ_ACR_BLK_HWS_GL_F","RH_m14a
 		wai_mission_system			= true;	// use built in mission system
 
 		wai_mission_markers			= ["DZMSMajMarker","DZMSMinMarker","DZMSBMajMarker","DZMSBMinMarker"];
-		wai_avoid_missions			= 750;								// avoid spawning missions this close to other missions, these are defined in wai_mission_markers
-		wai_avoid_traders			= 750;								// avoid spawning missions this close to traders
+		wai_avoid_missions			= 550;								// avoid spawning missions this close to other missions, these are defined in wai_mission_markers
+		wai_avoid_traders			= 550;								// avoid spawning missions this close to traders
 		wai_avoid_town				= 0;								// avoid spawning missions this close to towns, *** doesn't function with infiSTAR enabled ***
 		wai_avoid_road				= 0;								// avoid spawning missions this close to roads
-		wai_avoid_water				= 400;								// avoid spawning missions this close to water
+		wai_avoid_water				= 200;								// avoid spawning missions this close to water
 
 		
-		wai_mission_timer			= [30,900];							// time between missions 5-15 minutes
+		wai_mission_timer			= [30,300];							// time between missions 5-15 minutes
 		wai_mission_timeout			= [1500,3000]; 						// time each missions takes to despawn if inactive 15-30 minutes
 		wai_timeout_distance		= 700;								// if a player is this close to a mission then it won't time-out
 		
 		wai_clean_mission			= true;								// clean all mission buildings after a certain period
-		wai_clean_mission_time		= 1200;								// time after a mission is complete to clean mission buildings
+		wai_clean_mission_time		= 1000;								// time after a mission is complete to clean mission buildings
 
 		wai_mission_fuel			= [5,60];							// fuel inside mission spawned vehicles [min%,max%]
 		wai_vehicle_damage			= [20,70];							// damages to spawn vehicles with [min%,max%]
@@ -122,28 +122,28 @@ ai_wep_assault				= ["M16A4_ACG","Sa58V_RCO_EP1","FHQ_ACR_BLK_HWS_GL_F","RH_m14a
 		wai_bandit_limit			= 1;								// define how many bandit missions can run at once
 
 		wai_hero_missions			= [ 								// ["mission filename",% chance of picking this mission],Make sure the chances add up to 100,or it will not be accurate percentages
-										["patrol",6],
-										["black_hawk_crash",6],
-										["armed_vehicle",4],
-										["bandit_base",6],
+										//["patrol",6],
+										["black_hawk_crash",8],
+										["armed_vehicle",8],
+										["bandit_base",8],
 										["uavterminal",8],
-										["falloutshelter",8],
-										["christmas",20],
-										["captured_mv22",6],
-										["ikea_convoy",6],
+										//["falloutshelter",8],
+										["christmas",10],
+										["captured_mv22",8],
+										["ikea_convoy",10],
 										["destroyed_ural",6],
-										["disabled_milchopper",6],
-										["mayors_mansion",6],
-										["weapon_cache",6],
-										["bandit_patrol",6]
+										["disabled_milchopper",8],
+										["mayors_mansion",10],
+										["weapon_cache",8],
+										["bandit_patrol",8]
 									];
 		wai_bandit_missions			= [
-										["patrol",10],
-										["armed_vehicle",10],
+										//["patrol",10],
+										["armed_vehicle",14],
 										["black_hawk_crash",10],
-										["captured_mv22",6],
+										["captured_mv22",10],
 										["broken_down_ural",12],
-										["hero_base",6],
+										["hero_base",8],
 										["ikea_convoy",8],
 										["medi_camp",14],
 										["presidents_mansion",6],
