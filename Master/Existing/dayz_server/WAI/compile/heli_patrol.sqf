@@ -116,6 +116,20 @@ if (isServer) then {
 	_unitGroup setBehaviour "AWARE";
 	_unitGroup setSpeedMode "FULL";
 
+	if(_aitype == "Hero") then {
+		if (!isNil "_mission") then {
+			[_unitGroup, _mission] spawn hero_behaviour;
+		} else {
+			[_unitGroup] spawn hero_behaviour;
+		};
+	} else {
+		if (!isNil "_mission") then {
+			[_unitGroup, _mission] spawn bandit_behaviour;
+		} else {
+			[_unitGroup] spawn bandit_behaviour;
+		};
+	};
+
 	if(_wpnum > 0) then {
 
 		for "_i" from 1 to _wpnum do {

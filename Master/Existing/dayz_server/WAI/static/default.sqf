@@ -4,7 +4,6 @@ if(isServer) then {
 	//Custom Spawns file//
 	/*
 	Custom group spawns Eg.
-
 	[
 		[953.237,4486.48,0.001],			// Position
 		4,									// Number Of units
@@ -153,7 +152,12 @@ if(isServer) then {
       "Random",                 
       "Bandit"                 
    ] call spawn_group;
-/*
+
+
+
+
+
+
 	[
 		[3660.52,14883.2,0.001],			// Position
 		5,									// Number Of units
@@ -213,8 +217,6 @@ if(isServer) then {
 		"Random",							// Gearset number. "Random" for random gear set
 		"Bandit"							// AI Type, "Hero" or "Bandit".
 	] call spawn_group;
-*/
-
 	/*
 	Custom static weapon spawns Eg. (with mutiple positions)
 
@@ -253,7 +255,7 @@ if(isServer) then {
       "Random"                 
    ] call spawn_static;
 
-  /*
+
 	[
 		[									// Position(s) (can be multiple) middle tower
 			[3720.82,14487.3,29.192],
@@ -270,7 +272,7 @@ if(isServer) then {
 		"Random",							// Backpack classname, use "Random" or classname here
 		"Random"							// Gearset classname, use "Random" or classname here
 	] call spawn_static;
-*/
+
 
 	/*
 	Custom Chopper Patrol spawn Eg.
@@ -304,6 +306,7 @@ if(isServer) then {
 
 
 
+
 	/* 
 	Custom Vehicle patrol spawns Eg. (Watch out they are stupid)
 
@@ -331,7 +334,6 @@ if(isServer) then {
 		"Random",				
 		"Bandit"						
 	] spawn vehicle_patrol;
-/*
 [
 		[3750.51,14212.3,0.001],				// Position to patrol Middle
 		[3750.51,14212.3,0.001],				// Position to spawn at
@@ -365,7 +367,8 @@ if(isServer) then {
 		"Bandit"							// AI Type, "Hero" or "Bandit".
 	] spawn vehicle_patrol;
 
-*/
+
+
 
 	/*
 	Paradropped unit custom spawn Eg.
@@ -388,9 +391,7 @@ if(isServer) then {
 
 	Place your paradrop spawns under this line
 	*/
-/*
-	
-	[
+[
 		[3045.19,14363.4,0.001],	// Position that units will be dropped by
 		[1300,14960,0],							// Starting position of the heli
 		700,								// Radius from drop position a player has to be to spawn chopper
@@ -406,7 +407,7 @@ if(isServer) then {
 		true								// true: Aircraft will stay at position and fight. false: Heli will leave if not under fire. 
 	] spawn heli_para;
 	
-*/
+
 [
       [13706.369, 2928.425, 0],               
       [0,-2640,200],                 
@@ -438,7 +439,7 @@ if(isServer) then {
       "Bandit",                     
       true                     
    ] spawn heli_para;
-	
-	diag_log format["WAI: Static mission for %1 loaded", missionName];
+
+	diag_log "WAI: Static mission loaded";
 
 };

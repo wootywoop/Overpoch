@@ -75,8 +75,6 @@ if (isServer) then {
 		_unit enableAI "MOVE";
 		_unit enableAI "ANIM";
 		_unit enableAI "FSM";
-		_unit setCombatMode ai_modecombat;
-        _unit setBehaviour behaviour_ai;
 		
 		removeAllWeapons _unit;
 		removeAllItems _unit;
@@ -88,15 +86,14 @@ if (isServer) then {
 					if(_gun == 0) 			exitWith { _aiweapon = ai_wep_assault; };
 					if(_gun == 1) 			exitWith { _aiweapon = ai_wep_machine; };
 					if(_gun == 2) 			exitWith { _aiweapon = ai_wep_sniper; };
-					if(_gun == 3) 			exitWith { _aiweapon = ai_m107; };
 				} else {
 					if(_gun == "random") 	exitWith { _aiweapon = ai_wep_random call BIS_fnc_selectRandom; };
 					if(_gun == "unarmed") 	exitWith { _unarmed = true; };
 				};
 			};
-			_weaponandmag = _aiweapon call BIS_fnc_selectRandom;
-			_weapon = _weaponandmag select 0;
-			_magazine = _weaponandmag select 1;
+
+			_weapon 	= _aiweapon call BIS_fnc_selectRandom;
+			_magazine 	= _weapon call find_suitable_ammunition;
 			
 			call {
 				if(typeName(_gear) == "SCALAR") then {
@@ -116,6 +113,10 @@ if (isServer) then {
 			_gearmagazines 		= _aigear select 0;
 			_geartools 			= _aigear select 1;
 			_unit 				addweapon _weapon;
+
+			for "_i" from 1 to _mags do {
+				_unit addMagazine _magazine;
+			};
 
 			if(_backpack != "none") then {
 				_unit addBackpack _aipack;
@@ -176,6 +177,20 @@ if (isServer) then {
 	} forEach _position;
 
 	_unitGroup selectLeader ((units _unitGroup) select 0);
+
+	if(_aitype == "Hero") then {
+		if (!isNil "_mission") then {
+			[_unitGroup, _mission] spawn hero_behaviour;
+		} else {
+			[_unitGroup] spawn hero_behaviour;
+		};
+	} else {
+		if (!isNil "_mission") then {
+			[_unitGroup, _mission] spawn bandit_behaviour;
+		} else {
+			[_unitGroup] spawn bandit_behaviour;
+		};
+	};
 
 	diag_log format ["WAI: Spawned in %1 %2",_unitnumber,_class];
 

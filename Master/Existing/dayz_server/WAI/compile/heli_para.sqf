@@ -1,6 +1,6 @@
 if (isServer) then {
 
-	private ["_weaponandmag","_mission_data","_pos_x","_pos_y","_ainum","_missionrunning","_aitype","_helipos1","_geartools","_gearmagazines","_cleanheli","_drop","_helipos","_gunner2","_gunner","_player_present","_skillarray","_aicskill","_aiskin","_aigear","_wp","_helipatrol","_gear","_skin","_backpack","_mags","_gun","_triggerdis","_startingpos","_aiweapon","_mission","_heli_class","_aipack","_helicopter","_unitGroup","_pilot","_skill","_paranumber","_position","_wp1"];
+	private ["_mission_data","_pos_x","_pos_y","_ainum","_missionrunning","_aitype","_helipos1","_geartools","_gearmagazines","_cleanheli","_drop","_helipos","_gunner2","_gunner","_player_present","_skillarray","_aicskill","_aiskin","_aigear","_wp","_helipatrol","_gear","_skin","_backpack","_mags","_gun","_triggerdis","_startingpos","_aiweapon","_mission","_heli_class","_aipack","_helicopter","_unitGroup","_pilot","_skill","_paranumber","_position","_wp1"];
 
 	_position 		= _this select 0;
 	_pos_x			= _position select 0;
@@ -137,6 +137,20 @@ if (isServer) then {
 	_unitGroup setBehaviour "CARELESS";
 	_unitGroup setSpeedMode "FULL";
 
+	if(_aitype == "Hero") then {
+		if (!isNil "_mission") then {
+			[_unitGroup, _mission] spawn hero_behaviour;
+		} else {
+			[_unitGroup] spawn hero_behaviour;
+		};
+	} else {
+		if (!isNil "_mission") then {
+			[_unitGroup, _mission] spawn bandit_behaviour;
+		} else {
+			[_unitGroup] spawn bandit_behaviour;
+		};
+	};
+
 	// Add waypoints to the chopper group.
 	_wp = _unitGroup addWaypoint [[(_position select 0), (_position select 1)], 0];
 	_wp setWaypointType "MOVE";
@@ -172,10 +186,9 @@ if (isServer) then {
 						if(_gun == "random") 	exitWith { _aiweapon = ai_wep_random call BIS_fnc_selectRandom; };
 					};
 				};
-				_weaponandmag = _aiweapon call BIS_fnc_selectRandom;
-				_weapon = _weaponandmag select 0;
-				_magazine = _weaponandmag select 1;
-				
+
+				_weapon 	= _aiweapon call BIS_fnc_selectRandom;
+				_magazine 	= _weapon call find_suitable_ammunition;
 
 				call {
 					if (typeName(_gear) == "SCALAR") then {
@@ -214,12 +227,16 @@ if (isServer) then {
 				_para enableAI "MOVE";
 				_para enableAI "ANIM";
 				_para enableAI "FSM";
-				
+
 				removeAllWeapons _para;
 				removeAllItems _para;
 				
 				_para addweapon _weapon;
-								
+				
+				for "_i" from 1 to _mags do {
+					_para addMagazine _magazine;
+				};
+				
 				if(_backpack != "none") then {
 					_para addBackpack _aipack;
 				};
@@ -284,6 +301,21 @@ if (isServer) then {
 
 			[_pgroup,_position,_skill] call group_waypoints;
 			
+			if(_aitype == "Hero") then {
+				if (!isNil "_mission") then {
+					[_pgroup, _mission] spawn hero_behaviour;
+				} else {
+					[_pgroup] spawn hero_behaviour;
+				};
+			} else {
+				if (!isNil "_mission") then {
+					[_pgroup, _mission] spawn bandit_behaviour;
+				} else {
+					[_pgroup] spawn bandit_behaviour;
+				};
+			};
+		};
+	};
 
 	if (_helipatrol) then { 
 		
@@ -292,6 +324,20 @@ if (isServer) then {
 		_wp1 setWaypointCompletionRadius 150;
 		_unitGroup setBehaviour "AWARE";
 		_unitGroup setSpeedMode "FULL";
+
+		if(_aitype == "Hero") then {
+			if (!isNil "_mission") then {
+				[_unitGroup, _mission] spawn hero_behaviour;
+			} else {
+				[_unitGroup] spawn hero_behaviour;
+			};
+		} else {
+			if (!isNil "_mission") then {
+				[_unitGroup, _mission] spawn bandit_behaviour;
+			} else {
+				[_unitGroup] spawn bandit_behaviour;
+			};
+		};
 
 		{
 			_x addEventHandler ["Killed",{[_this select 0, _this select 1, "air"] call on_kill;}];
@@ -305,6 +351,20 @@ if (isServer) then {
 		
 		_unitGroup setBehaviour "CARELESS";
 		_unitGroup setSpeedMode "FULL";
+
+		if(_aitype == "Hero") then {
+			if (!isNil "_mission") then {
+				[_unitGroup, _mission] spawn hero_behaviour;
+			} else {
+				[_unitGroup] spawn hero_behaviour;
+			};
+		} else {
+			if (!isNil "_mission") then {
+				[_unitGroup, _mission] spawn bandit_behaviour;
+			} else {
+				[_unitGroup] spawn bandit_behaviour;
+			};
+		};
 		
 		_cleanheli = true;
 

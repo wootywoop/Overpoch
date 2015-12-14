@@ -1,6 +1,6 @@
 if (isServer) then {
 
-	private ["_rockets","_launcher","_type","_skin","_gain","_mission","_ainum","_unit","_player","_humanity","_banditkills","_humankills","_humanitygain","_smoke"];
+	private ["_rockets","_launcher","_type","_skin","_gain","_mission","_ainum","_unit","_player","_humanity","_banditkills","_humankills","_humanitygain"];
 	
 	_unit 		= _this select 0;
 	_player 	= _this select 1;
@@ -73,12 +73,6 @@ if (isServer) then {
 				};
 			} count allUnits;
 		};
-		
-		if (ai_smoke) then {
-				_smoke = "smokeShellRed" createVehicle getPosATL _unit;
-				_smoke setPosATL (getPosATL _unit);
-				_smoke attachTo [_unit,[0,0,0]];
-			};
 
 	} else {
 
@@ -102,17 +96,20 @@ if (isServer) then {
 		};
 
 	};
+
+	if(wai_remove_launcher && _launcher != "") then {
+
+		_rockets = _launcher call find_suitable_ammunition;
+		_unit removeWeapon _launcher;
 		
+		{
+			if(_x == _rockets) then {
+				_unit removeMagazine _x;
+			};
+		} count magazines _unit;
 		
-		_unit removeWeapon "RPG";
-		_unit removeMagazine "PG7VR";
-		
-				
-		
-		_unit removeWeapon "stinger";
-		_unit removeMagazine "stinger";
-		
-		
+	};
+
 	if(_unit hasWeapon "NVGoggles" && floor(random 100) < 20) then {
 		_unit removeWeapon "NVGoggles";
 	};
