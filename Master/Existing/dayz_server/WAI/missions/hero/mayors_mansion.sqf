@@ -1,12 +1,15 @@
 if(isServer) then {
 
-	private			["_room","_complete","_mayor_himself","_crate_type","_mission","_position","_crate","_baserunover","_mayor"];
+	private			["_room","_complete","_mayor_himself","_crate_type","_mission","_rndnum","_position","_crate","_baserunover","_mayor"];
 
 	// Get mission number, important we do this early
 	_mission 		= count wai_mission_data -1;
 
-	_position		= [40] call find_position;
-	[_mission,_position,"Hard","Mayors Mansion","MainHero",true] call mission_init;
+	_position		= [30] call find_position;
+	[_mission,_position,"Hard","Governors Mansion","MainHero",true] call mission_init;
+	// Send Top Right message to users , requires Remote message script
+	_hint = parseText format["<t align='left' color='#D60000' shadow='2' size='1.75'>New Mission:</t><br/><t align='left' color='#FFFFF9F'>The Governor has gone rogue, go take him and his task force out to claim the black market weapons!</t>"];
+	[nil, nil, rHINT, _hint] call RE;
 	
 	diag_log 		format["WAI: [Mission:[Hero] Mayors Mansion]: Starting... %1",_position];
 
@@ -19,10 +22,12 @@ if(isServer) then {
 	_baserunover 	setVectorUp surfaceNormal position _baserunover;
 
 	//Troops
-	[[_position select 0,_position select 1,0],4,"Hard",["Random","AT"],4,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
-	[[_position select 0,_position select 1,0],4,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
-	[[_position select 0,_position select 1,0],4,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
-	[[_position select 0,_position select 1,0],4,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+	_rndnum = 5 + round (random 3);
+	[[(_position select 0) -100, (_position select 1) +100, 0],_rndnum,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
+	[[(_position select 0) +100, (_position select 1) -100, 0],_rndnum,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
+	[[(_position select 0) +100, (_position select 1) +100, 0],_rndnum,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
+	[[(_position select 0) -100, (_position select 1) -100, 0],_rndnum,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
+	[[_position select 0,_position select 1,0],_rndnum,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_stinger;
 
 	//The Mayor Himself
 	_mayor = [_position,1,"Hard","Random",4,"Random","Special","Random",["Bandit",500],_mission] call spawn_group;
@@ -53,18 +58,18 @@ if(isServer) then {
 		[(_position select 0) - 15, (_position select 1) + 15, 8],
 		[(_position select 0) + 15, (_position select 1) - 15, 8]
 	],"M2StaticMG","Easy","Bandit","Bandit",1,2,"Random","Random",_mission] call spawn_static;
-
+	
 	_complete = [
 		[_mission,_crate],		// mission number and crate
-		["assassinate",_mayor], // ["crate"], or ["kill"], or ["assassinate", _unitGroup],
+		["crate"], // ["crate"], or ["kill"], or ["assassinate", _unitGroup],
 		[_baserunover], 		// cleanup objects
-		"The Mayor has gone rogue, go take him and his task force out to claim the black market weapons!",	// mission announcement
-		"The rogue mayor has been taken out, who will be the next Mayor of Cherno?",						// mission success
+		"The Governor has gone rogue, go take him and his task force out to claim the black market weapons!",	// mission announcement
+		"The rogue Governor has been taken out, who will be the next Governor of Napf?",						// mission success
 		"Survivors were unable to capture the mansion, time is up"										// mission fail
 	] call mission_winorfail;
 
 	if(_complete) then {
-		[_crate,16,4,0,4] call dynamic_crate;
+		[_crate,[16,ai_wep_box],4,0,4,[100,ammo_list]] call dynamic_crate;
 	};
 
 	diag_log format["WAI: [Mission:[Hero] Mayors Mansion]: Ended at %1",_position];
