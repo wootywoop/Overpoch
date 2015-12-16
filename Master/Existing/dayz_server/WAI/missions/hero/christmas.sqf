@@ -38,12 +38,12 @@ if(isServer) then {
 	
 	//Troops
 	_rndnum 	= (3 + round(random 3));
-	[[(_position select 0) -100, (_position select 1) +100, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
+	[[(_position select 0) -100, (_position select 1) +100, 0],_rndnum,"Hard",["Random","AT"],3,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
 	[[(_position select 0) +100, (_position select 1) -100, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
-	[[(_position select 0) +100, (_position select 1) +100, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+	[[(_position select 0) +100, (_position select 1) +100, 0],_rndnum,"Hard",["Random","AA"],3,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
 	[[(_position select 0) -100, (_position select 1) -100, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
 	[[(_position select 0) -50, (_position select 1) +50, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
-	[[(_position select 0) +50, (_position select 1) -50, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_stinger;
+	[[(_position select 0) +50, (_position select 1) -50, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
 
 
 	//Static Guns

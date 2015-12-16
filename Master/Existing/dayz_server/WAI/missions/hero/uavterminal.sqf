@@ -1,18 +1,12 @@
 if(isServer) then {
 
 	private 		["_rndnum","_complete","_baserunover","_mission","_directions","_position","_crate","_num","_crate_type","_baserunover0","_baserunover1","_baserunover2","_baserunover3"];
-
-	_fadeFire  = false;
-	_burn = true;
 	
 	// Get mission number, important we do this early
 	_mission 		= count wai_mission_data -1;
 
 	_position		= [30] call find_position;
 	[_mission,_position,"Easy","UAV-Terminal","MainHero",true] call mission_init;	
-	// Send Top Right message to users , requires Remote message script
-	_hint = parseText format["<t align='left' color='#00b37d' shadow='4' size='1.75'>UAV-Terminal:</t><br/><t align='left' color='#FFFFF9F'>A group of crazy engineers are setting up a drone from a military camp. Stop them before they can launch it!</t>"];
-	[nil, nil, rHINT, _hint] call RE;
 	
 	diag_log 		format["WAI: [Mission:[Hero] UAV-Terminal]: Starting... %1",_position];
 
@@ -42,8 +36,8 @@ _drone lock true;
 
 	//Troops
 	_rndnum = 3 + round (random 1);
-	[[(_position select 0) -100, (_position select 1) +100, 0],_rndnum,"medium","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
-	[[(_position select 0) +100, (_position select 1) -100, 0],_rndnum,"easy","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
+	[[(_position select 0) -100, (_position select 1) +100, 0],_rndnum,"medium",["Random","AT"],3,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+	[[(_position select 0) +100, (_position select 1) -100, 0],_rndnum,"easy","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
 
   
 

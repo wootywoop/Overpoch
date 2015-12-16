@@ -22,7 +22,7 @@ if(isServer) then {
 	_rndnum 	= 2 + round (random 2);
 	_rndgro 	= 1 + round (random 2);
 
-	[[_position select 0,_position select 1,0],_rndnum,"Easy",["Random","AT"],4,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+	[[(_position select 0) +100, (_position select 1) -100, 0],_rndnum,"Easy",["Random","AT"],4,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
 
 	for "_i" from 0 to _rndgro do {
 		[[_position select 0,_position select 1,0],_rndnum,"Easy","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_group;

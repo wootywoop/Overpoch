@@ -1,19 +1,13 @@
 if(isServer) then {
 
 	private 		["_rndnum","_complete","_baserunover","_mission","_directions","_position","_crate","_num","_crate_type","_baserunover0","_baserunover1","_baserunover2","_baserunover3","_baserunover4"];
-
-	_fadeFire  = false;
-	_burn = true;
 	
 	// Get mission number, important we do this early
 	_mission 		= count wai_mission_data -1;
 
 	_position		= [30] call find_position;
 	[_mission,_position,"Extreme","Fallout Shelter","MainHero",true] call mission_init;	
-	// Send Top Right message to users , requires Remote message script
-	_hint = parseText format["<t align='left' color='#ffe700' shadow='4' size='1.75'>Fallout Shelter:</t><br/><t align='left' color='#FFFFF9F'>Some Outlaws are trying to get loot from an abandoned fallout shelter. Kill them and get the loot first! </t>"];
-	[nil, nil, rHINT, _hint] call RE;
-	
+		
 	diag_log 		format["WAI: [Mission:[Hero] Fallout Shelter]: Starting... %1",_position];
 
 	//Setup the crate
@@ -37,21 +31,19 @@ if(isServer) then {
 
 	//Troops
 	_rndnum = 4 + round (random 1);
-	[[(_position select 0) -100, (_position select 1) +100, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
-	[[(_position select 0) +100, (_position select 1) -100, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
-	[[(_position select 0) +100, (_position select 1) +100, 0],_rndnum,"Medium","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
-	[[(_position select 0) -100, (_position select 1) -100, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
-	[[_position select 0,_position select 1,0],_rndnum,"Medium","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_stinger;
+	[[(_position select 0) -100, (_position select 1) +100, 0],_rndnum,"Hard",["Random","AT"],3,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+	[[(_position select 0) +100, (_position select 1) -100, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+	[[(_position select 0) +100, (_position select 1) +100, 0],_rndnum,"Medium",["Random","AA"],"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+	[[(_position select 0) -100, (_position select 1) -100, 0],_rndnum,"Hard","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+	[[_position select 0,_position select 1,0],_rndnum,"Medium","Random",3,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
   
   
-  //Static mounted guns
+	//Static mounted guns
 	[[
-		[(_position select 0) - 10, (_position select 1) + 0, 0],
-		[(_position select 0) + 10, (_position select 1) + 0, 0],
-    [(_position select 0) + 0, (_position select 1) + 10, 0],
-		[(_position select 0) + 0, (_position select 1) - 10, 0]
-	],"M2StaticMG","medium","Bandit","Bandit",1,2,"Random","Random",_mission] call spawn_static;
-
+		[(_position select 0) - 15, (_position select 1) + 15, 8],
+		[(_position select 0) + 15, (_position select 1) - 15, 8]
+	],"M2StaticMG","Easy","Bandit","Bandit",1,2,"Random","Random",_mission] call spawn_static;
+	
 	//Condition
 	_complete = [
 		[_mission,_crate],	// mission number and crate

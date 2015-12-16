@@ -64,8 +64,8 @@ ai_wep_assault				= ["M16A4_ACG","Sa58V_RCO_EP1","SCAR_L_STD_Mk4CQT","M4A1_HWS_G
 		ai_wep_machine				= ["RPK_74","MK_48_DZ","M249_EP1_DZ","Pecheneg_DZ","M60A4_EP1_DZE","Pecheneg_DZ","M240_DZ"];	// Light machine guns
 		ai_wep_sniper				= ["M14_EP1","m107_DZ","SCAR_H_LNG_Sniper_SD","M110_NVG_EP1","BAF_LRR_scoped","SVD_CAMO","VSS_Vintorez","DMR_DZ","M40A3"];	// Sniper rifles
 		ai_wep_random				= [ai_wep_assault,ai_wep_assault,ai_wep_assault,ai_wep_sniper,ai_wep_machine];	// random weapon 60% chance assault rifle,20% light machine gun,20% sniper rifle
-		ai_wep_launchers_AT			= ["M136","RPG18","JAVELIN"];
-		ai_wep_launchers_AA			= ["Strela","Igla","STINGER"];
+		ai_wep_launchers_AT			= ["JAVELIN"];
+		ai_wep_launchers_AA			= ["STINGER"];
 		
 		ai_packs					= ["DZ_Czech_Vest_Puch","DZ_ALICE_Pack_EP1","DZ_TK_Assault_Pack_EP1","DZ_British_ACU","DZ_GunBag_EP1","DZ_CivilBackpack_EP1","DZ_Backpack_EP1","DZ_LargeGunBag_EP1"];
 		ai_hero_skin				= ["FR_AC","FR_AR","FR_Corpsman","FR_GL","FR_Marksman","FR_R","FR_Sapper","FR_TL"];
@@ -123,29 +123,31 @@ ai_wep_assault				= ["M16A4_ACG","Sa58V_RCO_EP1","SCAR_L_STD_Mk4CQT","M4A1_HWS_G
 
 		wai_hero_missions			= [ 								// ["mission filename",% chance of picking this mission],Make sure the chances add up to 100,or it will not be accurate percentages
 										//["patrol",6],
-										["black_hawk_crash",8],
-										["armed_vehicle",8],
-										["bandit_base",8],
-										["uavterminal",8],
-										//["falloutshelter",8],
-										["christmas",10],
-										["captured_mv22",8],
-										["ikea_convoy",10],
-										["destroyed_ural",6],
-										["disabled_milchopper",8],
-										["mayors_mansion",10],
-										["weapon_cache",8],
-										["bandit_patrol",8]
+										["black_hawk_crash",4],
+										["armed_vehicle",4],
+										["bandit_base",6],
+										//["uavterminal",0],
+										["falloutshelter",26],
+										["christmas",20],
+										["captured_mv22",4],
+										["ikea_convoy",6],
+										["comm",6],
+										["destroyed_ural",4],
+										["disabled_milchopper",6],
+										["mayors_mansion",6],
+										["weapon_cache",4],
+										["bandit_patrol",4]
 									];
 		wai_bandit_missions			= [
 										//["patrol",10],
-										["armed_vehicle",14],
+										["armed_vehicle",10],
 										["black_hawk_crash",10],
 										["captured_mv22",10],
-										["broken_down_ural",12],
+										["broken_down_ural",8],
+										["comm",12],
 										["hero_base",8],
 										["ikea_convoy",8],
-										["medi_camp",14],
+										["medi_camp",10],
 										["presidents_mansion",6],
 										["sniper_extraction",8],
 										["weapon_cache",10]

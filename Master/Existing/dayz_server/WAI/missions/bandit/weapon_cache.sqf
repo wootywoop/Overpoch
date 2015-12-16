@@ -17,7 +17,7 @@ if(isServer) then {
 	//Troops
 	_rndnum 	= (1 + round(random 7));
 	_rndgro 	= (1 + round(random 2));
-	[[_position select 0,_position select 1,0],_rndnum,"Easy",["Random","AT"],3,"Random","Hero","Random","Hero",_mission] call spawn_group;
+	[[(_position select 0) -100, (_position select 1) +100, 0],_rndnum,"Easy",["Random","AT"],3,"Random","Hero","Random","Hero",_mission] call spawn_group;
 	for "_i" from 0 to _rndgro do {
 		[[_position select 0,_position select 1,0],_rndnum,"Easy","Random",3,"Random","Hero","Random","Hero",_mission] call spawn_group;
 	};
