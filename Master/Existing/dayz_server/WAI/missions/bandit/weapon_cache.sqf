@@ -7,9 +7,6 @@ if(isServer) then {
 
 	_position		= [30] call find_position;
 	[_mission,_position,"Medium","Weapon Cache","MainBandit",true] call mission_init;
-	// Send Top Right message to users , requires Remote message script
-	_hint = parseText format["<t align='left' color='#00FF11' shadow='2' size='1.75'>New Mission:</t><br/><t align='left' color='#FFFFF9F'>Heroes have obtained a weapon crate. Check your map for the location!</t>"];
-	[nil, nil, rHINT, _hint] call RE;
 	
 	diag_log 		format["WAI: [Mission:[Bandit] Weapons Cache]: Starting... %1",_position];
 
@@ -18,13 +15,13 @@ if(isServer) then {
 	_crate 			= createVehicle [_crate_type,[(_position select 0),(_position select 1),0], [], 0, "CAN_COLLIDE"];
 	
 	//Troops
-	_rndnum 	= (2 + round(random 3));
-	[[(_position select 0) -100, (_position select 1) +100, 0],_rndnum,"Medium","Random",3,"Random","Hero","Random","Hero",_mission] call spawn_rpg;
-	[[(_position select 0) +100, (_position select 1) -100, 0],_rndnum,"Medium","Random",3,"Random","Hero","Random","Hero",_mission] call spawn_rpg;
-	[[(_position select 0) +100, (_position select 1) +100, 0],_rndnum,"Medium","Random",3,"Random","Hero","Random","Hero",_mission] call spawn_rpg;
-	[[(_position select 0) -100, (_position select 1) -100, 0],_rndnum,"Medium","Random",3,"Random","Hero","Random","Hero",_mission] call spawn_rpg;
-	[[_position select 0,_position select 1,0],_rndnum,"Medium","Random",3,"Random","Hero","Random","Hero",_mission] call spawn_stinger;
-	
+	_rndnum 	= (1 + round(random 7));
+	_rndgro 	= (1 + round(random 2));
+	[[_position select 0,_position select 1,0],_rndnum,"Easy",["Random","AT"],3,"Random","Hero","Random","Hero",_mission] call spawn_group;
+	for "_i" from 0 to _rndgro do {
+		[[_position select 0,_position select 1,0],_rndnum,"Easy","Random",3,"Random","Hero","Random","Hero",_mission] call spawn_group;
+	};
+
 	//Static Guns
 	[[
 		[(_position select 0) + 10, (_position select 1) + 10, 0],
@@ -42,7 +39,7 @@ if(isServer) then {
 	] call mission_winorfail;
 
 	if(_complete) then {
-		[_crate,[22,ai_wep_box],4,2,1,[100,ammo_list]] call dynamic_crate;
+		[_crate,10,4,0,2] call dynamic_crate;
 	};
 
 	diag_log format["WAI: [Bandit] weapon_cache ended at %1",_position];

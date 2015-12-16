@@ -7,9 +7,6 @@ if(isServer) then {
 
 	_position		= [30] call find_position;
 	[_mission,_position,"Hard","Captured MV22","MainHero",true] call mission_init;
-	// Send Top Right message to users , requires Remote message script
-	_hint = parseText format["<t align='left' color='#D60000' shadow='2' size='1.75'>New Mission:</t><br/><t align='left' color='#FFFFF9F'>Bandits have captured a Red Cross MV-22! An informant has advised there are medical supplies, he has updated the map for the location!</t>"];
-	[nil, nil, rHINT, _hint] call RE;
 	
 	diag_log 		format["WAI: [Mission:[Hero] Captured MV22]: Starting... %1",_position];
 
@@ -22,19 +19,18 @@ if(isServer) then {
 	_baserunover 	setVectorUp surfaceNormal position _baserunover;
 
 	//Troops
-	_rndnum = 3 + round (random 2);
-	[[(_position select 0) -100, (_position select 1) +100, 0],_rndnum,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
-	[[(_position select 0) +100, (_position select 1) -100, 0],_rndnum,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
-	[[(_position select 0) +100, (_position select 1) +100, 0],_rndnum,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
-	[[(_position select 0) -100, (_position select 1) -100, 0],_rndnum,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
-	[[_position select 0,_position select 1,0],_rndnum,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_stinger;
-	
+	_rndnum = 3 + round (random 3);
+	[[_position select 0,_position select 1,0],_rndnum,"Hard",["Random","AT"],4,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+	[[_position select 0,_position select 1,0],_rndnum,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+	[[_position select 0,_position select 1,0],_rndnum,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+	[[_position select 0,_position select 1,0],_rndnum,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+	 
 	//Static Guns
 	[[
 		[(_position select 0) + 10, (_position select 1) + 10, 0],
 		[(_position select 0) + 10, (_position select 1) - 10, 0]
 	],"M2StaticMG","Hard","Bandit","Bandit",0,2,"Random","Random",_mission] call spawn_static;
-	 
+
 	//MV22
 	_vehclass 		= "MV22_DZ";
 	_vehicle		= [_vehclass,_position,_mission] call custom_publish;
@@ -54,7 +50,7 @@ if(isServer) then {
 	] call mission_winorfail;
 
 	if(_complete) then {
-		[_crate,[16,ai_wep_box],8,[30,crate_items_buildables],1,[100,ammo_list]] call dynamic_crate;
+		[_crate,0,0,[80,crate_items_medical],0] call dynamic_crate;
 	};
 
 	diag_log format["WAI: [Mission:[Hero] Captured MV22]: Ended at %1",_position];

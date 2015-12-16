@@ -5,11 +5,8 @@ if(isServer) then {
 	// Get mission number, important we do this early
 	_mission 		= count wai_mission_data -1;
 
-	_position		= [30] call find_position;
+	_position		= [40] call find_position;
 	[_mission,_position,"Hard","Disabled Convoy","MainHero",true] call mission_init;
-	// Send Top Right message to users , requires Remote message script
-	_hint = parseText format["<t align='left' color='#D60000' shadow='2' size='1.75'>New Mission:</t><br/><t align='left' color='#FFFFF9F'>An Ikea delivery has been hijacked by bandits, take over the convoy and the building supplies are yours!</t>"];
-	[nil, nil, rHINT, _hint] call RE;
 
 	diag_log 		format["WAI: [Mission:[Hero] Disabled Convoy]: Starting... %1",_position];
 
@@ -18,13 +15,12 @@ if(isServer) then {
 	_crate 			= createVehicle [_crate_type,[(_position select 0),(_position select 1),0], [], 0, "CAN_COLLIDE"];
 	
 	//Troops
-	_rndnum = 3 + round (random 3);
-	[[(_position select 0) -100, (_position select 1) +100, 0],_rndnum,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
-	[[(_position select 0) +100, (_position select 1) -100, 0],_rndnum,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
-	[[(_position select 0) +100, (_position select 1) +100, 0],_rndnum,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
-	[[(_position select 0) -100, (_position select 1) -100, 0],_rndnum,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_rpg;
-	[[_position select 0,_position select 1,0],_rndnum,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_stinger;
-	
+	_rndnum = 5 + round (random 3);
+	[[_position select 0,_position select 1,0],_rndnum,"Hard",["Random","AT"],4,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+	[[_position select 0,_position select 1,0],4,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+	[[_position select 0,_position select 1,0],4,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+	[[_position select 0,_position select 1,0],4,"Hard","Random",4,"Random","Bandit","Random","Bandit",_mission] call spawn_group;
+
 	//Static Guns
 	[[
 		[(_position select 0) + 25, (_position select 1) + 25, 0],
@@ -63,7 +59,7 @@ if(isServer) then {
 	] call mission_winorfail;
 
 	if(_complete) then {
-		[_crate,[5,crate_weapons_buildables],[4,crate_tools_buildable],[30,crate_items_buildables],1,[100,ammo_list]] call dynamic_crate;
+		[_crate,[1,crate_weapons_buildables],[4,crate_tools_buildable],[30,crate_items_buildables],4] call dynamic_crate;
 	};
 
 	diag_log format["WAI: [Mission:[Hero] Disabled Convoy]: Ended at %1",_position];
