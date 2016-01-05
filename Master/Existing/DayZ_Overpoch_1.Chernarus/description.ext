@@ -68,6 +68,7 @@ class RscPicture
 	lineSpacing=0;
 	text="";
 };
+/*
 class CfgFunctions 
 {
     class DZN {
@@ -79,6 +80,7 @@ class CfgFunctions
         };
     };
 };
+*/
 class RscLoadingText : RscText
 {
 	style = 2;
