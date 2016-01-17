@@ -283,12 +283,12 @@ _SupportBox3Content =
 */
 //	Support-Vault1
 _weapons1 = [
-	[],
-	[]
+	['ItemCrowbar'],
+	[15]
 ];
 _magazines1 = [
-	['30m_plot_kit', 'ItemComboLock'],
-	[2,5]
+	['cinder_wall_kit','cinder_garage_kit','cinder_door_kit','ItemWoodWallWindowLg','light_pole_kit','ItemWoodWallwithDoorLg','ItemWoodFloorHalf','ItemWoodWallLg','ItemWoodWall','ItemWoodStairsSupport','MortarBucket','metal_panel_kit','metal_floor_kit','ItemWoodStairs','ItemWoodLadder','ItemWoodFloorQuarter','ItemWoodFloor','ItemVault','ItemFireBarrel_Kit','ItemTankTrap','ItemSandbag','ItemPole','ItemLockbox','ItemComboLock','ItemEtool','ItemHatchet_DZE','ItemToolbox','ItemSledge','ItemMatchbox_DZE','bulk_ItemTankTrap','bulk_ItemWire','CinderBlocks','30m_plot_kit', 'ItemComboLock'],
+	[150,25,25,30,20,10,30,30,30,10,100,20,100,10,10,30,30,5,5,45,30,40,5,5,5,5,5,5,5,5,25,25,150,2,5]
 ];
 _backpack1 = [
 	[],
