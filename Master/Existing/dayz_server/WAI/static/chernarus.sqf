@@ -299,7 +299,7 @@ if(isServer) then {
 		[1300,12960,0],						// Position to spawn chopper at
 		1000,								// Radius of patrol
 		8,									// Number of waypoints to give
-		"UH1Y",								// Classname of vehicle (make sure it has driver and two gunners)
+		"Mi24_D_TK_EP1",								// Classname of vehicle (make sure it has driver and two gunners)
 		"extreme",							// Skill level of units (easy, medium, hard, extreme, Random)
 		"Random",							// Skin classname, use "Random" or classname here
 		"Bandit"							// AI Type, "Hero" or "Bandit".

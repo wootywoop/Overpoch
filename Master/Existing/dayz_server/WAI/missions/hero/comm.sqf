@@ -56,13 +56,13 @@ if(isServer) then {
 		[_mission,_crate],	// mission number and crate
 		["crate"], 			// ["crate"], or ["kill"], or ["assassinate", _unitGroup],
 		[_baserunover], 	// cleanup objects
-		"A jungle task force have set up a Communications Center! Go and ambush it to make it yours!",	// mission announcement
-		"Survivors captured the Communications Center, HOOAH!!",										// mission success
-		"Survivors were unable to capture the Communications Center"									// mission fail
+		"A jungle task force have set up a communications center! Ambush it to make it yours!",	// mission announcement
+		"Survivors captured the communications center, HOOAH!!",										// mission success
+		"Survivors were unable to capture the communications center"									// mission fail
 	] call mission_winorfail;
 
 	if(_complete) then {
-		[_crate,[25,ai_wep_box],[8,crate_tools_sniper],[25,crate_items_high_value],[1,crate_backpacks_large]] call dynamic_crate;
+		[_crate,[8,crate_tools_sniper],[25,crate_items_high_value],[1,crate_backpacks_large]] call dynamic_crate;
 	};
 
 	diag_log format["WAI: [Mission:[Hero] Communications Center]: Ended at %1",_position];

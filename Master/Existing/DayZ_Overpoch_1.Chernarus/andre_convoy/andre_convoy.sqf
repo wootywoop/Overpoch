@@ -12,13 +12,13 @@ if (isServer) then {
 	//Vehicles: Its ok to repeate the same car with different configuration.
 	donn_carsConvy = [
 		//(0) Vehicle Unarmored Armed low Capacity
-		["Offroad_DSHKM_Gue",1,["150Rnd_127x107_DSHKM"]],
+		["UAZ_MG_CDF",1,["150Rnd_127x107_DSHKM"]],
 		//(1) Vehicle Unarmored Unarmed Mediun Capacity
-		["BAF_Offroad_D",3,[]],
+		["HMMWV_M1151_M2_DES_EP1",3,["100Rnd_127x99_M2"]],
 		//(2) Vehicle Unarmed Armored High Capacity
-		["BTR40_TK_GUE_EP1",4,[]],
+		["LAV25",4,["210Rnd_25mm_M242_HEI","210Rnd_25mm_M242_APDS","100Rnd_762x51_M240"]],
 		//(3) Vehicle Unarmed Armored High Capacity
-		["GAZ_Vodnik_MedEvac",4,[]],
+		["BRDM2_CDF",4,["500Rnd_145x115_KPVT","200Rnd_762x54_PK"]],
 		//(4) Vehicle Trash High Capacity
 		["car_sedan",3,[]],
 		//(5) Civil Truck Ultra High Capacity
@@ -32,7 +32,7 @@ if (isServer) then {
 	];
 
 	//Soldier of the Convoys (all the soldiers are the same)
-	donn_soldierSkin = ["TK_INS_Bonesetter_EP1","TK_CIV_Takistani01_EP1"];
+	donn_soldierSkin = ["TK_INS_Bonesetter_EP1","TK_CIV_Takistani01_EP1","GUE_Commander_DZ","GUE_Soldier_Sniper_DZ","GUE_Soldier_MG_DZ","GUE_Soldier_Crew_DZ","GUE_Soldier_2_DZ","GUE_Soldier_CO_DZ","BanditW1_DZ","BanditW2_DZ","Bandit1_DZ","Bandit2_DZ"];
 
 	//=======================
 	//BASIC KONFIGURATION 2!

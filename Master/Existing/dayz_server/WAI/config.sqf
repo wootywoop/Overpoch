@@ -125,16 +125,16 @@ ai_wep_assault				= ["M16A4_ACG","Sa58V_RCO_EP1","SCAR_L_STD_Mk4CQT","M4A1_HWS_G
 										//["patrol",6],
 										["black_hawk_crash",4],
 										["armed_vehicle",4],
-										["bandit_base",6],
-										["fallout",4],
-										["gemstonemine",30],
-										["campsites",5],
+										["bandit_base",10],
+										["fallout",14],
+										["gemstonemine",15],
+										["campsites",14],
 										//["christmas",0],
 										["captured_mv22",5],
-										["ikea_convoy",10],
-										["comm",10],
+										["ikea_convoy",6],
+										["comm",1],
 										["destroyed_ural",4],
-										["disabled_milchopper",5],
+										["disabled_milchopper",10],
 										["mayors_mansion",4],
 										["weapon_cache",5],
 										["bandit_patrol",4]
@@ -184,7 +184,7 @@ ai_wep_assault				= ["M16A4_ACG","Sa58V_RCO_EP1","SCAR_L_STD_Mk4CQT","M4A1_HWS_G
 		crate_items_sniper			= [["ItemPainkiller",5],"Skin_Sniper1_DZ","Skin_CZ_Soldier_Sniper_EP1_DZ","Skin_GUE_Soldier_Sniper_DZ"];
 		crate_items_president		= ["ItemDocument","ItemGoldBar10oz","ItemBriefcase100oz"];
 		crate_items_gem = ["ItemRuby","ItemEmerald","ItemSapphire","ItemTopaz","ItemObsidian","ItemAmethyst","ItemCitrine","PartOre","PartOreSilver","PartOreGold","ItemGoldBar","ItemGoldBar2oz","ItemGoldBar3oz","ItemGoldBar4oz","ItemGoldBar5oz","ItemGoldBar6oz","ItemGoldBar7oz","ItemGoldBar8oz","ItemGoldBar9oz","ItemGoldBar10oz"];
-		crate_items_minerals = ["ItemSilverBar","ItemSilverBar2oz","ItemSilverBar3oz","ItemSilverBar4oz","ItemSilverBar5oz","ItemSilverBar6oz","ItemSilverBar7oz","ItemSilverBar8oz","ItemSilverBar9oz","ItemSilverBar10oz","ItemCopperBar","ItemCopperBar10oz","ItemAluminumBar","ItemAluminumBar10oz","ItemTinBar","ItemTinBar10oz"];
+		//crate_items_minerals = ["ItemSilverBar","ItemSilverBar2oz","ItemSilverBar3oz","ItemSilverBar4oz","ItemSilverBar5oz","ItemSilverBar6oz","ItemSilverBar7oz","ItemSilverBar8oz","ItemSilverBar9oz","ItemSilverBar10oz","ItemCopperBar","ItemCopperBar10oz","ItemAluminumBar","ItemAluminumBar10oz","ItemTinBar","ItemTinBar10oz"];
 		crate_backpacks_all			= ["DZ_Patrol_Pack_EP1","DZ_Assault_Pack_EP1","DZ_Czech_Vest_Puch","DZ_TerminalPack_EP1","DZ_ALICE_Pack_EP1","DZ_TK_Assault_Pack_EP1","DZ_CompactPack_EP1","DZ_British_ACU","DZ_GunBag_EP1","DZ_CivilBackpack_EP1","DZ_Backpack_EP1","DZ_LargeGunBag_EP1"];
 		crate_backpacks_large		= ["DZ_GunBag_EP1","DZ_Backpack_EP1","DZ_LargeGunBag_EP1","DZ_CivilBackpack_EP1"];
 

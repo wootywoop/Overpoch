@@ -4,6 +4,43 @@ class Category_700 {
 		buy[] ={100000,"Coins"};
 		sell[] ={90000,"Coins"};
 	};
+	
+	class CDF_dogtags {
+		type = "trade_weapons";
+		buy[] ={155938,"Coins"};
+		sell[] ={0,"Coins"};
+	};
+	
+	class Cobalt_File {
+		type = "trade_weapons";
+		buy[] ={781250,"Coins"};
+		sell[] ={0,"Coins"};
+	};
+	
+	class PMC_documents {
+		type = "trade_weapons";
+		buy[] ={1562188,"Coins"};
+		sell[] ={0,"Coins"};
+	};
+	
+	class Moscow_Bombing_File {
+		type = "trade_weapons";
+		buy[] ={3125000,"Coins"};
+		sell[] ={0,"Coins"};
+	};
+	
+	class Kostey_notebook {
+		type = "trade_weapons";
+		buy[] ={6250000,"Coins"};
+		sell[] ={0,"Coins"};
+	};
+	
+	class EvPhoto {
+		type = "trade_weapons";
+		buy[] ={3500000,"Coins"};
+		sell[] ={0,"Coins"};
+	};
+	
 	class ItemGoldBar {
 		type = "trade_items";
 		buy[] ={1000,"Coins"};
