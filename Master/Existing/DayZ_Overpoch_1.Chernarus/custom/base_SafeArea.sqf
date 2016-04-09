@@ -7,7 +7,7 @@
 
 
 while {true} do {
-  sleep 10;
+  sleep 2;
 
 
   // No Zeds near Plot Poles
