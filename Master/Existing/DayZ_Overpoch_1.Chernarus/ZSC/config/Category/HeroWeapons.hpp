@@ -19,6 +19,11 @@ class Category_477 {
 		buy[] ={90000,"Coins"};
 		sell[] ={30000,"Coins"};
 	};
+	class BAF_LRR_scoped_W {
+		type = "trade_weapons";
+		buy[] ={90000,"Coins"};
+		sell[] ={30000,"Coins"};
+	};
 	class Mk_48_DZ {
 		type = "trade_weapons";
 		buy[] ={55000,"Coins"};
@@ -39,4 +44,5 @@ class Category_477 {
 		buy[] ={25000000,"Coins"};
 		sell[] ={100000,"Coins"};
 	};
+	
 };
