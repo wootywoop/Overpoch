@@ -53,7 +53,7 @@ _minimumOvercast = 0;
 
 // Overcast intensity never exceeds this value. Must be between 0 && 1 && greater than || equal to _minimumOvercast
 // (0 = no overcast, 1 = maximum overcast). (Suggested value: 1).
-_maximumOvercast = 0.7;
+_maximumOvercast = 0.8;
 
 // When raining, rain intensity never falls below this value. Must be between 0 && 1 && less than || equal to _maximumRain
 // (0 = no rain, 1 = maximum rain intensity). (Suggested value: 0);

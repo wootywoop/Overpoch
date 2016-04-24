@@ -35,6 +35,7 @@ class CfgTraderCategory {
 	#include "Category\NeutralMedicalSupplies.hpp"
 	#include "Category\NeutralMilitaryUnarmed.hpp"
 	#include "Category\NeutralPackagedFood.hpp"
+	#include "Category\NeutralPatrol.hpp"
 	#include "Category\NeutralPistolAmmo.hpp"
 	#include "Category\NeutralPistols.hpp"
 	#include "Category\NeutralShotgunsandSingleshot.hpp"

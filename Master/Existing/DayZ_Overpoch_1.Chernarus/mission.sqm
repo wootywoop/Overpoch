@@ -1202,7 +1202,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=21;
+		items=20;
 		class Item0
 		{
 			position[]={7839.6055,381.33774,8414.7324};
@@ -1333,15 +1333,7 @@ class Mission
             type="hd_join";
             colorName="ColorBlue";
         };
-		class Item18 // Woot's garage marker
-            {
-            position[]={7047.66,300,2657.9}; 
-            name="Wootsgarage";
-            text="Woot's garage";
-            type="hd_flag";
-            colorName="ColorBlue";
-        };
-		class Item19 //Skalisty Island
+		class Item18 //Skalisty Island
             {
 			position[]={13214.373,300,3472.0823}; 
             name="skalistyisland";
@@ -1349,7 +1341,7 @@ class Mission
             type="hd_warning";
             colorName="ColorRed";
         };
-		class Item20 //Bandit city
+		class Item19 //Bandit city
 			{
 			position[]={3688.65,300,14499.4}; 
             name="banditcity";

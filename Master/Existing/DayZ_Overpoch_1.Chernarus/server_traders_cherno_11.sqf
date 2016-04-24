@@ -15,7 +15,7 @@ menu_Rocker4 = [
 	"neutral"
 ];
 menu_Profiteer4 = [
-	[["Bikes And Atv",587],["Buses And Vans",588],["Cargo Trucks",586],["Fuel Trucks",589],["Military Unarmed",598],["Trucks",590],["Used Cars",520],["Utility Vehicles",591],["Overwatch Civ Car",1015],["Overwatch Nissian Car",1016]],
+	[["Bikes And Atv",587],["Buses And Vans",588],["Cargo Trucks",586],["Fuel Trucks",589],["Military Unarmed",598],["Trucks",590],["Used Cars",520],["Utility Vehicles",591],["Overwatch Civ Car",1015],["Overwatch Nissian Car",1016],["Patrol vehicles",701]],
 	[],
 	"neutral"
 ];
@@ -50,7 +50,7 @@ menu_Worker2 = [
 	"neutral"
 ];
 menu_Worker3 = [
-	[["Bikes And Atv",587],["Buses And Vans",588],["Cargo Trucks",586],["Fuel Trucks",589],["Military Unarmed",598],["Trucks",590],["Used Cars",520],["Utility Vehicles",591],["Overwatch Civ Car",1015],["Overwatch Nissian Car",1016]],
+	[["Bikes And Atv",587],["Buses And Vans",588],["Cargo Trucks",586],["Fuel Trucks",589],["Military Unarmed",598],["Trucks",590],["Used Cars",520],["Utility Vehicles",591],["Overwatch Civ Car",1015],["Overwatch Nissian Car",1016],["Patrol vehicles",701]],
 	[],
 	"neutral"
 ];
@@ -65,7 +65,7 @@ menu_Woodlander1 = [
 	"neutral"
 ];
 menu_UN_CDF_Soldier_Pilot_EP1 = [
-	[["Bikes And Atv",587],["Buses And Vans",588],["Cargo Trucks",586],["Fuel Trucks",589],["Military Unarmed",598],["Trucks",590],["Used Cars",520],["Utility Vehicles",591],["Overwatch Civ Car",1015],["Overwatch Nissian Car",1016]],
+	[["Bikes And Atv",587],["Buses And Vans",588],["Cargo Trucks",586],["Fuel Trucks",589],["Military Unarmed",598],["Trucks",590],["Used Cars",520],["Utility Vehicles",591],["Overwatch Civ Car",1015],["Overwatch Nissian Car",1016],["Patrol vehicles",701]],
 	[],
 	"neutral"
 ];
@@ -120,7 +120,7 @@ menu_Pilot_EP1 = [
 	"neutral"
 ];
 menu_RU_Profiteer4 = [
-	[["Bikes And Atv",587],["Buses And Vans",588],["Cargo Trucks",586],["Fuel Trucks",589],["Military Unarmed",598],["Trucks",590],["Used Cars",520],["Utility Vehicles",591],["Overwatch Civ Car",1015],["Overwatch Nissian Car",1016]],
+	[["Bikes And Atv",587],["Buses And Vans",588],["Cargo Trucks",586],["Fuel Trucks",589],["Military Unarmed",598],["Trucks",590],["Used Cars",520],["Utility Vehicles",591],["Overwatch Civ Car",1015],["Overwatch Nissian Car",1016],["Patrol vehicles",701]],
 	[],
 	"neutral"
 ];
